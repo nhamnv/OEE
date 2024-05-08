@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\OEE</_PublishTargetUrl>
+    <History>True|2024-05-08T06:17:22.5428386Z;False|2024-05-08T13:16:21.8176845+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=nhamnv%3bDatabase=wdi_oee%3bTrustServerCertificate=True%3bUser Id=wdi_oee%3bPassword=Weldcom%24285A%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

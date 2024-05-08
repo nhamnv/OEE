@@ -1,0 +1,35 @@
+﻿namespace WDI.OEE.Models
+{
+    public class MachineRuningStatusViewModel
+    {
+        public MachineRuningStatusViewModel() { }
+
+
+
+        public string MachineName { get; set; }
+        public string MachineModel { get; set; }
+        public string LocationName { get; set; }
+        public string Image { get; set; }
+
+        /// <summary>
+        /// Danh sách các trạng thái của máy
+        /// </summary>
+        public List<RuningStatus> ListStatus { get; set; }
+
+        /// <summary>
+        /// Danh sách thời gian hoạt động của máy - biểu đồ ngang
+        /// </summary>
+        public List<LiveStatus> ListLiveStatus { get; set; }
+    }
+
+    public class RuningStatus
+    {
+        public string Name { get; set; }
+        public bool IsActived { get; set; } = false;
+    }
+
+    public class LiveStatus
+    {
+
+    }
+}
