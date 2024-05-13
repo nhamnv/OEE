@@ -76,7 +76,7 @@ namespace WDI.OEE.Controllers
             DateTime endDate = DateTime.Now;
             DateTime startDate = endDate.AddHours(-24);
 
-            List<MachineRuningStatusViewModel> model = _reportMachineRuningStatusService.GetReportMachineRuningStatus(startDate, endDate, "all", "all")?.Take(50)?.ToList();
+            List<MachineRuningStatusViewModel> model = _reportMachineRuningStatusService.GetReportMachineRuningStatus(startDate, endDate, "all", "all");
 
 
             return View(model);

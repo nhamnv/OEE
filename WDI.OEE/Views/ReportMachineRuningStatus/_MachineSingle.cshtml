@@ -11,6 +11,7 @@
         <div class="card-header">
             <input type="hidden" name="hidden_MachineID" value="@Model.MachineID" />
             <input type="hidden" name="hidden_MachineLocationID" value="@Model.MachineLocationID" />
+            <input type="hidden" name="hidden_LastStatusID" value="@Model._LastStatus.StatusID" />
             <div class="row">
                 <div class="col-sm-6" data-original-title="Tên máy" style="font-weight:bold;">
                     @Model.MachineName
@@ -190,6 +191,12 @@
                     let seriesName = w.config.series[opts.seriesIndex].name
                         ? w.config.series[opts.seriesIndex].name
                         : ''
+
+                    // let seriesName = w.config.series[opts.seriesIndex].data[0].x
+                    //     ? w.config.series[opts.seriesIndex].data[0].x
+                    //     : '';
+
+
                     const color = w.globals.colors[opts.seriesIndex]
 
                     return (

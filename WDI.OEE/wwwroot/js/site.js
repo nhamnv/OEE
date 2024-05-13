@@ -38,7 +38,6 @@ function getDateTime_LocalTimeString(d) {
 
 // Có date và time
 function getDateTime_LocalDateTimeString(d) {
-    debugger;
     return dformat =
         [
             d.getDate().padLeft(),

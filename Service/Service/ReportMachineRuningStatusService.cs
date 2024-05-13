@@ -24,8 +24,8 @@ namespace Service.Service
                 var hisData = (from h in StaticData.Data_MachineStatusHistory
                                where (h.StatusTime >= StartDate && h.StatusTime <= EndDate)
                                join m in StaticData.Data_Machine on h.MachineID equals m.MachineID
-                               join ls in StaticData.Data_MachineLocationSetup on h.MachineID equals ls.MachineID
-                               join l in StaticData.Data_MachineLocation on ls.LocationID equals l.LocationID
+                               //join ls in StaticData.Data_MachineLocationSetup on h.MachineID equals ls.MachineID
+                               join l in StaticData.Data_MachineLocation on h.MachineLocationID equals l.LocationID
                                join s in StaticData.Data_MachineStatus on h.StatusID equals s.StatusID
                                orderby h.StatusTime
                                select new
@@ -53,7 +53,7 @@ namespace Service.Service
                                     ,
                                    m.MachineName
                                     ,
-                                   l.LocationID
+                                   h.MachineLocationID
                                     ,
                                    l.LocationName
                                }).Distinct();
@@ -76,7 +76,7 @@ namespace Service.Service
                 if (!string.IsNullOrEmpty(MachineLocationID) && MachineLocationID.ToLower() != "all")
                 {
                     hisData = from h in hisData
-                              where h.LocationID.ToString() == MachineLocationID
+                              where h.MachineLocationID.ToString() == MachineLocationID
                               select h;
                 }
 
@@ -100,11 +100,12 @@ namespace Service.Service
                                    ,
                         d.MachineAvatar
                                     ,
-                        d.LocationID
+                        d.MachineLocationID
                                    ,
                         d.LocationName
 
-                    }).ToList();
+                    }).ToList()
+                    .Take(50);// Fake 50 dòng thôi cho nhẹ
 
 
                 foreach (var item in listMachine)
@@ -113,7 +114,7 @@ namespace Service.Service
 
                     List<TimelineSeriesData> timeline = new List<TimelineSeriesData>();
 
-                    var tempHisData = hisData?.Where(m => m.MachineID == item.MachineID && m.LocationID == item.LocationID)?.OrderBy(o => o.StatusTime);
+                    var tempHisData = hisData?.Where(m => m.MachineID == item.MachineID && m.MachineLocationID == item.MachineLocationID)?.OrderBy(o => o.StatusTime);
 
                     if (tempHisData != null)
                     {
@@ -198,13 +199,12 @@ namespace Service.Service
                         MachineModel = item.MachineModel,
                         MachineAvatar = item.MachineAvatar ?? "no_image.png", // OEE\WDI.OEE\wwwroot\images\products\no_image.png
                         MachineLocationName = item.LocationName,
-                        MachineLocationID = item.LocationID,
+                        MachineLocationID = item.MachineLocationID,
                         ListStatusPercent = listStatusPercent,
                         StatusHistories = (from h in hisData
-                                           where h.MachineID == item.MachineID
+                                           where h.MachineID == item.MachineID && h.MachineLocationID == item.MachineLocationID
                                            select new Common.Data_MachineStatusHistory()
                                            {
-                                               //MachineStatusHistoryID = h.MachineStatusHistoryID,
                                                MachineID = h.MachineID,
                                                StatusID = h.StatusID,
                                                StatusTime = h.StatusTime
@@ -223,6 +223,7 @@ namespace Service.Service
 
             }
 
+            // return reval?.Take(50)?.ToList() ?? new List<MachineRuningStatusViewModel>();
             return reval;
         }
     }

@@ -202,10 +202,7 @@ public class MachineRuningStatusViewModel
 
 public class TimelineSeriesData
 {
-    /// <summary>
-    /// Trường để tính toán
-    /// </summary>
-    public int _StatusID { get; set; } = 0;
+
 
     /// <summary>
     /// Tên hiển thị
@@ -222,4 +219,9 @@ public class TimelineSeriesData
     /// Màu hiển thị barChart
     /// </summary>
     public string fillColor { get; set; }
+
+    /// <summary>
+    /// Trường để tính toán
+    /// </summary>
+    public int _StatusID { get; set; } = 0;
 }
