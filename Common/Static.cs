@@ -1,6 +1,6 @@
 ﻿namespace Common
 {
-    public static class StaticData
+    public static partial class StaticData
     {
         public static readonly List<TimeRange> TimeRange = new List<TimeRange>();
         /// <summary>
@@ -134,7 +134,7 @@
                 Data_Machine.Add(new Common.Data_Machine() { MachineID = 36, MachineName = "Máy cắt CNC Plasma FSC 5000D x 18M", MachineNameOrigin = "Máy cắt CNC Plasma FSC 5000D x 18M", MachineGroupID = 4, MachineGroupName = "PLASMA" });
                 Data_Machine.Add(new Common.Data_Machine() { MachineID = 37, MachineName = "MÁY CẮT ĐẦU RẦM ROBOTI", MachineNameOrigin = "Robot cắt ầu dầm Model PKG100/50 (kèm robot ABBIRS 2600, nguồn cắt Hypertherm 260 XD)", MachineGroupID = 5, MachineGroupName = "ROBOT" });
                 Data_Machine.Add(new Common.Data_Machine() { MachineID = 38, MachineName = "HỆ THỐNG HÀN ROBOT", MachineNameOrigin = "Hệ thống Robot hàn dầm-HD 523-26/9/19-DDCI", MachineGroupID = 5, MachineGroupName = "ROBOT" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 39, MachineName = "MÁY CẮT THỦY LỰC 12M YSD", MachineNameOrigin = "Máy cắt iều khiển CNC", MachineGroupID = 0, MachineGroupName = "" });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 39, MachineName = "MÁY CẮT THỦY LỰC 12M YSD", MachineNameOrigin = "Máy cắt iều khiển CNC", MachineGroupID = 2, MachineGroupName = "KCT" });
 
                 #endregion
 
@@ -181,7 +181,111 @@
                 Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 17, MachineName = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15 1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", LocationID = 13, LocationName = "AH2-Tổ HT-LBC" });
                 Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 25, MachineName = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", LocationID = 13, LocationName = "AH2-Tổ HT-LBC" });
                 Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 26, MachineName = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", LocationID = 13, LocationName = "AH2-Tổ HT-LBC" });
-
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 3, MachineName = "MÁY CẮT CNC LAZER YAWEI", LocationID = 16, LocationName = "AH1-Tổ Cắt -LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 28, MachineName = "MÁY KHOAN, CẮT CNC PLASMA - AKYAPAK", LocationID = 14, LocationName = "AH1-Tổ Cắt -LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 8, MachineName = "MÁY CẮT PLASMA XPR3000", LocationID = 16, LocationName = "AH1-Tổ Cắt -LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 5, MachineName = "Máy cắt CNC Plasma FSC 5000D x 18M", LocationID = 20, LocationName = "AH1" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 10, MachineName = "MÁY CHẤN YSD 12M", LocationID = 12, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 11, MachineName = "MÁY CƯA VÒNG KRUMAN 1000", LocationID = 7, LocationName = "AH2-T.CK-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 27, MachineName = "MÁY KHOAN ĐẦU DẦM CNC", LocationID = 20, LocationName = "AH2-LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 2, MachineName = "Khoan Bản Mã Tốc ĐỘ cao", LocationID = 19, LocationName = "AH1" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 32, MachineName = "MÁY PHAY ĐẦU DẦM", LocationID = 10, LocationName = "AH1-Tổ Tiện-LDE" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 32, MachineName = "MÁY PHAY ĐẦU DẦM", LocationID = 5, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 29, MachineName = "MÁY LỐC TÔN 4 TRỤC AKBEND", LocationID = 8, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 35, MachineName = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", LocationID = 14, LocationName = "AH1-Tổ Tiện-LDE" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 15, MachineName = "MÁY GÁ XOAY BÀN", LocationID = 19, LocationName = "AH2-L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 15, MachineName = "MÁY GÁ XOAY BÀN", LocationID = 6, LocationName = "AH2-Tổ HÀN Thô -LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 13, MachineName = "MÁY GÁ HỘP DẠNG CỔNG XXZ15", LocationID = 4, LocationName = "AH2-Tổ Hàn Thô -L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 12, MachineName = "MÁY ĐÍNH GÁ DẦM H TỰ ĐỘNG.", LocationID = 6, LocationName = "AH2-Tổ Ráp Thô 1-L AB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 14, MachineName = "MÁY GÁ TẤM XJZ 15", LocationID = 3, LocationName = "AH2-Tổ Hàn Thô -L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 37, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 01", LocationID = 19, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 40, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 04", LocationID = 3, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 34, MachineName = "MÁY RÁP DẦM ZHOUXIANG - NGANG", LocationID = 12, LocationName = "AH3-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 30, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", LocationID = 19, LocationName = "AH3-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 30, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", LocationID = 12, LocationName = "AH2-LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 36, MachineName = "Máy vát mép 2 ầu, Model XBJ-12", LocationID = 6, LocationName = "AH2" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 19, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", LocationID = 15, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 1, MachineName = "HỆ THỐNG HÀN ROBOT", LocationID = 6, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 22, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", LocationID = 17, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 22, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", LocationID = 16, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 18, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG", LocationID = 4, LocationName = "AH3-Tổ hàn thô-LB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 21, MachineName = "MÁY HÀN CỔNG THÔNG MINH", LocationID = 18, LocationName = "AH3-Tổ RT+HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 25, MachineName = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", LocationID = 19, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 26, MachineName = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", LocationID = 20, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 3, MachineName = "MÁY CẮT CNC LAZER YAWEI", LocationID = 3, LocationName = "AH1-Tổ Cắt -LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 28, MachineName = "MÁY KHOAN, CẮT CNC PLASMA - AKYAPAK", LocationID = 12, LocationName = "AH1-Tổ Cắt -LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 8, MachineName = "MÁY CẮT PLASMA XPR3000", LocationID = 16, LocationName = "AH1-Tổ Cắt -LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 4, MachineName = "MÁY CẮT CNC PLASMA AMG", LocationID = 20, LocationName = "AH1-Tổ Cắt -LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 10, MachineName = "MÁY CHẤN YSD 12M", LocationID = 4, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 11, MachineName = "MÁY CƯA VÒNG KRUMAN 1000", LocationID = 3, LocationName = "AH2-T.CK-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 27, MachineName = "MÁY KHOAN ĐẦU DẦM CNC", LocationID = 11, LocationName = "AH2-LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 2, MachineName = "Khoan Bản Mã Tốc ĐỘ cao", LocationID = 19, LocationName = "AH1" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 32, MachineName = "MÁY PHAY ĐẦU DẦM", LocationID = 9, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 29, MachineName = "MÁY LỐC TÔN 4 TRỤC AKBEND", LocationID = 20, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 35, MachineName = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", LocationID = 6, LocationName = "AH1-Tổ Tiện-LDE" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 15, MachineName = "MÁY GÁ XOAY BÀN", LocationID = 8, LocationName = "AH2-L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 12, MachineName = "MÁY ĐÍNH GÁ DẦM H TỰ ĐỘNG.", LocationID = 2, LocationName = "AH2-Tổ Ráp Thô 1-L AB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 14, MachineName = "MÁY GÁ TẤM XJZ 15", LocationID = 1, LocationName = "AH2-Tổ Hàn Thô -L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 37, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 01", LocationID = 15, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 30, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", LocationID = 13, LocationName = "AH2-LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 36, MachineName = "Máy vát mép 2 ầu, Model XBJ-12", LocationID = 10, LocationName = "AH2" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 19, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", LocationID = 12, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 19, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", LocationID = 14, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 1, MachineName = "HỆ THỐNG HÀN ROBOT", LocationID = 17, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 22, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", LocationID = 11, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 22, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", LocationID = 11, LocationName = "AH3-Tổ Hàn HT" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 4, MachineName = "MÁY CẮT CNC PLASMA AMG", LocationID = 17, LocationName = "AH1-Tổ Cắt -LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 9, MachineName = "MÁY CẮT THỦY LỰC 12M YSD", LocationID = 10, LocationName = "AH1-Tổ Cắt BM-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 6, MachineName = "MÁY CẮT ĐẦU RẦM ROBOTI", LocationID = 5, LocationName = "AH1-Tổ Cắt BM-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 5, MachineName = "Máy cắt CNC Plasma FSC 5000D x 18M", LocationID = 7, LocationName = "AH1" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 10, MachineName = "MÁY CHẤN YSD 12M", LocationID = 6, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 11, MachineName = "MÁY CƯA VÒNG KRUMAN 1000", LocationID = 19, LocationName = "AH2-T.CK-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 27, MachineName = "MÁY KHOAN ĐẦU DẦM CNC", LocationID = 6, LocationName = "AH2-LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 2, MachineName = "Khoan Bản Mã Tốc ĐỘ cao", LocationID = 18, LocationName = "AH1" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 32, MachineName = "MÁY PHAY ĐẦU DẦM", LocationID = 10, LocationName = "AH1-Tổ Tiện-LDE" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 32, MachineName = "MÁY PHAY ĐẦU DẦM", LocationID = 14, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 29, MachineName = "MÁY LỐC TÔN 4 TRỤC AKBEND", LocationID = 13, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 35, MachineName = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", LocationID = 6, LocationName = "AH1-Tổ Tiện-LDE" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 15, MachineName = "MÁY GÁ XOAY BÀN", LocationID = 1, LocationName = "AH2-L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 15, MachineName = "MÁY GÁ XOAY BÀN", LocationID = 16, LocationName = "AH2-Tổ HÀN Thô -LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 13, MachineName = "MÁY GÁ HỘP DẠNG CỔNG XXZ15", LocationID = 17, LocationName = "AH2-Tổ Hàn Thô -L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 12, MachineName = "MÁY ĐÍNH GÁ DẦM H TỰ ĐỘNG.", LocationID = 1, LocationName = "AH2-Tổ Ráp Thô 1-L AB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 14, MachineName = "MÁY GÁ TẤM XJZ 15", LocationID = 9, LocationName = "AH2-Tổ Hàn Thô -L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 39, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 03", LocationID = 3, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 30, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", LocationID = 20, LocationName = "AH2-LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 36, MachineName = "Máy vát mép 2 ầu, Model XBJ-12", LocationID = 8, LocationName = "AH2" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 19, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", LocationID = 5, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 22, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", LocationID = 10, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 18, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG", LocationID = 6, LocationName = "AH3-Tổ hàn thô-LB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 17, MachineName = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15 1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", LocationID = 7, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 4, MachineName = "MÁY CẮT CNC PLASMA AMG", LocationID = 2, LocationName = "AH1-Tổ Cắt -LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 9, MachineName = "MÁY CẮT THỦY LỰC 12M YSD", LocationID = 6, LocationName = "AH1-Tổ Cắt BM-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 6, MachineName = "MÁY CẮT ĐẦU RẦM ROBOTI", LocationID = 11, LocationName = "AH1-Tổ Cắt BM-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 5, MachineName = "Máy cắt CNC Plasma FSC 5000D x 18M", LocationID = 16, LocationName = "AH1" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 10, MachineName = "MÁY CHẤN YSD 12M", LocationID = 20, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 11, MachineName = "MÁY CƯA VÒNG KRUMAN 1000", LocationID = 16, LocationName = "AH2-T.CK-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 32, MachineName = "MÁY PHAY ĐẦU DẦM", LocationID = 7, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 29, MachineName = "MÁY LỐC TÔN 4 TRỤC AKBEND", LocationID = 10, LocationName = "AH2-LCD" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 35, MachineName = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", LocationID = 10, LocationName = "AH1-Tổ Tiện-LDE" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 15, MachineName = "MÁY GÁ XOAY BÀN", LocationID = 4, LocationName = "AH2-L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 15, MachineName = "MÁY GÁ XOAY BÀN", LocationID = 10, LocationName = "AH2-Tổ HÀN Thô -LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 13, MachineName = "MÁY GÁ HỘP DẠNG CỔNG XXZ15", LocationID = 17, LocationName = "AH2-Tổ Hàn Thô -L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 12, MachineName = "MÁY ĐÍNH GÁ DẦM H TỰ ĐỘNG.", LocationID = 13, LocationName = "AH2-Tổ Ráp Thô 1-L AB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 14, MachineName = "MÁY GÁ TẤM XJZ 15", LocationID = 1, LocationName = "AH2-Tổ Hàn Thô -L BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 37, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 01", LocationID = 16, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 38, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 02", LocationID = 7, LocationName = "AH2-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 30, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", LocationID = 7, LocationName = "AH2-LAB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 36, MachineName = "Máy vát mép 2 ầu, Model XBJ-12", LocationID = 5, LocationName = "AH2" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 19, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", LocationID = 15, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 19, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", LocationID = 5, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 1, MachineName = "HỆ THỐNG HÀN ROBOT", LocationID = 20, LocationName = "AH2-Tổ HT-BC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 22, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", LocationID = 5, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 18, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG", LocationID = 3, LocationName = "AH3-Tổ hàn thô-LB" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 21, MachineName = "MÁY HÀN CỔNG THÔNG MINH", LocationID = 12, LocationName = "AH3-Tổ RT+HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 22, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", LocationID = 7, LocationName = "AH3-Tổ Hàn HT" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 17, MachineName = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15 1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", LocationID = 2, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 25, MachineName = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", LocationID = 7, LocationName = "AH2-Tổ HT-LBC" });
+                Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 26, MachineName = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", LocationID = 1, LocationName = "AH2-Tổ HT-LBC" });
                 #endregion
 
 
@@ -1192,6 +1296,8 @@
                 #endregion
 
 
+                // Init trong file StaticDataV2
+                StaticDataV2();
             }
             catch (Exception ex)
             {
@@ -1235,6 +1341,9 @@
         public string MachineNameOrigin { get; set; }
         public int MachineGroupID { get; set; }
         public string MachineGroupName { get; set; }
+
+        public string MachineModel { get; set; }
+        public string MachineAvatar { get; set; }
     }
     /// <summary>
     /// Bảng vị trí cài đặt máy

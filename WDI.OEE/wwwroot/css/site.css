@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -19,6 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  font-size:13px!important;
 }
 
 
@@ -39,18 +40,53 @@ body {
 .card-machineinfo{
     height:200px;
 }
-.machineinfor-title {
+.wcom-table-title {
     font-size: 16px;
     text-align: center;
     font-weight: bold;
 }
 .card-machineinfo .machineinfor-data {
 }
-/*#report-error-machine .floating-label{
-    top:-20px!important;
-}*/
+
 .form-group .control-caption {
     top: -20px;
     font-size: 0.75rem;
     color: #4680ff;
 }
+
+.block-status {
+    width: 45px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #e2e5e8;
+    border-radius: 3px;
+}
+.machine-avatar-container {
+    width: 600px;
+    max-height: 180px;
+    max-width: 600px;
+    display: flex;
+}
+/***** Customize theme *************************************/
+/**** thay đổi độ rộng thanh menu trái từ 230 sang 300 */
+.pcoded-navbar.menu-light {
+    width: 300px !important; /* độ rộng menu trái = 300px (cũ là 230)*/
+}
+.pcoded-navbar.navbar-collapsed {
+    width: 70px !important; /*Fix độ rộng cố định menu khi thu vào*/
+}
+.pcoded-header .m-header {
+    width: 300px !important;/* thanh icon searh trên đầu menu*/
+}
+.pcoded-header .m-header {
+    width: 300px !important;
+}
+.pcoded-navbar {
+    width: 300px !important;
+}
+    .pcoded-navbar .header-logo {
+        width: 300px !important;
+    }
+ 

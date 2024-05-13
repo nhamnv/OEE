@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1Ol0y5eBpIoK9qA/ES6wAq/j8siDBtbEsE4h+Xv6ptcrKjzIn8zqnmD9Dk8GTK1UwST4JMpXqRaejOs4ss7cUQ==",
+  "dgSpecHash": "/djAU/CX0u5nBgbweOpnwt3+g9xCMsoOyOS7u8nHfKcQkzoGu707t7q6TioZO6SLHU/eABNnIWWJILsqz1+8TA==",
   "success": true,
   "projectFilePath": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

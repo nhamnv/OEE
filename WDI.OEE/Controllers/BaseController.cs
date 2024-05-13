@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Service.IService;
-using System.Globalization;
 
 namespace WDI.OEE.Controllers
 {
@@ -20,7 +18,7 @@ namespace WDI.OEE.Controllers
 
         public BaseController()
         {
-            
+
         }
 
     }

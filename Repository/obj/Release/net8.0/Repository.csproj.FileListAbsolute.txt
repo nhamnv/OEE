@@ -10,3 +10,4 @@ E:\nhamnv\SourceCode\WELDCOMOEE\OEE\Repository\obj\Release\net8.0\Repository.dll
 E:\nhamnv\SourceCode\WELDCOMOEE\OEE\Repository\obj\Release\net8.0\refint\Repository.dll
 E:\nhamnv\SourceCode\WELDCOMOEE\OEE\Repository\obj\Release\net8.0\Repository.pdb
 E:\nhamnv\SourceCode\WELDCOMOEE\OEE\Repository\obj\Release\net8.0\ref\Repository.dll
+E:\nhamnv\SourceCode\WELDCOMOEE\OEE\Repository\obj\Release\net8.0\Repository.sourcelink.json

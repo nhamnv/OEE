@@ -19,17 +19,14 @@
         /// <summary>
         /// Danh sách thời gian hoạt động của máy - biểu đồ ngang
         /// </summary>
-        public List<LiveStatus> ListLiveStatus { get; set; }
+        public List<Common.Data_MachineStatusHistory> ListStatusHistory { get; set; }
     }
 
     public class RuningStatus
     {
-        public string Name { get; set; }
+        public int StatusID { get; set; }
+        public string StatusName { get; set; }
+        public string ColorCode { get; set; }
         public bool IsActived { get; set; } = false;
-    }
-
-    public class LiveStatus
-    {
-
     }
 }

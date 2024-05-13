@@ -1,7 +1,79 @@
-﻿@*
+﻿@model Common.ViewModels.DashboardViewModel
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
 
-<label>Dashboadd OEE</label>
+<div class="row">
+    @foreach (var machineStatus in Model.LitStatusSummary)
+    {
+        @Html.Partial("_CardMachineStatus.cshtml", machineStatus)
+    }
+</div>
+
+
+<div class="row">
+    <div class="card">
+        <div class="card-header wcom-table-title">Danh sách tình trạng hoạt động</div>
+        <div class="card-body">
+            <div class="table-hover">
+                <table id="gridListMachineStatus" class="table"
+                       data-pagination="true"
+                       data-page-list="[5, 10, 20, 50, 100, 200]"
+                       data-show-footer="false">
+                    <thead>
+                        <tr>
+                            <th data-field="machineGroupName" data-align="left" data-sortable="true">Nhóm máy</th>
+                            <th data-field="machineLocationName" data-align="left" data-sortable="true">Vị trí</th>
+                            <th data-field="machineName" data-align="left" data-sortable="true">Tên máy</th>
+                            <th data-field="machineStatusName" data-align="center" data-sortable="true">Trạng thái</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // 1111
+        var data = JSON.parse('@Html.Raw(Json.Serialize(Model.ListMachineStatus))');
+        console.log(data);
+
+        console.log(data);
+        debugger;
+
+        if (data !== undefined) {
+            $("#gridListMachineStatus").bootstrapTable({
+                data: data,
+                formatLoadingMessage: function () {
+                    return '<b>This is a custom loading message...</b>';
+                }
+            });
+
+            $('#gridListMachineStatus').bootstrapTable('load', data);
+        }
+    });
+
+    function innitData() {
+        //var data = @Model.ListMachineStatus.ToArray() ; //     var data = System.Collections.Generic.List`1[Common.ViewModels.MachineStatus] ;
+        var data = JSON.parse('@Html.Raw(Json.Serialize(Model.ListMachineStatus))');
+        console.log(data);
+
+        console.log(data);
+        debugger;
+
+        if (data !== undefined) {
+            $("#gridListMachineStatus").bootstrapTable({
+                data: data,
+                formatLoadingMessage: function () {
+                    return '<b>This is a custom loading message...</b>';
+                }
+            });
+
+            $('#gridListMachineStatus').bootstrapTable('load', data);
+        }
+    }
+</script>

@@ -42,7 +42,7 @@
                 <!-- [card1] start-->
                 <div class="card card-machineinfo" name="errormachine-info">
                     <div class="card-body" style="position: relative;text-align:center">
-                        <p class="machineinfor-title">Tổng số lỗi</p>
+                        <p class="wcom-table-title">Tổng số lỗi</p>
                         <p class="machineinfor-data" style="font-size:90px; color:#1d62c2;" id="cardErrorTotal">123</p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <!-- [card2] start-->
                 <div class="card card-machineinfo" name="errormachine-error">
                     <div class="card-body" style="position: relative;text-align:center">
-                        <p class="machineinfor-title">Lỗi gặp nhiều nhất</p>
+                        <p class="wcom-table-title">Lỗi gặp nhiều nhất</p>
                         <p class="machineinfor-data" style="color:#c07f8a;" id="cardErrorMostOccus">Lỗi gặp nhiều nhấtLỗi gặp nhiều nhấtLỗi gặp nhiều nhất</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <!-- [card3] start-->
                 <div class="card card-machineinfo" name="errormachine-warning">
                     <div class="card-body" style="position: relative;text-align:center">
-                        <p class="machineinfor-title">Lỗi gặp ít nhất</p>
+                        <p class="wcom-table-title">Lỗi gặp ít nhất</p>
                         <p class="machineinfor-data" style="color:#dabe4d;" id="cardErrorLeastOccus">Lỗi gặp ít nhất Lỗi gặp ít nhất Lỗi gặp ít nhất</p>
                     </div>
                 </div>
@@ -75,7 +75,6 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        @* <canvas id="chartTop10ErrorOccured" style="width:100%; max-width:600px;"></canvas> *@
                         <div id="chartTop10ErrorOccured"></div>
                     </div>
                 </div>
@@ -86,7 +85,7 @@
     <div class="col-sm-6">
         <div class="row">
             <div class="card">
-                <div class="card-header machineinfor-title">Danh sách lỗi</div>
+                <div class="card-header wcom-table-title">Danh sách lỗi</div>
                 <div class="card-body">
                     <div class="table-hover">
                         <table id="gridListErrorMachine" class="table"
@@ -159,14 +158,6 @@
                         chart_categories.push(item.errorName);
                     });
 
-
-                    // render_barChartTop10ErrorOccured(chart_categories, chart_data);
-
-                    // chartTop10Error.updateSeries([{
-                    //     data: chart_data,
-                    // }]);
-
-                    // var chart = document.querySelector("#chartTop10ErrorOccured");
                     if (chartTop10Error === undefined) {
                         render_barChartTop10ErrorOccured(chart_categories, chart_data);
                     }
@@ -264,78 +255,7 @@
         chartTop10Error.render();
     }
 
-
-    // var barChartTop10ErrorOccured = {};
-    // function load_barChartTop10ErrorOccured()
-    // {
-    //     var categories = ["M4", "M6", "E10", "C1", "B3", "C14", "C6", "A1", "C15"];
-    //     var data = [53, 15, 8, 21, 30, 7, 2, 11, 9];
-    //     var colors = ["#7fb26d", "#e9b838", "#6fd0e1", "#ef843c", "#e14d41", "#2078c2", "#ba43a9", "#705d9f", "#cda301"];
-
-
-    //     var options = {
-    //         series: [{
-    //             name: "Tổng số lỗi",
-    //             data: data
-    //         }],
-    //         chart: {
-    //             height: 350,
-    //             type: 'bar',
-    //             events: {
-    //                 click: function (chart, w, e) {
-    //                     // console.log(chart, w, e)
-    //                 }
-    //             }
-    //         },
-    //         colors: colors,
-    //         plotOptions: {
-    //             bar: {
-    //                 columnWidth: '45%',
-    //                 distributed: true,
-    //             }
-    //         },
-    //         dataLabels: {
-    //             enabled: false
-    //         },
-    //         legend: {
-    //             // https://apexcharts.com/docs/options/legend/
-    //             show: true,
-    //             position: 'right'
-    //         },
-    //         xaxis: {
-    //             categories: categories,
-    //             labels: {
-    //                 style: {
-    //                     colors: colors,
-    //                     fontSize: '12px'
-    //                 }
-    //             }
-    //         },
-    //         title: {
-    //             text: "Top 10 lỗi nhiều nhất",
-    //             align: 'center',
-    //             margin: 10,
-    //             offsetX: 0,
-    //             offsetY: 0,
-    //             floating: false,
-    //             style: {
-    //                 fontSize: '16px',
-    //                 fontWeight: 'normal',
-    //                 fontFamily: undefined,
-    //                 color: '#263238'
-    //             },
-    //         }
-    //     };
-
-    //     barChartTop10ErrorOccured = new ApexCharts(document.querySelector("#chartTop10ErrorOccured"), options);
-    //     barChartTop10ErrorOccured.render();
-
-    //     // barChartTop10ErrorOccured.updateSeries([{
-    //     //     name: 'Sales',
-    //     //     data: response
-    //     // }])
-    // }
-
+     
     function load_gridErrorList() {
         var _TimeRange = $("#TimeRangeID").val();
         var _MachineGroup = $("#MachineGroupID").val();
