@@ -46,6 +46,7 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 });
 
 #endregion
+
 #region Define: Service Injection
 //builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultUI().AddDefaultTokenProviders();
 //var automapper = new MapperConfiguration(item => item.AddProfile(new AutoMapperHandler()));
@@ -57,8 +58,11 @@ builder.Services.AddSignalR();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IData_MenuService, Data_MenuService>();
 builder.Services.AddScoped<IData_MenuRepository, Data_MenuRepository>();
-builder.Services.AddScoped<IErrorMachineService, ErrorMachineService>();
+builder.Services.AddScoped<IErrorMachineService, ReportErrorMachineService>();
 
+builder.Services.AddScoped<IReportMachineRuningStatusService, ReportMachineRuningStatusService>();
+builder.Services.AddScoped<IRazorPartialToStringRenderer, RazorPartialToStringRenderer>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
 
 
 #endregion
@@ -83,10 +87,13 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    //pattern: "{controller=Home}/{action=Index}/{id?}");
+    // pattern: "{controller=Home}/{action=Index}/{id?}");
     // pattern: "{controller=Authentication}/{action=LoginForm}/{id?}");
-    pattern: "{controller=ReportErrorMachine}/{action=Index}/{id?}");
+    // pattern: "{controller=ReportErrorMachine}/{action=Index}/{id?}");
 
+    // pattern: "{controller=ReportMachineRuningStatus}/{action=Index}/{id?}");
+    // pattern: "{controller=ReportMachineRuningStatus}/{action=Detail}/{id?}");
+    pattern: "{controller=Dashboard}/{action=Index}/{id?}");
 
 
 app.UseRequestLocalization();

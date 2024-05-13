@@ -3,9 +3,9 @@ using Service.IService;
 
 namespace Service.Service
 {
-    public class ErrorMachineService : IErrorMachineService
+    public class ReportErrorMachineService : IErrorMachineService
     {
-        public ErrorMachineService()
+        public ReportErrorMachineService()
         {
 
         }

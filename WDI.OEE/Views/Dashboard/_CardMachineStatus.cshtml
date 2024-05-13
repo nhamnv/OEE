@@ -1,0 +1,24 @@
+﻿@model Common.ViewModels.DashboardStatusSummary
+
+<!-- [] start -->
+<div class="col-sm-4" name="box1">
+    <div class="card support-bar overflow-hidden">
+        <div class="card-body pb-0 text-center">
+            <h5>Tổng số máy đang @Model.StatusName </h5>
+            <span class="text-c-blue" style="font-size:60px;">@Model.MachineCount</span>
+        </div>
+        <div class="card-footer text-white" style="background-color:@Model.ColorCode">
+            <div class="row text-center">
+            @foreach (var gr in Model.MachineGroups)
+            {
+                <div class="col">
+                    <h4 class="m-0 text-white">@gr.MachineCount</h4>
+                    <span>@gr.GroupName</span>
+                </div>
+            }
+            </div>
+        </div>
+        <div class="resize-triggers"><div class="expand-trigger"><div style="width: 321px; height: 306px;"></div></div><div class="contract-trigger"></div></div>
+    </div>
+</div>
+<!-- [] end -->

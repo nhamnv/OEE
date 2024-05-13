@@ -5,14 +5,20 @@ namespace WDI.OEE.Controllers
 {
     public class DashboardController : BaseController
     {
-        public DashboardController()
+        private readonly IDashboardService _dashboardService;
+        public DashboardController(IDashboardService dashboardService)
         {
-            
+            _dashboardService = dashboardService;
         }
         public IActionResult Index()
         {
             @ViewData["Title"] = "Màn hình dashboard";
-            return View();
+
+            DateTime date = DateTime.Now.AddDays(5);
+
+            var model = _dashboardService.GetData(date);
+
+            return View(model);
         }
     }
 }

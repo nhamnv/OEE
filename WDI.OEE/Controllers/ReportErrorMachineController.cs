@@ -113,9 +113,6 @@ namespace WDI.OEE.Controllers
                 Data = data,
                 Message = message
             });
-
-            //Random rand = new Random();
-            //return new JsonResult(new { success = true, ErrorTotal = rand.Next(1, 1000).ToString(), ErrorMostOccus = rand.Next(1, 1000).ToString(), ErrorLeastOccus = rand.Next(1, 1000).ToString() });
         }
     }
 }

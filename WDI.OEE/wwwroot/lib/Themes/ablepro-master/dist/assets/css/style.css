@@ -1,4 +1,4 @@
-/**======================================================================
+﻿/**======================================================================
 =========================================================================
 Template Name: Able pro Bootstrap Admin Template
 Author: Phoenixcoded
@@ -21053,12 +21053,12 @@ pre[class*=language-]:before {
     transition: all 0.15s ease-in-out;
 }
 
-.pcoded-navbar.navbar-collapsed:hover {
-    width: 230px !important;
-}
+    .pcoded-navbar.navbar-collapsed:hover {
+        width: 300px !important; /*nhamnv change 230 -> 300*/
+    }
 
 .pcoded-navbar.navbar-collapsed:hover .header-logo {
-    width: 230px;
+    width: 300px;/*nhamnv change 230 -> 300*/
 }
 
 .pcoded-navbar.navbar-collapsed:hover .header-logo img {
@@ -21595,7 +21595,7 @@ pre[class*=language-]:before {
     float: unset;
     right: 0;
     top: 0;
-    margin-left: 230px;
+    margin-left: 300px;/*cũ là 230*/
     min-height: 100vh;
     transition: all 0.3s ease-in-out;
 }

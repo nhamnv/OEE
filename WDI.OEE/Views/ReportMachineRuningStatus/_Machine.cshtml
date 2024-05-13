@@ -1,17 +1,237 @@
 ﻿@using WDI.OEE.Models;
-@model WDI.OEE.Models.MachineRuningStatusViewModel
+@model Common.ViewModels.MachineRuningStatusViewModel
 @{
-
+    string guid = Guid.NewGuid().ToString().ToLower();
+    string chartHtmlID = "chartPercent_MID_" + Model.MachineID + "_" + guid;
 }
 <div class="col-sm-6">
     <!-- [card1] start-->
     <div class="card">
-        <div class="card-boby">
-            <div class="card card-machineinfo" name="errormachine-info">
-                <label>Trong thẻ</label>
-                @Model.MachineName
+        <!-- [card-header] start -->
+        <div class="card-header">
+            <input type="hidden" name="hidden_MachineID" value="@Model.MachineID" />
+            <input type="hidden" name="hidden_MachineLocationID" value="@Model.MachineLocationID" />
+            <div class="row">
+                <div class="col-sm-6" data-original-title="Tên máy" style="font-weight:bold;">
+                    @Model.MachineName
+                </div>
+
+                <div class="col-sm-6 text-right">
+                    @foreach (var status in Model.ListStatus)
+                    {
+                        string strBgColor = "";
+                        if (status.StatusID == Model._LastStatus.StatusID)
+                        {
+                            strBgColor = "background-color:" + status.ColorCode + "!important;";
+                        }
+                        <span class="block-status" style="@strBgColor">
+                            @status.StatusName
+                        </span>
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-muted m-b-0" data-original-title="Model máy">
+                        @* MachineModel *@
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div data-original-title="Vị trí">
+                        @Model.MachineLocationName
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- [card-header] end -->
+
+
+        <!-- [card-body] start -->
+        <div class="card-boby" style="text-align: -webkit-center;">
+            <div>
+                <div class="machine-avatar-container">
+                    <img style="width:100%;object-fit: contain;" src="~/images/machines/@Model.MachineAvatar" />
+                </div>
+            </div>
+
+            <!-- [Thanh time-line] start -->
+            <div class="col-sm-12">
+                <div id="@chartHtmlID"></div>
+            </div>
+            <!-- [Thanh time-line] end -->
+
+            <div class="cold-sm-12">
+@*                 @foreach (var status in Model.ListStatus)
+                {
+                    Random rand = new Random();
+                    int randomNumber = rand.Next(10, 60); // Generate a random two-digit number
+                    <span class="block-status" style="background-color:@status.ColorCode;width:20px!important;height:20px!important;display: inline-block;margin-bottom: -5px;"></span>
+                    <span style="width:65px!important;">
+                        @status.StatusName<span> @randomNumber % &nbsp;</span>
+                    </span>                    
+                } *@
+
+                @foreach (var status in Model.ListStatusPercent)
+                {
+                    <span class="block-status" style="background-color:@status.ColorCode;width:20px!important;height:20px!important;display: inline-block;margin-bottom: -5px;"></span>
+                    <span style="width:65px!important;">
+                        @status.StatusName<span> @status.DataPercent % &nbsp;</span>
+                    </span>
+                }
+            </div>
+
+            <br/>
+        </div>
+        <!-- [card-body] end -->
+
+
+        <!-- [card-footer] start -->
+        <div class="card-footer">
+            <div class="row text-left">
+                <span style="color:@Model._CurrentOnOffStatus.ColorCode">
+                    <i class="bi bi-square-fill" style="background-color:@Model._CurrentOnOffStatus.ColorCode
+                            ;width:20px
+                            ;height:20px
+                            ;display:block
+                            ;float: left
+                            ;margin-right: 10px;"></i>
+                    @Model._CurrentOnOffStatus.StatusName
+                </span>
+            </div>
+        </div>
+        <!-- [card-footer] end -->
+
     </div>
     <!-- [card1] end-->
 </div>
+
+
+<script>
+    $(document).ready(function () {
+
+        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "On", ColorCode = "#5f9d32" });
+        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#9ccc65" });
+        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Stop", ColorCode = "#fff100" });
+        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffba57" });
+        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#afabab" });
+        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 6, StatusName = "Emg", ColorCode = "#ff5252" });
+
+        var data = JSON.parse('@Html.Raw(Json.Serialize(Model.SeriesTimeLine))');
+        // console.log('1111');
+        // console.log(data);
+        // console.log('2222');
+
+        var series = [{ data: data }];
+
+        var options = {
+            series: series,
+            // series: [
+            //     {
+            //         data: [
+            //             {
+            //                 x: 'On',
+            //                 y: [
+            //                     new Date('2024-05-10 01:03:21').getTime(),
+            //                     new Date('2024-05-10 03:21:21').getTime(),
+            //                 ],
+            //                 fillColor: '#5f9d32'
+            //             },
+            //             {
+            //                 x: 'Run',
+            //                 y: [
+            //                     new Date('2024-05-10 23:16:21').getTime(),
+            //                     new Date('2024-05-10 23:55:21').getTime(),
+            //                 ],
+            //                 fillColor: '#9ccc65'
+            //             },
+            //             {
+            //                 x: 'Stop',
+            //                 y: [
+            //                     new Date('2024-05-10 05:09:21').getTime(),
+            //                     new Date('2024-05-10 08:31:21').getTime(),
+            //                 ],
+            //                 fillColor: '#fff100'
+            //             },
+            //             {
+            //                 x: 'Alarm',
+            //                 y: [
+            //                     new Date('2024-05-10 11:08:21').getTime(),
+            //                     new Date('2024-05-10 13:27:21').getTime(),
+            //                 ],
+            //                 fillColor: '#ffba57'
+            //             },
+            //             {
+            //                 x: 'Off',
+            //                 y: [
+            //                     new Date('2024-05-10 14:56:21').getTime(),
+            //                     new Date('2024-05-10 18:19:21').getTime(),
+            //                 ],
+            //                 fillColor: '#afabab'
+            //             },
+            //             {
+            //                 x: 'Emg',
+            //                 y: [
+            //                     new Date('2024-05-10 12:08:21').getTime(),
+            //                     new Date('2024-05-10 15:27:21').getTime(),
+            //                 ],
+            //                 fillColor: '#ff5252'
+            //             }
+            //         ]
+            //     }
+            // ],
+            chart: {
+                height: 150,
+                type: 'rangeBar'
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: true
+                }
+            },
+            xaxis: {
+                type: 'datetime'
+            },
+            tooltip: {
+                custom: function (opts) {
+                    // const fromYear = new Date(opts.y1).getFullYear()
+                    // const toYear = new Date(opts.y2).getFullYear()
+
+                    const fromYear = getDateTime_LocalDateTimeString(new Date(opts.y1));
+                    const toYear = getDateTime_LocalDateTimeString(new Date(opts.y2));
+
+
+                    const w = opts.ctx.w
+                    let ylabel = w.globals.labels[opts.dataPointIndex]
+                    let seriesName = w.config.series[opts.seriesIndex].name
+                        ? w.config.series[opts.seriesIndex].name
+                        : ''
+                    const color = w.globals.colors[opts.seriesIndex]
+
+                    return (
+                        '<div class="apexcharts-tooltip-rangebar">' +
+                        '<div> <span class="series-name" style="color: ' +
+                        color +
+                        '"> Thời gian ' +
+                        (seriesName ? seriesName : '') +
+                        '</span></div>' +
+                        '<div> <span class="category">' +
+                        // ylabel +
+                        ' </span> <span class="value start-value">' +
+                        fromYear +
+                        '</span> <span class="separator">-</span> <span class="value end-value">' +
+                        toYear +
+                        '</span></div>' +
+                        '</div>'
+                    )
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#@chartHtmlID"), options);
+        chart.render();
+
+    });
+</script>
