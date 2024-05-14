@@ -10025,6 +10025,9 @@
                 Data_MachineStatusHistory.Add(new Common.Data_MachineStatusHistory() { MachineStatusHistoryID = 5001, MachineID = 2, StatusID = 5, MachineLocationID = 10, StatusTime = new DateTime(2024, 5, 15, 1, 24, 1) });
                 Data_MachineStatusHistory.Add(new Common.Data_MachineStatusHistory() { MachineStatusHistoryID = 5001, MachineID = 20, StatusID = 4, MachineLocationID = 18, StatusTime = new DateTime(2024, 5, 13, 13, 0, 12) });
 
+
+                // Từ dữ liệu fake 3 ngày cố định, biến thành 3 ngày hiện tại
+
                 #endregion
             }
             catch (Exception ex)

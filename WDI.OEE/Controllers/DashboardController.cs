@@ -14,11 +14,25 @@ namespace WDI.OEE.Controllers
         {
             @ViewData["Title"] = "Màn hình dashboard";
 
-            DateTime date = DateTime.Now.AddDays(5);
-
+            DateTime date = DateTime.Now;
             var model = _dashboardService.GetData(date);
 
             return View(model);
         }
+
+        public ActionResult MachineGroupDetail(string MachineStatusID, string MachineGroupID)
+        {
+            @ViewData["Title"] = "Danh sách máy theo nhóm và trạng thái hoạt động";
+
+
+            ViewBag.MachineStatusID = MachineStatusID;
+            ViewBag.MachineGroupID = MachineGroupID;
+            DateTime repotDate = DateTime.Now;
+
+            var model = _dashboardService.GetMachineByStatusGroupDetail(MachineStatusID, MachineGroupID, repotDate);
+
+            return View(model);
+        }
+
     }
 }
