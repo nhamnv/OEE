@@ -42,8 +42,8 @@
                     {
                         <div class="col">
                             <input type="hidden" name="hidden_MachineGroupID" value="@gr.GroupID" />
-                            @* <a href="#" title="Chi tiết" style="color: inherit!important;" onclick="load_gridListMachineByGroupAndStatus(@Model.MachineStatusID, @gr.GroupID)"> *@
-                            <a href="@Url.Action("MachineGroupDetail","Dashboard", new {MachineStatusID=Model.MachineStatusID, MachineGroupID=@gr.GroupID})" title="Chi tiết" style="color: inherit!important;" onclick="load_gridListMachineByGroupAndStatus(@Model.MachineStatusID, @gr.GroupID)">
+                            <a href="#" title="Chi tiết" style="color: inherit!important;" onclick="load_gridListMachineByGroupAndStatus(@Model.MachineStatusID, @gr.GroupID)">
+                            @* <a href="@Url.Action("MachineGroupDetail","Dashboard", new {MachineStatusID=Model.MachineStatusID, MachineGroupID=@gr.GroupID})" title="Chi tiết" style="color: inherit!important;" onclick="load_gridListMachineByGroupAndStatus(@Model.MachineStatusID, @gr.GroupID)"> *@
                                 <h5 class="m-0 text-white">@gr.MachineCount</h5>
                                 <span>@gr.GroupName</span>
                             </a>
@@ -108,11 +108,12 @@
         $('#gridListMachineByGroupAndStatus').bootstrapTable('load', result);
     });
 
-    function load_gridListMachineByGroupAndStatus(MachineStatusID, MachineGroupID) {
-        
+    function load_gridListMachineByGroupAndStatus(MachineStatusID, MachineGroupID) {   
+        debugger;
         $.ajax({
-            url: "/Dashboard/MachineGroupDetail",
-            method: "GET",
+            // url: "/Dashboard/MachineGroupDetail?MachineStatusID="+MachineStatusID+"&MachineGroupID="+MachineGroupID,
+            url: "/Dashboard/ChangeMachineGroupDetail",
+            method: "POST",
             dataType: "json",
             data: { MachineStatusID: MachineStatusID, MachineGroupID: MachineGroupID },
             async: true,
@@ -120,13 +121,13 @@
             success: function (result) {
                 debugger;
                 $("#gridListMachineByGroupAndStatus").bootstrapTable({
-                    data: result.ListMachine,
+                    data: result.listMachine,
                     formatLoadingMessage: function () {
                         return '<b>Loading ...</b>';
                     }
                 });
 
-                $('#gridListMachineByGroupAndStatus').bootstrapTable('load', result.ListMachine);
+                $('#gridListMachineByGroupAndStatus').bootstrapTable('load', result.listMachine);
             },
             error: function (err) {
                 console.log(err);

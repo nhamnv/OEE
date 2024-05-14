@@ -34,7 +34,7 @@ namespace Service.Service
                          MachineLocationID = l.LocationID,
                          MachineLocationName = l.LocationName,
                          MachineModel = m.MachineModel,
-                         MachineAvatar = m.MachineAvatar,
+                         MachineAvatar = (!string.IsNullOrEmpty(m.MachineAvatar) ? m.MachineAvatar : "no_image.png"),
                          MachineStatusID = x.Where(t => t.StatusTime <= reportDate).OrderByDescending(o => o.StatusTime).FirstOrDefault()?.StatusID ?? 0
                          ,
                          MachineStatusName = (from st in StaticData.Data_MachineStatus
@@ -136,7 +136,7 @@ namespace Service.Service
                          MachineLocationID = l.LocationID,
                          MachineLocationName = l.LocationName,
                          MachineModel = m.MachineModel,
-                         MachineAvatar = m.MachineAvatar,
+                         MachineAvatar = (!string.IsNullOrEmpty(m.MachineAvatar) ? m.MachineAvatar : "no_image.png"),
 
                          MachineStatusID = x.Where(t => t.StatusTime <= reportDate).OrderByDescending(o => o.StatusTime).FirstOrDefault()?.StatusID ?? 0
                          ,
@@ -193,7 +193,7 @@ namespace Service.Service
                 reval.ListMachine = lstMachineLastStatus?.Where(t => t.MachineStatusID == _MachineStatusID && t.MachineGroupID == _MachineGroupID)
                     .Select(t => new DashboardMachineItem()
                     {
-                        MachineAvatar = t.MachineAvatar
+                        MachineAvatar = (!string.IsNullOrEmpty(t.MachineAvatar) ? t.MachineAvatar : "no_image.png")
                         ,
                         MachineName = t.MachineName
                         ,

@@ -197,7 +197,7 @@ namespace Service.Service
                         MachineID = item.MachineID,
                         MachineName = item.MachineName,
                         MachineModel = item.MachineModel,
-                        MachineAvatar = item.MachineAvatar ?? "no_image.png", // OEE\WDI.OEE\wwwroot\images\products\no_image.png
+                        MachineAvatar = (!string.IsNullOrEmpty(item.MachineAvatar) ? item.MachineAvatar : "no_image.png"), // OEE\WDI.OEE\wwwroot\images\products\no_image.png
                         MachineLocationName = item.LocationName,
                         MachineLocationID = item.MachineLocationID,
                         ListStatusPercent = listStatusPercent,
