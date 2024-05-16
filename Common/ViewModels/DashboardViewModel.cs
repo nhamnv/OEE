@@ -3,12 +3,14 @@
     public class DashboardViewModel
     {
         public List<MachineStatus> ListMachineStatus { get; set; } = new List<MachineStatus>();
+
         public List<DashboardStatusSummary> LitStatusSummary { get; set; } = new List<DashboardStatusSummary>();
     }
 
     public class DashboardStatusSummary
     {
         public string StatusName { get; set; } = string.Empty;
+        public int StatusID { get; set; } = 0;
         public string ColorCode { get; set; } = string.Empty;
 
         public int MachineCount { get; set; } = 0;
@@ -18,6 +20,7 @@
 
     public class MachineGroup
     {
+        public int GroupID { get; set; } = 0;
         public string GroupName { get; set; } = string.Empty;
         public int MachineCount { get; set; }
     }
@@ -32,6 +35,9 @@
 
         public int MachineID { get; set; }
         public string MachineName { get; set; } = string.Empty;
+        public string MachineModel { get; set; } = string.Empty;
+        public string MachineAvatar { get; set; } = string.Empty;
+
 
         public int MachineStatusID { get; set; }
         public string MachineStatusName { get; set; } = string.Empty;

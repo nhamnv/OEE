@@ -11,7 +11,7 @@ public class MachineRuningStatusViewModel
     public string MachineModel { get; set; } = string.Empty;
     public int MachineLocationID { get; set; }
     public string MachineLocationName { get; set; } = string.Empty;
-    public string MachineAvatar { get; set; } = string.Empty;
+    public string MachineAvatar { get; set; } = "no_image.png";
     public List<Common.Data_MachineStatus> ListStatus = StaticData.Data_MachineStatus;
     public List<Common.Data_MachineStatusHistory> StatusHistories { get; set; }
 

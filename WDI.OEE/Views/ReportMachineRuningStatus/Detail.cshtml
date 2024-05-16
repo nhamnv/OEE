@@ -13,19 +13,19 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label class="control-caption" for="ListTimeRange">Nhóm máy</label>
+                            <label class="control-caption" >Nhóm máy</label>
                             @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-select form-select-sm mt-3"})
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label class="control-caption" for="ListTimeRange">Vị trí</label>
+                            <label class="control-caption" >Vị trí</label>
                             @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-select form-select-sm mt-3"})
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label class="control-caption" for="ListTimeRange">Máy</label>
+                            <label class="control-caption" >Máy</label>
                             @Html.DropDownList("MachineID", (List<SelectListItem>)ViewData["ListMachine"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange = "filterDataDetail()" })
                         </div>
                     </div>
@@ -47,7 +47,6 @@
         var _MachineID = $("#MachineID").val();
         var _MachineGroup = $("#MachineGroupID").val();
         var _MachineLocation = $("#MachineLocationID").val();
-        debugger;
         $.ajax({
             url: "/ReportMachineRuningStatus/FilterDataDetail",
             method: "POST",

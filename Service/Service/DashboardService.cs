@@ -9,16 +9,14 @@ namespace Service.Service
         public DashboardViewModel GetData(DateTime reportDate)
         {
             // Nếu không chỉ định thời gian thì lấy thời điểm hiện tại
-            if (reportDate == null) { reportDate = DateTime.Now; }
-
+            if ((reportDate == DateTime.MinValue) || (reportDate == DateTime.MaxValue))
+            { reportDate = DateTime.Now; }
 
 
             DashboardViewModel reval = new DashboardViewModel();
 
             try
             {
-                // Random rand = new Random();
-
                 #region Danh sach may kem trang thai cuoi cung den thoi diem hien tai
 
                 var lstMachineLastStatus =
@@ -35,7 +33,8 @@ namespace Service.Service
                          MachineName = m.MachineName,
                          MachineLocationID = l.LocationID,
                          MachineLocationName = l.LocationName,
-
+                         MachineModel = m.MachineModel,
+                         MachineAvatar = (!string.IsNullOrEmpty(m.MachineAvatar) ? m.MachineAvatar : "no_image.png"),
                          MachineStatusID = x.Where(t => t.StatusTime <= reportDate).OrderByDescending(o => o.StatusTime).FirstOrDefault()?.StatusID ?? 0
                          ,
                          MachineStatusName = (from st in StaticData.Data_MachineStatus
@@ -44,10 +43,13 @@ namespace Service.Service
                                               ).ToList().FirstOrDefault()?.st.StatusName ?? ""
 
                      }
-                    ).ToList().Where(t => t.MachineStatusID > 0);
+                    ).ToList()
+                            .OrderBy(t => t.MachineName)
+                            .ThenBy(t => t.MachineGroupName)
+                            .ThenBy(t => t.MachineLocationName)
+                     .Where(t => t.MachineStatusID > 0);
 
                 #endregion
-
 
                 #region Lấy 6 trạng thái cùng với số liệu theo nhóm máy
 
@@ -57,6 +59,7 @@ namespace Service.Service
                     {
                         ColorCode = s.ColorCode,
                         StatusName = s.StatusName,
+                        StatusID = s.StatusID,
                     };
 
 
@@ -66,18 +69,14 @@ namespace Service.Service
                     // Count số máy có trạng thái này
                     sts.MachineCount = machinesByStatus?.Count() ?? 0;
 
-                    // Count số máy có trạng thái này theo group
-                    //var grp = machinesByStatus?
-                    //    .GroupBy(d => new { d.MachineGroupID, d.MachineGroupName })
-                    //    .Select(d => new { d.Key })
-                    //    .ToList();
-
 
                     foreach (var g in StaticData.Data_MachineGroup)
                     {
                         sts.MachineGroups.Add(new MachineGroup()
                         {
                             GroupName = g.MachineGroupName
+                            ,
+                            GroupID = g.MachineGroupID
                             ,
                             MachineCount = (machinesByStatus?
                                             .Where(t => t.MachineGroupID == g.MachineGroupID)
@@ -103,6 +102,117 @@ namespace Service.Service
 
             }
 
+            return reval;
+        }
+
+        public MachineByStatusGroupDetailViewModel GetMachineByStatusGroupDetail(string MachineStatusID, string MachineGroupID, DateTime reportDate)
+        {
+            MachineByStatusGroupDetailViewModel reval = new MachineByStatusGroupDetailViewModel();
+            try
+            {
+                int _MachineStatusID = Convert.ToInt32(MachineStatusID);
+                int _MachineGroupID = Convert.ToInt32(MachineGroupID);
+
+                reval.MachineStatusID = _MachineStatusID;
+                reval.MachineGroupID = _MachineGroupID;
+                reval.MachineStatusName = StaticData.Data_MachineStatus.FirstOrDefault(t => t.StatusID == _MachineStatusID)?.StatusName ?? "";
+                reval.MachineGroupName = StaticData.Data_MachineGroup.FirstOrDefault(t => t.MachineGroupID == _MachineGroupID)?.MachineGroupName ?? "";
+                reval.ColorCode = StaticData.Data_MachineStatus.FirstOrDefault(t => t.StatusID == _MachineStatusID)?.ColorCode ?? "";
+
+                #region Danh sach may kem trang thai cuoi cung den thoi diem hien tai
+
+                var lstMachineLastStatus =
+                    (from m in StaticData.Data_Machine
+                     join s in StaticData.Data_MachineLocationSetup on m.MachineID equals s.MachineID
+                     join l in StaticData.Data_MachineLocation on s.LocationID equals l.LocationID
+                     join h in StaticData.Data_MachineStatusHistory on m.MachineID equals h.MachineID into x
+
+                     select new MachineStatus
+                     {
+                         MachineGroupID = m.MachineGroupID,
+                         MachineGroupName = m.MachineGroupName,
+                         MachineID = m.MachineID,
+                         MachineName = m.MachineName,
+                         MachineLocationID = l.LocationID,
+                         MachineLocationName = l.LocationName,
+                         MachineModel = m.MachineModel,
+                         MachineAvatar = (!string.IsNullOrEmpty(m.MachineAvatar) ? m.MachineAvatar : "no_image.png"),
+
+                         MachineStatusID = x.Where(t => t.StatusTime <= reportDate).OrderByDescending(o => o.StatusTime).FirstOrDefault()?.StatusID ?? 0
+                         ,
+                         MachineStatusName = (from st in StaticData.Data_MachineStatus
+                                              where st.StatusID == (x.Where(t => t.StatusTime <= reportDate).OrderByDescending(o => o.StatusTime).FirstOrDefault()?.StatusID)
+                                              select new { st }
+                                              ).ToList().FirstOrDefault()?.st.StatusName ?? ""
+
+                     }
+                    ).ToList()
+                            .OrderBy(t => t.MachineName)
+                            .ThenBy(t => t.MachineGroupName)
+                            .ThenBy(t => t.MachineLocationName)
+                    .Where(t => t.MachineStatusID == _MachineStatusID);
+
+                #endregion
+
+                #region Lấy thông tin trạng thái truyền vào cùng với số liệu theo nhóm máy
+
+                var s1 = StaticData.Data_MachineStatus.Where(t => t.StatusID == _MachineStatusID).FirstOrDefault();
+                var sts = new DashboardStatusSummary()
+                {
+                    ColorCode = s1.ColorCode,
+                    StatusName = s1.StatusName,
+                    StatusID = s1.StatusID,
+                };
+
+                var machinesByStatus = lstMachineLastStatus.Where(t => t.MachineStatusID == s1.StatusID);
+                // Count số máy có trạng thái này
+                sts.MachineCount = machinesByStatus?.Count() ?? 0;
+
+                foreach (var g in StaticData.Data_MachineGroup)
+                {
+                    sts.MachineGroups.Add(new MachineGroup()
+                    {
+                        GroupName = g.MachineGroupName
+                        ,
+                        GroupID = g.MachineGroupID
+                        ,
+                        MachineCount = (machinesByStatus?
+                                        .Where(t => t.MachineGroupID == g.MachineGroupID)
+                                        .Distinct()
+                                        .ToList())?.Count ?? 0
+
+                    });
+                }
+
+                reval.MachineGroups = sts;
+
+                #endregion
+
+                #region Lấy danh sách máy
+
+                reval.ListMachine = lstMachineLastStatus?.Where(t => t.MachineStatusID == _MachineStatusID && t.MachineGroupID == _MachineGroupID)
+                    .Select(t => new DashboardMachineItem()
+                    {
+                        MachineAvatar = (!string.IsNullOrEmpty(t.MachineAvatar) ? t.MachineAvatar : "no_image.png")
+                        ,
+                        MachineName = t.MachineName
+                        ,
+                        MachineID = t.MachineID
+                        ,
+                        MachineLocationID = t.MachineLocationID
+                        ,
+                        MachineLocationName = t.MachineLocationName
+                        ,
+                        MachineModel = t.MachineModel
+                    })?.ToList() ?? new List<DashboardMachineItem>();
+
+
+                #endregion
+            }
+            catch (Exception ex)
+            {
+
+            }
             return reval;
         }
     }

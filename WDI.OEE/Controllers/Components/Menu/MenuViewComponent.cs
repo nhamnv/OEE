@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.IService;
 
-namespace WDI.OEE.ViewComponents.Menu
+namespace WDI.OEE.Controllers.Components.Menu
 {
     [ViewComponent]
     public class MenuViewComponent : ViewComponent
@@ -13,11 +13,18 @@ namespace WDI.OEE.ViewComponents.Menu
         }
 
 
+        //public async Task<IViewComponentResult> InvokeAsync()
+        //{
+        //    var model = _data_MenuService.GetList();
+
+        //    return await Task.FromResult(View(model));
+        //}
+
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var model = _data_MenuService.GetList();
 
-            return await Task.FromResult(View(model));
+            return View(model);
         }
     }
 }

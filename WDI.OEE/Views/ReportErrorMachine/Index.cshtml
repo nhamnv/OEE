@@ -12,19 +12,19 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label class="control-caption" for="ListTimeRange">Thời gian</label>
+                            <label class="control-caption" >Thời gian</label>
                             @Html.DropDownList("TimeRangeID", (List<SelectListItem>)ViewData["ListTimeRange"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange="filterData()" })
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label class="control-caption" for="ListTimeRange">Nhóm máy</label>
+                            <label class="control-caption" >Nhóm máy</label>
                             @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange = "filterData()" })
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label class="control-caption" for="ListTimeRange">Vị trí</label>
+                            <label class="control-caption" >Vị trí</label>
                             @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange = "filterData()" })
                         </div>
                     </div>
@@ -274,7 +274,7 @@
                 $("#gridListErrorMachine").bootstrapTable({
                     data: result,
                     formatLoadingMessage: function () {
-                        return '<b>This is a custom loading message...</b>';
+                        return '<b>Loading ...</b>';
                     }
                 });
 

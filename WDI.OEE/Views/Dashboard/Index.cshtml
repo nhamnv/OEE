@@ -38,18 +38,12 @@
 
 <script>
     $(document).ready(function () {
-        // 1111
         var data = JSON.parse('@Html.Raw(Json.Serialize(Model.ListMachineStatus))');
-        console.log(data);
-
-        console.log(data);
-        debugger;
-
         if (data !== undefined) {
             $("#gridListMachineStatus").bootstrapTable({
                 data: data,
                 formatLoadingMessage: function () {
-                    return '<b>This is a custom loading message...</b>';
+                    return '<b>Loading...</b>';
                 }
             });
 
@@ -58,18 +52,14 @@
     });
 
     function innitData() {
-        //var data = @Model.ListMachineStatus.ToArray() ; //     var data = System.Collections.Generic.List`1[Common.ViewModels.MachineStatus] ;
         var data = JSON.parse('@Html.Raw(Json.Serialize(Model.ListMachineStatus))');
-        console.log(data);
-
-        console.log(data);
         debugger;
 
         if (data !== undefined) {
             $("#gridListMachineStatus").bootstrapTable({
                 data: data,
                 formatLoadingMessage: function () {
-                    return '<b>This is a custom loading message...</b>';
+                    return '<b>Loading...</b>';
                 }
             });
 
