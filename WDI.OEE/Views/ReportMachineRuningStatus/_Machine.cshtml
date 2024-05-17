@@ -13,11 +13,11 @@
             <input type="hidden" name="hidden_MachineLocationID" value="@Model.MachineLocationID" />
             <input type="hidden" name="hidden_LastStatusID" value="@Model._LastStatus.StatusID" />
             <div class="row">
-                <div class="col-sm-6" data-original-title="Tên máy" style="font-weight:bold;">
+                <div class="col-lg-6 col-sm-12" data-original-title="Tên máy" style="font-weight:bold;">
                     @Model.MachineName
                 </div>
 
-                <div class="col-sm-6 text-right">
+                <div class="col-lg-6 col-sm-12 text-right">
                     @foreach (var status in Model.ListStatus)
                     {
                         string strBgColor = "";

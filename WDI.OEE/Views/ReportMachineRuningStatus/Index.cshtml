@@ -40,7 +40,7 @@
     function filterData() {
         var _MachineGroup = $("#MachineGroupID").val();
         var _MachineLocation = $("#MachineLocationID").val();
-        debugger;
+        //debugger;
         $.ajax({
             url: "/ReportMachineRuningStatus/FilterData",
             method: "POST",
@@ -49,7 +49,7 @@
             async: true,
             beforeSend: function () { },
             success: function (result) {
-                debugger;
+                //debugger;
                 if (result && result.success ===true) {
                     $("#divlistMachineRunningStatus").html(result.html);
                 }

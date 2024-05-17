@@ -58,7 +58,7 @@ body {
     width: 45px;
     height: 32px;
     line-height: 32px;
-    display: inline-block;
+    display: inline-block!important;
     text-align: center;
     border: 1px solid #e2e5e8;
     border-radius: 3px;
@@ -71,15 +71,15 @@ body {
 }
 /***** Customize theme *************************************/
 /**** thay đổi độ rộng thanh menu trái từ 230 sang 300 */
-.pcoded-navbar.menu-light {
-    width: 300px !important; /* độ rộng menu trái = 300px (cũ là 230)*/
-}
+/*.pcoded-navbar.menu-light {
+    width: 300px !important;*/ /* độ rộng menu trái = 300px (cũ là 230)*/
+/*}
 .pcoded-navbar.navbar-collapsed {
-    width: 70px !important; /*Fix độ rộng cố định menu khi thu vào*/
+    width: 70px !important; Fix độ rộng cố định menu khi thu vào
 }
 .pcoded-header .m-header {
-    width: 300px !important;/* thanh icon searh trên đầu menu*/
-}
+    width: 300px !important;*//* thanh icon searh trên đầu menu*/
+/*}
 .pcoded-header .m-header {
     width: 300px !important;
 }
@@ -88,5 +88,25 @@ body {
 }
     .pcoded-navbar .header-logo {
         width: 300px !important;
-    }
- 
+    }*/
+
+
+
+
+
+
+.tab6 .nav-item {
+    width: calc(100% / 6) !important;
+}
+
+.tab6 .slide {
+    width: calc(100% / 6) !important;
+}
+
+
+.tabname-icon {
+    padding-right: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}

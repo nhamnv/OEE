@@ -95,7 +95,7 @@
                             <thead>
                                 <tr>
                                     @* <th data-field="" data-checkbox="true"></th> *@
-                                    <th data-field="errorDate" data-align="center" data-sortable="true">Ngày</th>
+                                    <th data-field="errorDate" data-align="center" data-sortable="true" data-formatter="dateFormat">Ngày</th>
                                     <th data-field="machineLocation" data-align="left" data-sortable="true">Vị trí</th>
                                     <th data-field="machineName" data-align="left" data-sortable="true">Tên máy</th>
                                     <th data-field="machineGroupName" data-align="left" data-sortable="true">Nhóm máy</th>
@@ -141,7 +141,7 @@
             async: true,
             beforeSend: function () { },
             success: function (result) {
-                debugger;
+                //debugger;
                 if (result && result.success === true)
                     {
                     $("#cardErrorTotal").text(result.data.errorTotal);
@@ -286,4 +286,9 @@
         });
     }
 
+    function dateFormat(value, row, index) {
+        var _format = 'DD/MM/YYYY hh:mm:ss';
+        //let _format = "";
+        return moment(value).format(_format);
+    }
 </script>

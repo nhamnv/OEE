@@ -53,7 +53,7 @@
 
     function innitData() {
         var data = JSON.parse('@Html.Raw(Json.Serialize(Model.ListMachineStatus))');
-        debugger;
+        //debugger;
 
         if (data !== undefined) {
             $("#gridListMachineStatus").bootstrapTable({
