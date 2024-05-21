@@ -38,8 +38,17 @@
 
     <style>
         .login-logo{
-            width: 60px;
             height: 60px;
+            margin-left: 15px;
+            margin-right: 25px;
+        }
+
+        .form-group {
+            line-height: 35px;
+        }
+
+        .label-icon{
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -99,23 +108,18 @@
                                             <div class="col-lg-6 m-auto col-sm-12">
                                                 <!-- Login card start -->
                                                 <div class="card">
-                                                    <div class="card-block">
-                                                        <div class="j-wrapper j-wrapper-800" style="padding:0px!important;">
+                                                    <div class="card-block" style="padding-bottom: 0px;!important;">
+                                                        <div class="j-wrapper j-wrapper-1000" style="padding:0px!important;">
                                                             <div class="">
                                                                 <div class="j-content">
                                                                     <div class="j-unit">
                                                                         <div class="j-input">
                                                                             <div class="row ml-1">
                                                                                 <div>
-                                                                                    <img class="img-fluid login-logo" src="~/images/logoes/weldcom.png" alt="OEE-Logo">
+                                                                                    <img class="img-fluid login-logo" src="~/images/logoes/weldcom_02.png" alt="OEE-Logo">
                                                                                 </div>
                                                                                 <div class="ml-auto mr-1">
                                                                                     <img class="img-fluid login-logo" src="~/images/logoes/daidung.png" alt="OEE-Logo">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-lg-12 col-md-12 text-center">
-                                                                                    <h3>PHẦN MỀM DỊCH VỤ KỸ THUẬT</h3>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -123,54 +127,62 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="sub-title"></div>
-                                                        <div class="j-wrapper j-wrapper-400">
+                                                        <div class="j-wrapper j-wrapper-600" style="padding: 33px 15px!important;">
                                                             <form action="@Url.Action("Index","Dashboard")" method="post" class="j-pro" id="j-pro" novalidate="">
                                                                 <!-- end /.header -->
                                                                 <div class="j-content">
                                                                     <!-- start login -->
                                                                     <div class="j-unit">
-                                                                        <div class="j-input">
-                                                                            <label class="j-icon-right" for="login">
-                                                                                <i class="icofont icofont-ui-user"></i>
-                                                                            </label>
-                                                                            <input type="text" id="login" name="login" placeholder="Tài khoản..." value="demo">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-sm-3 col-form-label">Tên đăng nhập</label>
+                                                                            <div class="col-sm-8">
+                                                                                <label class="j-icon-right label-icon" for="login">
+                                                                                    <i class="icofont icofont-ui-user"></i>
+                                                                                </label>
+                                                                                <input type="text" id="login" name="login" placeholder="Tài khoản..." value="Administrator">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <!-- end login -->
                                                                     <!-- start password -->
                                                                     <div class="j-unit">
-                                                                        <div class="j-input">
-                                                                            <label class="j-icon-right" for="password">
-                                                                                <i class="icofont icofont-lock"></i>
-                                                                            </label>
-                                                                            <input type="password" id="password" name="password" autocomplete="off" placeholder="Mật khẩu..." value="123456">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-sm-3 col-form-label">Mật khẩu</label>
+                                                                            <div class="col-sm-8">
+                                                                                <label class="j-icon-right label-icon" for="password">
+                                                                                    <i class="icofont icofont-lock"></i>
+                                                                                </label>
+                                                                                <input type="password" id="password" name="password" autocomplete="off" placeholder="Mật khẩu..." value="12345678">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <!-- end password -->
                                                                     <!-- start factory -->
                                                                     <div class="j-unit">
-                                                                        <div class="j-input">
-                                                                            <label class="j-icon-right" for="factory">
-                                                                                <i class="icofont icofont-caret-down"></i>
-                                                                            </label>
-                                                                            <select id="factory" class="js-example-basic-single col-sm-12 select2-hidden-accessible" tabindex="-1" aria-hidden="true" placeholder="Nhà máy">
-                                                                                <option value="0">An Hạ</option>
-                                                                                <option value="1">Nhà máy 1</option>
-                                                                                <option value="2">Nhà máy 2</option>
-                                                                                <option value="3">Nhà máy 3</option>
-                                                                            </select>
+                                                                        <div class="form-group row">
+                                                                            <label class="col-sm-3 col-form-label">Nhà máy</label>
+                                                                            <div class="col-sm-8">
+                                                                                <label class="j-icon-right label-icon" for="factory">
+                                                                                    <i class="icofont icofont-caret-down"></i>
+                                                                                </label>
+                                                                                <select id="factory" class="js-example-basic-single col-sm-12 select2-hidden-accessible" tabindex="-1" aria-hidden="true" placeholder="Nhà máy">
+                                                                                    <option value="0">Tập đoàn Đại Dũng</option>
+                                                                                    <option value="1">An Hạ - Bình Chánh</option>
+                                                                                    <option value="2">Long An</option>
+                                                                                    <option value="3">Miền Trung</option>
+                                                                                </select>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <!-- end factory -->
-
+                                                                     
                                                                     <!-- start response from server -->
                                                                     <div class="j-response"></div>
                                                                     <!-- end response from server -->
                                                                 </div>
                                                                 <!-- end /.content -->
                                                                 <div class="j-footer">
-                                                                    <div class="row ml-1">
+                                                                    <div class="row ml-1" style="line-height:40px;">
                                                                         <div>
                                                                             <a href="#" class="j-link">Lấy lại mật khẩu?</a>
                                                                         </div>
@@ -184,13 +196,12 @@
                                                             </form>
                                                         </div>
                                                     </div>
-                                                    <div class="sub-title"></div>
-                                                    <div class="card-footer">
-                                                        <div class="col-lg-12 col-sm-12 text-center">
+                                                    <div class="card-footer" style="color:white;background-color:#D82F24;">
+                                                        <div class="col-lg-12 col-sm-12 text-center" style="margin-top: 10px;">
                                                             <label class="j-icon-left">
                                                                 <i class="icofont icofont-copyright"></i>
                                                             </label>
-                                                            <span>Công ty cổ phần công nghiệp Weldcom - v 24.05</span>
+                                                            <span>CÔNG TY CỔ PHẦN CÔNG NGHIỆP WELDCOM - v:24.05.088</span>
                                                         </div>
                                                     </div>
                                                 </div>

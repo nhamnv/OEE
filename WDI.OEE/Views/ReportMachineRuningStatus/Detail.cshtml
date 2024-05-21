@@ -1,33 +1,26 @@
 ﻿@model List<Common.ViewModels.MachineRuningStatusViewModel>
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
 
 
-<div style="padding-left: 0px;">
-    <div class="col-sm-12">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label class="control-caption" >Nhóm máy</label>
-                            @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-select form-select-sm mt-3"})
-                        </div>
+<div class="col-lg-12 col-sm-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label" >Nhóm máy</label>
+                        @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-control select2" })
                     </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label class="control-caption" >Vị trí</label>
-                            @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-select form-select-sm mt-3"})
-                        </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Vị trí</label>
+                        @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-control select2" })
                     </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label class="control-caption" >Máy</label>
-                            @Html.DropDownList("MachineID", (List<SelectListItem>)ViewData["ListMachine"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange = "filterDataDetail()" })
-                        </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Máy</label>
+                        @Html.DropDownList("MachineID", (List<SelectListItem>)ViewData["ListMachine"], htmlAttributes: new { @class = "form-control select2", @onchange = "filterDataDetail()" })
                     </div>
                 </div>
             </div>
@@ -35,11 +28,13 @@
     </div>
 </div>
 
-<div id="divlistMachineRunningStatusDetail" class="row">
-    @if (Model != null && Model.Count>0)
-    {
-        @Html.Partial("_MachineSingle.cshtml", Model?[0]);
-    }
+<div class="col-lg-12 col-sm-12">
+    <div id="divlistMachineRunningStatusDetail" class="row">
+        @if (Model != null && Model.Count>0)
+        {
+            @Html.Partial("_MachineSingle.cshtml", Model?[0]);
+        }
+    </div>
 </div>
 
 <script>
@@ -65,4 +60,16 @@
             }
         });
     }
+
+    $(document).ready(function () {
+        $('#MachineGroupID').select2({
+            placeholder: 'Nhóm máy'
+        });
+        $('#MachineLocationID').select2({
+            placeholder: 'Vị trí'
+        });
+        $('#MachineID').select2({
+            placeholder: 'Máy'
+        });
+    });
 </script>

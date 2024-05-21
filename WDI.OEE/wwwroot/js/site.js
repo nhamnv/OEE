@@ -51,3 +51,9 @@ function getDateTime_LocalDateTimeString(d) {
             d.getSeconds().padLeft()
         ].join(':');
 }
+
+function formatDateTime(value, row, index) {
+    var _format = 'DD/MM/YYYY hh:mm:ss';
+    //let _format = "";
+    return moment(value).format(_format);
+}

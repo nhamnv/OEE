@@ -18,22 +18,28 @@
     <meta name="author" content="Phoenixcoded" />
     <!-- [Theme adminty] start -->
     <!-- Favicon icon -->
-    <link rel="icon" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/lib/themes/adminty-dashboard-master/libraries/assets/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/bootstrap/css/bootstrap.min.css">
-    <!-- feather Awesome -->
-    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/feather/css/feather.css">
-    <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/css/jquery.mCustomScrollbar.css">   
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/themify-icons/themify-icons.css">
     <!-- ico font -->
-    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/icofont/css/icofont.css">
-    <!-- [Theme adminty] end -->
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/icofont/css/icofont.css">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/feather/css/feather.css">
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/select2/css/select2.min.css">
+    <!-- Multi Select css -->
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap-multiselect/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/multiselect/css/multi-select.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/css/jquery.mCustomScrollbar.css">
+
 
     <!--Bootstrap-->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css">
     <!--Site CSS-->
@@ -324,59 +330,7 @@
                 <div class="pcoded-wrapper">
                     <nav class="pcoded-navbar">
                         <div class="pcoded-inner-navbar main-menu">
-                            @* Menu mẫu
-							<div class="pcoded-navigatio-lavel">Menu group</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu active pcoded-trigger">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                        <span class="pcoded-mtext">Menu cấp 1</span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class="active">
-                                            <a href="index-1.htm">
-                                                <span class="pcoded-mtext">Menu cấp 2 - 1</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="dashboard-crm.htm">
-                                                <span class="pcoded-mtext">Menu cấp 2 - 2</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="dashboard-analytics.htm">
-                                                <span class="pcoded-mtext">Menu cấp 2 - 3</span>
-                                                <span class="pcoded-badge label label-info ">Tiêu đề bôi đậm cho menu cấp 2 </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-							*@
                             <!-- [nhamnv - menu] start-->
-                            <div class="pcoded-navigatio-lavel">Menu cấp 1</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu active">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                        <span class="pcoded-mtext">Menu cấp 2</span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class="active">
-                                            <a href="index-1.htm">
-                                                <span class="pcoded-mtext">Menu cấp 3 - 1</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="dashboard-crm.htm">
-                                                <span class="pcoded-mtext">Menu cấp 3 - 2</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <!-- [nhamnv - menu] end-->
-
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="pcoded-hasmenu pcoded-trigger">
                                     <a href="javascript:void(0)">
@@ -384,39 +338,47 @@
                                         <span class="pcoded-mtext">Các báo cáo</span>
                                     </a>
                                     <ul class="pcoded-submenu">
-                                        <li class="active">
+                                        <li class="active pcoded-trigger">
                                             <a href="@Url.Action("Index","Dashboard")">
-                                                <span class="pcoded-mtext">Dashboard</span>
+                                                <span class="pcoded-mtext">Báo cáo tổng hợp</span>
                                             </a>
                                         </li>
-                                        <li class="">
+                                        <li class="pcoded-trigger">
                                             <a href="@Url.Action("Index","ReportErrorMachine")">
                                                 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                                                 <span class="pcoded-mtext">Dừng lỗi máy</span>
                                             </a>
                                         </li>
-                                        <li class="">
+                                        <li class="pcoded-trigger">
                                             <a href="@Url.Action("Index","ReportMachineRuningStatus")">
                                                 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                                                 <span class="pcoded-mtext">Tình trạng hoạt động máy</span>
                                             </a>
                                         </li>
-                                        <li class="">
+                                        <li class="pcoded-trigger">
                                             <a href="@Url.Action("Detail","ReportMachineRuningStatus")">
                                                 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                                                 <span class="pcoded-mtext">Tình trạng hoạt động máy - chi tiết</span>
                                             </a>
-                                        </li>	
-                                        <li class="">
+                                        </li>
+                                        <li class="pcoded-trigger">
+                                            <a href="@Url.Action("List","MachineManagement")">
+                                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                                <span class="pcoded-mtext">Danh sách máy</span>
+                                            </a>
+                                        </li>
+                                        <li class="pcoded-trigger">
                                             <a href="@Url.Action("Index","MachineManagement")">
                                                 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                                <span class="pcoded-mtext">Quản lý máy</span>
+                                                <span class="pcoded-mtext">Chi tiết máy</span>
                                             </a>
-                                        </li>	
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
-                            
+                            <!-- [nhamnv - menu] end-->
+
+                            @await Component.InvokeAsync("Menu");
                         </div>
                     </nav>
                     <div class="pcoded-content">
@@ -431,9 +393,9 @@
                                     </div>
                                 </div>
 
-                                <div id="styleSelector">
-
-                                </div>
+                                @* <div id="styleSelector">
+                                element này để cấu hình màu sắc theme
+                                </div> *@
                             </div>
                         </div>
                     </div>
@@ -445,92 +407,84 @@
     <!-- Warning Section Starts -->
     <!-- Older IE warning message -->
     <!--[if lt IE 10]>
-<div class="ie-warning">
-    <h1>Warning!!</h1>
-    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-    <div class="iew-container">
-        <ul class="iew-download">
-            <li>
-                <a href="http://www.google.com/chrome/">
-                    <img src="../files/assets/images/browser/chrome.png" alt="Chrome">
-                    <div>Chrome</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
-                    <div>Firefox</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.opera.com">
-                    <img src="../files/assets/images/browser/opera.png" alt="Opera">
-                    <div>Opera</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apple.com/safari/">
-                    <img src="../files/assets/images/browser/safari.png" alt="Safari">
-                    <div>Safari</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="../files/assets/images/browser/ie.png" alt="">
-                    <div>IE (9 & above)</div>
-                </a>
-            </li>
-        </ul>
+    <div class="ie-warning">
+        <h1>Warning!!</h1>
+        <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+        <div class="iew-container">
+            <ul class="iew-download">
+                <li>
+                    <a href="http://www.google.com/chrome/">
+                        <img src="../files/assets/images/browser/chrome.png" alt="Chrome">
+                        <div>Chrome</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/">
+                        <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
+                        <div>Firefox</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.opera.com">
+                        <img src="../files/assets/images/browser/opera.png" alt="Opera">
+                        <div>Opera</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.apple.com/safari/">
+                        <img src="../files/assets/images/browser/safari.png" alt="Safari">
+                        <div>Safari</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                        <img src="../files/assets/images/browser/ie.png" alt="">
+                        <div>IE (9 & above)</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>Sorry for the inconvenience!</p>
     </div>
-    <p>Sorry for the inconvenience!</p>
-</div>
-<![endif]-->
+    <![endif]-->
     <!-- Warning Section Ends -->
-
-
-
-    <!-- [Theme adminty] start-->
     <!-- Required Jquery -->
-    <!--script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></!--script><script-- type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/jquery/js/jquery.min.js"></script-->
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/popper.js/js/popper.min.js"></script>
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/popper.js/js/popper.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap/js/bootstrap.min.js"></script>
     <!-- jquery slimscroll js -->
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
     <!-- modernizr js -->
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/modernizr/js/modernizr.js"></script>
-    <!-- Chart js -->
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/chart.js/js/Chart.js"></script>
-    <!-- amchart js -->
-    <script src="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/widget/amchart/amcharts.js"></script>
-    <script src="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/widget/amchart/serial.js"></script>
-    <script src="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/widget/amchart/light.js"></script>
-    <script src="~/lib/Themes/adminty-dashboard-master/libraries/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/assets/js/SmoothScroll.js"></script>
-    <script src="~/lib/Themes/adminty-dashboard-master/libraries/assets/js/pcoded.min.js"></script>
-    <!-- custom js -->
-    <script src="~/lib/Themes/adminty-dashboard-master/libraries/assets/js/vartical-layout.min.js"></script>
-    <!--script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/dashboard/custom-dashboard.js"></!--script-->
-    <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/assets/js/script.min.js"></script>
-    <!-- [Theme adminty] end-->
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/modernizr/js/modernizr.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/modernizr/js/css-scrollbars.js"></script>
 
 
-
-    @* <!-- Bootstrap -->
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <!-- Custom script -->
-    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
-    <!-- Apex Chart -->
-    <script src="~/lib/Themes/ablepro-master/dist/assets/js/plugins/apexcharts.min.js"></script>
-     *@
-
+    <!-- i18next.min.js -->
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/i18next/js/i18next.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+    <!-- Select 2 js -->
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/select2/js/select2.full.min.js"></script>
+    <!-- Multiselect js -->
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/bower_components/multiselect/js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/assets/js/jquery.quicksearch.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/assets/pages/advance-elements/select2-custom.js"></script>
+    <script src="~/lib/themes/adminty-dashboard-master/libraries/assets/js/pcoded.min.js"></script>
+    <script src="~/lib/themes/adminty-dashboard-master/libraries/assets/js/vartical-layout.min.js"></script>
+    <script src="~/lib/themes/adminty-dashboard-master/libraries/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="~/lib/themes/adminty-dashboard-master/libraries/assets/js/script.js"></script>
     <!-- bootstrap-table -->
     <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
     <!-- Apex Chart -->
     <script src="~/lib/Themes/ablepro-master/dist/assets/js/plugins/apexcharts.min.js"></script>
     <!-- Momen JS -->
     <script src="~/lib/moment/moment.js"></script>
+    <!-- Site's JS -->
+    <script src="~/js/site.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
