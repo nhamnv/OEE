@@ -8,10 +8,10 @@ public class MachineRuningStatusViewModel
     }
     public int MachineID { get; set; }
     public string MachineName { get; set; } = string.Empty;
-    public string MachineModel { get; set; } = string.Empty;
+    public string Model { get; set; } = string.Empty;
     public int MachineLocationID { get; set; }
     public string MachineLocationName { get; set; } = string.Empty;
-    public string MachineAvatar { get; set; } = "no_image.png";
+    public string UmageUrl { get; set; } = "NoImage.png";
     public List<Common.Data_MachineStatus> ListStatus = StaticData.Data_MachineStatus;
     public List<Common.Data_MachineStatusHistory> StatusHistories { get; set; }
 

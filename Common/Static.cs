@@ -98,45 +98,129 @@
 
                 #region Build table Data_Machine --> https://docs.google.com/spreadsheets/d/1UMRjN9evTMvQwJMt31RtQRhMZcriXHBo0uEliIhr05M/edit#gid=1716046326&range=D3
 
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 1, MachineName = "MÁY CHẤN YSD 12M", MachineNameOrigin = "Hệ thống máy chấn U CNC hiệu YSD model: 2HPC 1800/60 - ACBL - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "#N/A 2", MachineAvatar = "May_chan_ysd_12m.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 2, MachineName = "MÁY CƯA VÒNG KRUMAN 1000", MachineNameOrigin = "Máy cưa vòng KH_1000H_Kruman - HD 3370 - 29/06/19 - Nam Weldcom - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "KH-1000H", MachineAvatar = "May_cua_vong_kruman_1000.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 3, MachineName = "MÁY KHOAN ĐẦU DẦM CNC", MachineNameOrigin = "Máy khoan CNC cho dầm thép model BHD1206A/3 - ACBL - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "#N/A 3", MachineAvatar = "May_khoan_dau_dam_cnc.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 4, MachineName = "Khoan Bản Mã Tốc ĐỘ cao", MachineNameOrigin = "Máy khoan tấm tốc ộ cao CNC FIN", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "#N/A 4", MachineAvatar = "Khoan_ban_ma_toc_do_cao.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 5, MachineName = "MÁY PHAY ĐẦU DẦM", MachineNameOrigin = "Máy phay ầu dầm, Model BDX 6080 - HD 1 - 04/07/19 - Trường Phúc - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "BXD 6080", MachineAvatar = "May_phay_dau_dam__1.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 6, MachineName = "MÁY PHAY ĐẦU DẦM", MachineNameOrigin = "Máy phay ầu dầm, Model BDX 2020 - HD 1 - 04/07/19 - Trường Phúc - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "BXD 6080", MachineAvatar = "May_phay_dau_dam__2.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 7, MachineName = "MÁY LỐC TÔN 4 TRỤC AKBEND", MachineNameOrigin = "MÁY LỐC TÔN 4 TRỤC AKBEND", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "#N/A 5", MachineAvatar = "May_loc_ton_4_truc_akbend.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 8, MachineName = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", MachineNameOrigin = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "APK-360", MachineAvatar = "May_uon_thep_hinh_apk_360_hang_akypak_tho_nhi_ky-growell.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 9, MachineName = "Máy vát mép 2 ầu, Model XBJ-12", MachineNameOrigin = "Máy vát mép 2 ầu, Model XBJ-12 - HD 1 - 04/07/19 - Trường Phúc - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", MachineModel = "#N/A 8", MachineAvatar = "May_vat_mep_2_au,_model_xbj-12.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 10, MachineName = "MÁY GÁ XOAY BÀN", MachineNameOrigin = "Bộ gá hàn dầm Model 50T-H BRUCO - HD 541 - 27/9/19 - Nam Weldcom - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "HB-50", MachineAvatar = "May_ga_xoay_ban.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 11, MachineName = "MÁY GÁ HỘP DẠNG CỔNG XXZ15", MachineNameOrigin = "MÁY GÁ HỘP DẠNG CỔNG XXZ15", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XXZ15", MachineAvatar = "May_ga_hop_dang_cong_xxz15.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 12, MachineName = "MÁY ĐÍNH GÁ DẦM H TỰ ĐỘNG.", MachineNameOrigin = "Máy ính gá dầm H tự ộng Medol BZJ -2000Plus - HD 523 - 26/9/19 - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "BZJ-2000 PLUS", MachineAvatar = "" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 13, MachineName = "MÁY GÁ TẤM XJZ 15", MachineNameOrigin = "MÁY GÁ TẤM XJZ 15", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XJZ 15", MachineAvatar = "" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 14, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 01", MachineNameOrigin = "Máy hàn dầm hộp trọn bộ-Jingfeng-ACBL-DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XF 15", MachineAvatar = "Thiet_bi_lat_dam_xf_15_-_so_01.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 15, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 02", MachineNameOrigin = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 02", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XF 15", MachineAvatar = "Thiet_bi_lat_dam_xf_15_-_so_02.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 16, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 03", MachineNameOrigin = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 03", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XF 15", MachineAvatar = "Thiet_bi_lat_dam_xf_15_-_so_03.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 17, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 04", MachineNameOrigin = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 04", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XF 15", MachineAvatar = "Thiet_bi_lat_dam_xf_15_-_so_04.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 18, MachineName = "MÁY RÁP DẦM ZHOUXIANG - NGANG", MachineNameOrigin = "Máy ính gá dầm H tự ộng Model HZJ-2000", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "HZJ-2000", MachineAvatar = "" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 19, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", MachineNameOrigin = "Máy nắn thẳng cánh dầm hạng nặng Model YJZ 80B - HD 526 - 26/9/19 - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "YJZ 80B", MachineAvatar = "May_nan_thang_canh_dam_hang_nang_1.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 20, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", MachineNameOrigin = "Máy nắn thẳng cánh dầm hạng nặng Model Y80B - HD 526 - 26/9/19 - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "YJZ 80B", MachineAvatar = "May_nan_thang_canh_dam_hang_nang_2.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 21, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", MachineNameOrigin = "", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "BTMZ 1800-S3", MachineAvatar = "May_han_cong_hang_nang_1.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 22, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", MachineNameOrigin = "Máy hàn cổng thông minh hạng nặng - VCB02- 62.23.07/CTTC (7 năm)", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "BTMZ 1800-S3", MachineAvatar = "May_han_cong_hang_nang_2.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 23, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", MachineNameOrigin = "Máy hàn cần cột, hàn nối ống CZM-8x6 - HD 459 - 24/10/19 - Cơ Khí Đồng Nai - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "CZM 8x6", MachineAvatar = "May_han_dam_cot_han_noi_ong_1.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 24, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", MachineNameOrigin = "Máy hàn cần cột, hàn nối ống CZM-4x7 - HD 459 - 24/10/19 - Cơ Khí Đồng Nai - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "CZM 8x6", MachineAvatar = "May_han_dam_cot_han_noi_ong_2.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 25, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG", MachineNameOrigin = "Máy hàn cổng hạng nặng model BTMZ-S3 (01 bộ) - HĐ số 013-19/HDMMTB/DDCI-NW-HD 23867 - 20/11/19-NAM WELDCOM-DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "BTMZ 1800-S3", MachineAvatar = "May_han_cong_hang_nang.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 26, MachineName = "MÁY HÀN CỔNG THÔNG MINH", MachineNameOrigin = "Máy hàn dầm ngang Model (Cổng hàn thông minh) HN0630-S1 - ACBL - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "HN0620-S1", MachineAvatar = "May_han_cong_thong_minh.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 27, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", MachineNameOrigin = "Máy hàn cần cột, hàn ống nối CZM-8x6 - HD 459 - 24/10/2019 - CK Đồng Nai - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "CZM 8x6", MachineAvatar = "May_han_dam_cot_han_noi_ong.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 28, MachineName = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15  1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineNameOrigin = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15  1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "#N/A 6", MachineAvatar = "May_han_co2_dang_cong_xqhb-15__1_bo_gom_4_nguon_co2_otc_xd_500.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 29, MachineName = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15   1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineNameOrigin = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15   1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "#N/A 7", MachineAvatar = "May_han_co2_dang_cong_xqhb-15___1_bo_gom_4_nguon_co2_otc_xd_500.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 30, MachineName = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", MachineNameOrigin = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XZHB-15", MachineAvatar = "May_han_dien_xi_dang_cong_xzhb-15.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 31, MachineName = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", MachineNameOrigin = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "XMHB 15", MachineAvatar = "May_han_ho_quang_chim_dang_cong_xmhb_15.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 32, MachineName = "MÁY CẮT CNC LAZER YAWEI", MachineNameOrigin = "Máy cắt laser sợi quang Model HLF-24240-20000W - ACBL - DDCI", MachineGroupID = 3, MachineGroupName = "LASER", MachineModel = "HLF-24240", MachineAvatar = "May_cát_cnc_lazer_yawei.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 33, MachineName = "MÁY KHOAN, CẮT CNC PLASMA - AKYAPAK", MachineNameOrigin = "Máy cắt Plasma CNC kích thước cắt hữu ích 3000 x 12000 mm, nguồn cắt plasma Smart Focus 300A, Kjellberg,Đức", MachineGroupID = 4, MachineGroupName = "PLASMA", MachineModel = "ADOP3000*12000", MachineAvatar = "May_khoan,_cat_cnc_plasma_-_akyapak.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 34, MachineName = "MÁY CẮT PLASMA XPR3000", MachineNameOrigin = "Máy cắt CNC ầu nghiêng vắt mép - Model TDC-IV - ACBL - DDCI", MachineGroupID = 4, MachineGroupName = "PLASMA", MachineModel = "TDCIV6000x28000-PF", MachineAvatar = "May_cat_plasma_xpr3000.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 35, MachineName = "MÁY CẮT CNC PLASMA AMG", MachineNameOrigin = "Máy cắt Plasma CNC kích thước cắt hữu ích 3000 x 12000 mm, nguồn cắt plasma Smart Focus 300A, Kjellberg,Đức", MachineGroupID = 4, MachineGroupName = "PLASMA", MachineModel = "FSC3000D", MachineAvatar = "May_cat_cnc_plasma_amg.png" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 36, MachineName = "Máy cắt CNC Plasma FSC 5000D x 18M", MachineNameOrigin = "Máy cắt CNC Plasma FSC 5000D x 18M", MachineGroupID = 4, MachineGroupName = "PLASMA", MachineModel = "FSC 5000D x 18M", MachineAvatar = "May_cat_cnc_plasma_fsc_5000d_x_18m.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 37, MachineName = "MÁY CẮT ĐẦU RẦM ROBOTI", MachineNameOrigin = "Robot cắt ầu dầm Model PKG100/50 (kèm robot ABBIRS 2600, nguồn cắt Hypertherm 260 XD)", MachineGroupID = 5, MachineGroupName = "ROBOT", MachineModel = "PKG 100/50", MachineAvatar = "May_cat_dau_ram_roboti.jpg" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 38, MachineName = "HỆ THỐNG HÀN ROBOT", MachineNameOrigin = "Hệ thống Robot hàn dầm-HD 523-26/9/19-DDCI", MachineGroupID = 5, MachineGroupName = "ROBOT", MachineModel = "IRB4600-20/2.5 ABB", MachineAvatar = "" });
-                Data_Machine.Add(new Common.Data_Machine() { MachineID = 39, MachineName = "MÁY CẮT THỦY LỰC 12M YSD", MachineNameOrigin = "Máy cắt iều khiển CNC", MachineGroupID = 2, MachineGroupName = "DCTH", MachineModel = "HGSK 120/20", MachineAvatar = "" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 1, MachineName = "MÁY CHẤN YSD 12M", MachineNameOrigin = "Hệ thống máy chấn U CNC hiệu YSD model: 2HPC 1800/60 - ACBL - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", Model = "#N/A 2", UmageUrl = "May_chan_ysd_12m.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 2, MachineName = "MÁY CƯA VÒNG KRUMAN 1000", MachineNameOrigin = "Máy cưa vòng KH_1000H_Kruman - HD 3370 - 29/06/19 - Nam Weldcom - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", Model = "KH-1000H", UmageUrl = "May_cua_vong_kruman_1000.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 3, MachineName = "MÁY KHOAN ĐẦU DẦM CNC", MachineNameOrigin = "Máy khoan CNC cho dầm thép model BHD1206A/3 - ACBL - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", Model = "#N/A 3", UmageUrl = "May_khoan_dau_dam_cnc.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 4, MachineName = "Khoan Bản Mã Tốc ĐỘ cao", MachineNameOrigin = "Máy khoan tấm tốc ộ cao CNC FIN", MachineGroupID = 1, MachineGroupName = "GCN", Model = "#N/A 4", UmageUrl = "Khoan_ban_ma_toc_do_cao.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 5, MachineName = "MÁY PHAY ĐẦU DẦM", MachineNameOrigin = "Máy phay ầu dầm, Model BDX 6080 - HD 1 - 04/07/19 - Trường Phúc - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", Model = "BXD 6080", UmageUrl = "May_phay_dau_dam__1.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 6, MachineName = "MÁY PHAY ĐẦU DẦM", MachineNameOrigin = "Máy phay ầu dầm, Model BDX 2020 - HD 1 - 04/07/19 - Trường Phúc - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", Model = "BXD 6080", UmageUrl = "May_phay_dau_dam__2.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 7, MachineName = "MÁY LỐC TÔN 4 TRỤC AKBEND", MachineNameOrigin = "MÁY LỐC TÔN 4 TRỤC AKBEND", MachineGroupID = 1, MachineGroupName = "GCN", Model = "#N/A 5", UmageUrl = "May_loc_ton_4_truc_akbend.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 8, MachineName = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", MachineNameOrigin = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", MachineGroupID = 1, MachineGroupName = "GCN", Model = "APK-360", UmageUrl = "May_uon_thep_hinh_apk_360_hang_akypak_tho_nhi_ky-growell.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 9, MachineName = "Máy vát mép 2 ầu, Model XBJ-12", MachineNameOrigin = "Máy vát mép 2 ầu, Model XBJ-12 - HD 1 - 04/07/19 - Trường Phúc - DDCI", MachineGroupID = 1, MachineGroupName = "GCN", Model = "#N/A 8", UmageUrl = "May_vat_mep_2_au,_model_xbj-12.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 10, MachineName = "MÁY GÁ XOAY BÀN", MachineNameOrigin = "Bộ gá hàn dầm Model 50T-H BRUCO - HD 541 - 27/9/19 - Nam Weldcom - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "HB-50", UmageUrl = "May_ga_xoay_ban.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 11, MachineName = "MÁY GÁ HỘP DẠNG CỔNG XXZ15", MachineNameOrigin = "MÁY GÁ HỘP DẠNG CỔNG XXZ15", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XXZ15", UmageUrl = "May_ga_hop_dang_cong_xxz15.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 12, MachineName = "MÁY ĐÍNH GÁ DẦM H TỰ ĐỘNG.", MachineNameOrigin = "Máy ính gá dầm H tự ộng Medol BZJ -2000Plus - HD 523 - 26/9/19 - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "BZJ-2000 PLUS", UmageUrl = "" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 13, MachineName = "MÁY GÁ TẤM XJZ 15", MachineNameOrigin = "MÁY GÁ TẤM XJZ 15", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XJZ 15", UmageUrl = "" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 14, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 01", MachineNameOrigin = "Máy hàn dầm hộp trọn bộ-Jingfeng-ACBL-DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XF 15", UmageUrl = "Thiet_bi_lat_dam_xf_15_-_so_01.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 15, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 02", MachineNameOrigin = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 02", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XF 15", UmageUrl = "Thiet_bi_lat_dam_xf_15_-_so_02.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 16, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 03", MachineNameOrigin = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 03", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XF 15", UmageUrl = "Thiet_bi_lat_dam_xf_15_-_so_03.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 17, MachineName = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 04", MachineNameOrigin = "THIẾT BỊ LẬT DẦM XF 15 - SỐ 04", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XF 15", UmageUrl = "Thiet_bi_lat_dam_xf_15_-_so_04.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 18, MachineName = "MÁY RÁP DẦM ZHOUXIANG - NGANG", MachineNameOrigin = "Máy ính gá dầm H tự ộng Model HZJ-2000", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "HZJ-2000", UmageUrl = "" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 19, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", MachineNameOrigin = "Máy nắn thẳng cánh dầm hạng nặng Model YJZ 80B - HD 526 - 26/9/19 - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "YJZ 80B", UmageUrl = "May_nan_thang_canh_dam_hang_nang_1.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 20, MachineName = "MÁY NẮN THẲNG CÁNH DẦM HẠNG NẶNG", MachineNameOrigin = "Máy nắn thẳng cánh dầm hạng nặng Model Y80B - HD 526 - 26/9/19 - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "YJZ 80B", UmageUrl = "May_nan_thang_canh_dam_hang_nang_2.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 21, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", MachineNameOrigin = "", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "BTMZ 1800-S3", UmageUrl = "May_han_cong_hang_nang_1.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 22, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG.", MachineNameOrigin = "Máy hàn cổng thông minh hạng nặng - VCB02- 62.23.07/CTTC (7 năm)", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "BTMZ 1800-S3", UmageUrl = "May_han_cong_hang_nang_2.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 23, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", MachineNameOrigin = "Máy hàn cần cột, hàn nối ống CZM-8x6 - HD 459 - 24/10/19 - Cơ Khí Đồng Nai - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "CZM 8x6", UmageUrl = "May_han_dam_cot_han_noi_ong_1.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 24, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", MachineNameOrigin = "Máy hàn cần cột, hàn nối ống CZM-4x7 - HD 459 - 24/10/19 - Cơ Khí Đồng Nai - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "CZM 8x6", UmageUrl = "May_han_dam_cot_han_noi_ong_2.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 25, MachineName = "MÁY HÀN CỔNG HẠNG NẶNG", MachineNameOrigin = "Máy hàn cổng hạng nặng model BTMZ-S3 (01 bộ) - HĐ số 013-19/HDMMTB/DDCI-NW-HD 23867 - 20/11/19-NAM WELDCOM-DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "BTMZ 1800-S3", UmageUrl = "May_han_cong_hang_nang.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 26, MachineName = "MÁY HÀN CỔNG THÔNG MINH", MachineNameOrigin = "Máy hàn dầm ngang Model (Cổng hàn thông minh) HN0630-S1 - ACBL - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "HN0620-S1", UmageUrl = "May_han_cong_thong_minh.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 27, MachineName = "MÁY HÀN DẦM CỘT, HÀN NỐI ỐNG", MachineNameOrigin = "Máy hàn cần cột, hàn ống nối CZM-8x6 - HD 459 - 24/10/2019 - CK Đồng Nai - DDCI", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "CZM 8x6", UmageUrl = "May_han_dam_cot_han_noi_ong.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 28, MachineName = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15  1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineNameOrigin = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15  1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "#N/A 6", UmageUrl = "May_han_co2_dang_cong_xqhb-15__1_bo_gom_4_nguon_co2_otc_xd_500.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 29, MachineName = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15   1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineNameOrigin = "MÁY HÀN CO2 DẠNG CỔNG XQHB-15   1 BỘ GỒM 4 NGUỒN CO2 OTC XD 500", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "#N/A 7", UmageUrl = "May_han_co2_dang_cong_xqhb-15___1_bo_gom_4_nguon_co2_otc_xd_500.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 30, MachineName = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", MachineNameOrigin = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XZHB-15", UmageUrl = "May_han_dien_xi_dang_cong_xzhb-15.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 31, MachineName = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", MachineNameOrigin = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "XMHB 15", UmageUrl = "May_han_ho_quang_chim_dang_cong_xmhb_15.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 32, MachineName = "MÁY CẮT CNC LAZER YAWEI", MachineNameOrigin = "Máy cắt laser sợi quang Model HLF-24240-20000W - ACBL - DDCI", MachineGroupID = 3, MachineGroupName = "LASER", Model = "HLF-24240", UmageUrl = "May_cát_cnc_lazer_yawei.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 33, MachineName = "MÁY KHOAN, CẮT CNC PLASMA - AKYAPAK", MachineNameOrigin = "Máy cắt Plasma CNC kích thước cắt hữu ích 3000 x 12000 mm, nguồn cắt plasma Smart Focus 300A, Kjellberg,Đức", MachineGroupID = 4, MachineGroupName = "PLASMA", Model = "ADOP3000*12000", UmageUrl = "May_khoan,_cat_cnc_plasma_-_akyapak.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 34, MachineName = "MÁY CẮT PLASMA XPR3000", MachineNameOrigin = "Máy cắt CNC ầu nghiêng vắt mép - Model TDC-IV - ACBL - DDCI", MachineGroupID = 4, MachineGroupName = "PLASMA", Model = "TDCIV6000x28000-PF", UmageUrl = "May_cat_plasma_xpr3000.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 35, MachineName = "MÁY CẮT CNC PLASMA AMG", MachineNameOrigin = "Máy cắt Plasma CNC kích thước cắt hữu ích 3000 x 12000 mm, nguồn cắt plasma Smart Focus 300A, Kjellberg,Đức", MachineGroupID = 4, MachineGroupName = "PLASMA", Model = "FSC3000D", UmageUrl = "May_cat_cnc_plasma_amg.png" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 36, MachineName = "Máy cắt CNC Plasma FSC 5000D x 18M", MachineNameOrigin = "Máy cắt CNC Plasma FSC 5000D x 18M", MachineGroupID = 4, MachineGroupName = "PLASMA", Model = "FSC 5000D x 18M", UmageUrl = "May_cat_cnc_plasma_fsc_5000d_x_18m.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 37, MachineName = "MÁY CẮT ĐẦU RẦM ROBOTI", MachineNameOrigin = "Robot cắt ầu dầm Model PKG100/50 (kèm robot ABBIRS 2600, nguồn cắt Hypertherm 260 XD)", MachineGroupID = 5, MachineGroupName = "ROBOT", Model = "PKG 100/50", UmageUrl = "May_cat_dau_ram_roboti.jpg" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 38, MachineName = "HỆ THỐNG HÀN ROBOT", MachineNameOrigin = "Hệ thống Robot hàn dầm-HD 523-26/9/19-DDCI", MachineGroupID = 5, MachineGroupName = "ROBOT", Model = "IRB4600-20/2.5 ABB", UmageUrl = "" });
+                //Data_Machine.Add(new Common.Data_Machine() { MachineID = 39, MachineName = "MÁY CẮT THỦY LỰC 12M YSD", MachineNameOrigin = "Máy cắt iều khiển CNC", MachineGroupID = 2, MachineGroupName = "DCTH", Model = "HGSK 120/20", UmageUrl = "" });
+
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 1, MachineName = "Máy cắt CNC laser Yawei", UmageUrl = "B20500006.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20500006", MachineGroupName = "LASER", MachineGroupID = 3, AccountantCode = "A01212203270048", MachineLocationName = "AH1-Tổ Cắt -LAB", MachineLocationID = 2, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "HLF-24240", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 2, MachineName = "Máy khoan, cắt CNC Plasma Akyapak", UmageUrl = "B20500007.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20500007", MachineGroupName = "PLASMA", MachineGroupID = 4, AccountantCode = "A04211204270048", MachineLocationName = "AH1-Tổ Cắt -LAB", MachineLocationID = 2, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "ADOP3000*12000", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 3, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 3, MachineName = "Máy cắt Plasma XPR3000", UmageUrl = "B20500009.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20500009", MachineGroupName = "PLASMA", MachineGroupID = 4, AccountantCode = "A01212203270045", MachineLocationName = "AH1-Tổ Cắt -LCD", MachineLocationID = 3, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "TDCIV6000x28000-PF", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 3, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 4, MachineName = "Máy cắt CNC Plasma AMG", UmageUrl = "B20500011.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20500011", MachineGroupName = "PLASMA", MachineGroupID = 4, AccountantCode = "A01211204270201", MachineLocationName = "AH1-Tổ Cắt -LAB", MachineLocationID = 2, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "FSC3000D", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 4, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 5, MachineName = "Máy cắt thủy lực 12M YSD", UmageUrl = "B20500013.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20500013", MachineGroupName = "PLASMA", MachineGroupID = 4, AccountantCode = "A01211204270033", MachineLocationName = "AH1-Tổ Cắt BM-LBC", MachineLocationID = 4, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "HGSK 120/20", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 6, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 6, MachineName = "Máy cắt đầu dầm Roboti", UmageUrl = "B20500019.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20500019", MachineGroupName = "ROBOT", MachineGroupID = 5, AccountantCode = "A01211204270194", MachineLocationName = "AH1-Tổ Cắt BM-LBC", MachineLocationID = 4, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "PKG 100/50", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 7, MachineName = "Máy cắt CNC Plasma FSC 5000D x 18M", UmageUrl = "B20500103.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20500103", MachineGroupName = "PLASMA", MachineGroupID = 4, AccountantCode = "A01212203270066", MachineLocationName = "AH1", MachineLocationID = 1, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "FSC 5000D x 18M", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 8, MachineName = "Máy chấn YSD 12M", UmageUrl = "B20600008.jpg", AssetGroupName = "Máy cắt", AssetGroupID = 1, MachineAssetCode = "B20600008", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01212203270040", MachineLocationName = "AH2-LCD", MachineLocationID = 10, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "YSD 12M", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 6, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 9, MachineName = "Máy cưa vòng Kruman 1000", UmageUrl = "B20800013.jpg", AssetGroupName = "Máy cưa", AssetGroupID = 2, MachineAssetCode = "B20800013", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01211204270176", MachineLocationName = "AH2-T.CK-LBC", MachineLocationID = 11, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "KH-1000H", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 10, MachineName = "Máy khoan đầu dầm CNC", UmageUrl = "B21100006.jpg", AssetGroupName = "Máy khoan", AssetGroupID = 3, MachineAssetCode = "B21100006", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01212203270046", MachineLocationName = "AH2-LAB", MachineLocationID = 8, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BHD1206A/3", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 1, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 11, MachineName = "Máy khoan bản mã tốc độ cao", UmageUrl = "B21100241.jpg", AssetGroupName = "Máy khoan", AssetGroupID = 3, MachineAssetCode = "B21100241", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01212203270080", MachineLocationName = "AH1", MachineLocationID = 1, BaseUnitName = "Cái", BaseUnitID = 2, Model = "CNC-FIN", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 1, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 12, MachineName = "Máy phay đầu dầm", UmageUrl = "B21200008.jpg", AssetGroupName = "Máy phay", AssetGroupID = 4, MachineAssetCode = "B21200008", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01211204270181", MachineLocationName = "AH1-Tổ Tiện-LDE", MachineLocationID = 5, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BXD 6080", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 13, MachineName = "Máy phay đầu dầm", UmageUrl = "B21200009.jpg", AssetGroupName = "Máy phay", AssetGroupID = 4, MachineAssetCode = "B21200009", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01211204270180", MachineLocationName = "AH2-LCD", MachineLocationID = 10, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BXD 2020", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 14, MachineName = "Máy phay đầu dầm", UmageUrl = "B21200010.jpg", AssetGroupName = "Máy phay", AssetGroupID = 4, MachineAssetCode = "B21200010", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01211204270196", MachineLocationName = "AH2-LBC", MachineLocationID = 9, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BXD 2020", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 15, MachineName = "Máy lốc tôn 4 trục Akbend", UmageUrl = "B21400006.jpg", AssetGroupName = "Máy lốc, uốn, gấp mép, xoay ống", AssetGroupID = 5, MachineAssetCode = "B21400006", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A05211204270035", MachineLocationName = "AH2-LCD", MachineLocationID = 10, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "AKBEND AHS-40/32-40", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 2, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 16, MachineName = "Máy uốn thép hình APK 360 hãng Akypak Thổ Nhĩ Kỳ-Growell", UmageUrl = "B21400005.jpg", AssetGroupName = "Máy lốc, uốn, gấp mép, xoay ống", AssetGroupID = 5, MachineAssetCode = "B21400005", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A04211204270050", MachineLocationName = "AH1-Tổ Tiện-LDE", MachineLocationID = 5, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "APK-360", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 2, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 17, MachineName = "Máy gá xoay bàn", UmageUrl = "B21600003.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600003", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211206270224", MachineLocationName = "AH2-L BC", MachineLocationID = 7, BaseUnitName = "Cái", BaseUnitID = 2, Model = "HB-50", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 18, MachineName = "Máy gá xoay bàn", UmageUrl = "B21600004.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600004", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211206270225", MachineLocationName = "AH2-Tổ HÀN Thô -LBC", MachineLocationID = 15, BaseUnitName = "Cái", BaseUnitID = 2, Model = "HB-50", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine()
+                {
+                    MachineID = 19,
+                    MachineName = "Máy gá hộp dạng cổng XXZ15",
+                    UmageUrl = "B21600009.jpg",
+                    AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm",
+                    AssetGroupID = 6,
+                    MachineAssetCode = "B21600009",
+                    MachineGroupName = "DCTH",
+                    MachineGroupID = 2,
+                    AccountantCode = "",
+                    MachineLocationName = "AH2 - Tổ HÀN Thô - LBC",
+                    MachineLocationID = 15,
+                    BaseUnitName = "Bộ",
+                    BaseUnitID = 1,
+                    Model = "XXZ15",
+                    SerialNo = "18022010",
+                    ProviderName = string.Empty,
+                    ProviderID = 5,
+                    FirstUseDate = new DateTime(2018, 1, 1)
+                });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 20, MachineName = "Máy đính gá dầm H tự động", UmageUrl = "B21600010.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600010", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211204270108", MachineLocationName = "AH2-Tổ Ráp Thô 1-L AB", MachineLocationID = 17, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BZJ-2000 Plus", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 21, MachineName = "Máy gá dầm XJZ 15", UmageUrl = "B21600011.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600011", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-Tổ Hàn Thô -L BC", MachineLocationID = 14, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XJZ 15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 22, MachineName = "Thiết bị lật dầm XF15 - Số 01", UmageUrl = "B21600012.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600012", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-LBC", MachineLocationID = 9, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XF 15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 23, MachineName = "Thiết bị lật dầm XF15 - Số 02", UmageUrl = "B21600013.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600013", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-LBC", MachineLocationID = 9, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XF 15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 24, MachineName = "Thiết bị lật dầm XF15 - Số 03", UmageUrl = "B21600014.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600014", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-LBC", MachineLocationID = 9, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XF 15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 25, MachineName = "Thiết bị lật dầm XF15 - Số 04", UmageUrl = "B21600015.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600015", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-LBC", MachineLocationID = 9, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XF 15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 26, MachineName = "Máy ráp dầm Zhouxiang - Ngang", UmageUrl = "B21600018.jpg", AssetGroupName = "Máy ráp dầm, H/I-Đính, Gá, Lật, VC dầm", AssetGroupID = 6, MachineAssetCode = "B21600018", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211204270193", MachineLocationName = "AH3-LBC", MachineLocationID = 18, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "HZJ-2000", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 27, MachineName = "Máy nắn thẳng cánh dầm hạng nặng", UmageUrl = "B21700010.jpg", AssetGroupName = "Máy nắn thẳng", AssetGroupID = 7, MachineAssetCode = "B21700010", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211204270189", MachineLocationName = "AH3-LBC", MachineLocationID = 18, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "YJZ 80B", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 28, MachineName = "Máy nắn thẳng cánh dầm hạng nặng", UmageUrl = "B21700003.jpg", AssetGroupName = "Máy nắn thẳng", AssetGroupID = 7, MachineAssetCode = "B21700003", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211204270190", MachineLocationName = "AH2-LAB", MachineLocationID = 8, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "YJZ 80B", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 29, MachineName = "Máy vát mép 2 đầu", UmageUrl = "B22000008.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22000008", MachineGroupName = "GCN", MachineGroupID = 1, AccountantCode = "A01211204270179", MachineLocationName = "AH2", MachineLocationID = 6, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XBJ-12", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 30, MachineName = "Máy hàn cổng hạng nặng", UmageUrl = "B22400183.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400183", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212205270002", MachineLocationName = "AH2-Tổ HT-BC", MachineLocationID = 12, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BTMZ 1800-S3", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 31, MachineName = "Máy hàn cổng hạng nặng", UmageUrl = "B22401593.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22401593", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270079", MachineLocationName = "AH2-Tổ HT-BC", MachineLocationID = 12, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BTMZ 1800TP-A2", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 32, MachineName = "Hệ thống hàng Robot", UmageUrl = "B22400184.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400184", MachineGroupName = "ROBOT", MachineGroupID = 5, AccountantCode = "A01211204270192", MachineLocationName = "AH2-Tổ HT-BC", MachineLocationID = 12, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "IRB4600-20/2.5 ABB", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 33, MachineName = "Máy hàn dầm cột, hàn nối ống", UmageUrl = "B22400185.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400185", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211204270198", MachineLocationName = "AH2-Tổ HT-LBC", MachineLocationID = 13, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "CZM 8x6", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine()
+                {
+                    MachineID = 34,
+                    MachineName = "Máy hàn dầm cột, hàn nối ống",
+                    UmageUrl = "B22401010.jpg",
+                    AssetGroupName = "Máy hàn cổng",
+                    AssetGroupID = 8,
+                    MachineAssetCode = "B22401010",
+                    MachineGroupName = "DCTH",
+                    MachineGroupID = 2,
+                    AccountantCode = "",
+                    MachineLocationName = "AH2 - Tổ HT - LBC",
+                    MachineLocationID = 13,
+                    BaseUnitName = "Bộ",
+                    BaseUnitID = 1,
+                    Model = "CMZ 4X7",
+                    SerialNo = string.Empty,
+                    ProviderName = string.Empty,
+                    ProviderID = 5,
+                    FirstUseDate = new DateTime(2018, 1, 1)
+                });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 35, MachineName = "Máy hàn cổng hạng nặng", UmageUrl = "B22400222.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400222", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211204270203", MachineLocationName = "AH3-Tổ hàn thô-LB", MachineLocationID = 20, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "BTMZ 1800-S3", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 36, MachineName = "Máy hàn cổng thông minh", UmageUrl = "B22400221.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400221", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270049", MachineLocationName = "AH3-Tổ RT+HT-LBC", MachineLocationID = 21, BaseUnitName = "Cái", BaseUnitID = 2, Model = "HN0620-S1", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 37, MachineName = "Máy hàn dầm cột, hàn nối ống", UmageUrl = "B22401010.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22401010", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01211204270200", MachineLocationName = "AH3-Tổ Hàn HT", MachineLocationID = 19, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "CZM-4x7", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 38, MachineName = "Máy hàn CO2 dạng cổng", UmageUrl = "B22400186.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400186", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-Tổ HT-LBC", MachineLocationID = 13, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XQHB-15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 39, MachineName = "Máy hàn CO2 dạng cổng", UmageUrl = "B22400187.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400187", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-Tổ HT-LBC", MachineLocationID = 13, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XQHB-15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 40, MachineName = "Máy hàn điện xỉ dạng cổng", UmageUrl = "B22400188.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400188", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-Tổ HT-LBC", MachineLocationID = 13, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XZHB-15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 41, MachineName = "Máy hàn điện xỉ dạng cổng", UmageUrl = "B22400189.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400189", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-Tổ HT-LBC", MachineLocationID = 13, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XZHB-15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 42, MachineName = "Máy hàn hồ quang chìm dạng cổng", UmageUrl = "B22400190.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400190", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-Tổ HT-LBC", MachineLocationID = 13, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XMHB 15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
+                Data_Machine.Add(new Common.Data_Machine() { MachineID = 43, MachineName = "Máy hàn hồ quang chìm dạng cổng", UmageUrl = "B22400191.jpg", AssetGroupName = "Máy hàn cổng", AssetGroupID = 8, MachineAssetCode = "B22400191", MachineGroupName = "DCTH", MachineGroupID = 2, AccountantCode = "A01212203270051", MachineLocationName = "AH2-Tổ HT-LBC", MachineLocationID = 13, BaseUnitName = "Bộ", BaseUnitID = 1, Model = "XMHB 15", SerialNo = string.Empty, ProviderName = string.Empty, ProviderID = 5, FirstUseDate = new DateTime(2018, 1, 1) });
 
 
                 #endregion
@@ -1313,7 +1397,7 @@
     public class TimeRange
     {
         public int TimeRangeID { get; set; }
-        public string TimeRangeName { get; set; }
+        public string TimeRangeName { get; set; } = string.Empty;
     }
 
 
@@ -1323,8 +1407,8 @@
     public class Data_Error
     {
         public int ErrorID { get; set; }
-        public string ErrorName { get; set; }
-        public string ErrorCode { get; set; }
+        public string ErrorName { get; set; } = string.Empty;
+        public string ErrorCode { get; set; } = string.Empty;
     }
     /// <summary>
     /// Bảng danh sách loai máy 
@@ -1332,21 +1416,71 @@
     public class Data_MachineGroup
     {
         public int MachineGroupID { get; set; }
-        public string MachineGroupName { get; set; }
+        public string MachineGroupName { get; set; } = string.Empty;
     }
     /// <summary>
     /// Bảng danh sách máy
     /// </summary>
     public class Data_Machine
     {
-        public int MachineID { get; set; }
-        public string MachineName { get; set; }
-        public string MachineNameOrigin { get; set; }
-        public int MachineGroupID { get; set; }
-        public string MachineGroupName { get; set; }
+        //public int MachineID { get; set; }
+        //public string MachineName { get; set; } = string.Empty;
+        //public string MachineNameOrigin { get; set; } = string.Empty;
+        //public int MachineGroupID { get; set; }
+        //public string MachineGroupName { get; set; } = string.Empty;
 
-        public string MachineModel { get; set; }
-        public string MachineAvatar { get; set; }
+        //public string Model { get; set; } = string.Empty;
+        //public string UmageUrl { get; set; } = string.Empty;
+
+        /*
+
+ 
+        SELECT ID = m.ID
+	        ,  MachineName=m.MachineName
+	        ,  UmageUrl = m.ImageUrl
+	        ,  AssetGroupName=a.AssetGroupName
+	        ,  AssetGroupID=m.AssetGroupID
+	        ,  MachineAssetCode=m.MachineAssetCode
+	        ,  MachineGroupName=g.MachineGroupName
+	        ,  MachineGroupID=m.MachineGroupID
+	        ,  AccountantCode=m.AccountantCode
+	        ,  MachineLocationName = l.LocationName
+	        ,  MachineLocationID = m.MachineLocationID
+	        ,  BaseUnitName = u.UnitName
+	        ,  BaseUnitID= m.BaseUnitID
+	        ,  Model= m.Model
+	        ,  SerialNo= m.SerialNo
+	        ,  ProviderName = d.ProviderName
+	        ,  ProviderID= m.ProviderID
+	        ,  FirstUseDate = m.FirstUseDate
+        FROM Data_Machine m
+        LEFT JOIN Data_AssetGroup a ON a.ID = m.AssetGroupID
+        LEFT JOIN Data_MachineGroup g ON g.ID=m.MachineGroupID
+        LEFT JOIN Data_Location l ON l.ID = m.MachineLocationID
+        LEFT JOIN Data_BaseUnit u ON u.ID = m.BaseUnitID
+        LEFT JOIN Data_Provider d ON d.ID= m.ProviderID
+         
+        Data_Machine.Add(new Common.Data_Machine() { MachineID="&A2&",	MachineName=""&B2&"",UmageUrl=""&C2&"",AssetGroupName=""&D2&"",AssetGroupID="&E2&",MachineAssetCode=""&F2&"",MachineGroupName=""&G2&"",MachineGroupID="&H2&",AccountantCode=""&I2&"",MachineLocationName=""&J2&"",MachineLocationID="&K2&",BaseUnitName=""&L2&"",BaseUnitID="&M2&",Model=""&N2&"",SerialNo=""&O2&"",ProviderName=""&P2&"",ProviderID="&Q2&",FirstUseDate=new DateTime(2018,1,1)});
+         */
+
+        public int MachineID { get; set; } = 0;
+        public string MachineName { get; set; } = string.Empty;
+        public string UmageUrl { get; set; } = string.Empty;
+        public string AssetGroupName { get; set; } = string.Empty;
+        public int AssetGroupID { get; set; } = 0;
+        public string MachineAssetCode { get; set; } = string.Empty;
+        public string MachineGroupName { get; set; } = string.Empty;
+        public int MachineGroupID { get; set; } = 0;
+        public string AccountantCode { get; set; } = string.Empty;
+        public string MachineLocationName { get; set; } = string.Empty;
+        public int MachineLocationID { get; set; } = 0;
+        public string BaseUnitName { get; set; } = string.Empty;
+        public int BaseUnitID { get; set; } = 0;
+        public string Model { get; set; } = string.Empty;
+        public string SerialNo { get; set; } = string.Empty;
+        public string ProviderName { get; set; } = string.Empty;
+        public int ProviderID { get; set; } = 0;
+        public DateTime? FirstUseDate { get; set; }
     }
     /// <summary>
     /// Bảng vị trí cài đặt máy
@@ -1354,7 +1488,7 @@
     public class Data_MachineLocation
     {
         public int LocationID { get; set; }
-        public string LocationName { get; set; }
+        public string LocationName { get; set; } = string.Empty;
     }
     /// <summary>
     /// Bảng map máy nào đặt ở vị trí nào
@@ -1362,9 +1496,9 @@
     public class Data_MachineLocationSetup
     {
         public int MachineID { get; set; }
-        public string MachineName { get; set; }
+        public string MachineName { get; set; } = string.Empty;
         public int LocationID { get; set; }
-        public string LocationName { get; set; }
+        public string LocationName { get; set; } = string.Empty;
     }
     /// <summary>
     /// Bảng máy lỗi

@@ -1,6 +1,6 @@
 ﻿namespace Common.ViewModels
 {
-    public class MachineSummaryViewModel
+    public class MachineStatiticsViewModel
     {
         /// <summary>
         /// Số nhà xưởng

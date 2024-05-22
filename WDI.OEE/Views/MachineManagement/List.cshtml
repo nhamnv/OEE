@@ -148,14 +148,13 @@
 
     function expanLinkMachineDetail(value, row, index) {
         var _model = '{machineID:' + row.iD + ',machineLocationID:' + row.machineLocationID + '}';
-
+        
         var _temp = '@Url.Action("MachineDetail", "MachineManagement")?stringData=' + _model;
-
-        // var _link = '<a href="@Url.Action("MachineDetail", "MachineManagement")?stringData=' + _model.toString() + '">' + row.machineName + '</a>';
         var _link = '<a href="' + _temp + '">' + row.machineName + '</a>';
 
         return _link;
     }
+
 </script>
 
 

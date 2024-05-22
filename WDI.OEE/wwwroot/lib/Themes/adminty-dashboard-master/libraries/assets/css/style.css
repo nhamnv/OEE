@@ -7540,7 +7540,7 @@ table tbody .border-bottom-info td {
 
 .main-menu {
     float: left;
-    width: 300px; /*width: 240px;*/
+    width: 240px;
     z-index: 99
 }
 
@@ -7645,7 +7645,7 @@ table tbody .border-bottom-info td {
         height: 56px;
         text-align: center;
         text-transform: uppercase;
-        width: 300px; /*width: 240px;*/
+        width: 240px;
         padding: 10px
     }
 

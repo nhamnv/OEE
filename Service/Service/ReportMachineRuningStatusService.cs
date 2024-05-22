@@ -47,9 +47,9 @@ namespace Service.Service
                                     ,
                                    m.MachineGroupName
                                     ,
-                                   m.MachineModel
+                                   m.Model
                                     ,
-                                   m.MachineAvatar
+                                   m.UmageUrl
                                     ,
                                    m.MachineName
                                     ,
@@ -96,9 +96,9 @@ namespace Service.Service
                                    ,
                         d.MachineName
                                    ,
-                        d.MachineModel
+                        d.Model
                                    ,
-                        d.MachineAvatar
+                        d.UmageUrl
                                     ,
                         d.MachineLocationID
                                    ,
@@ -196,8 +196,8 @@ namespace Service.Service
                     {
                         MachineID = item.MachineID,
                         MachineName = item.MachineName,
-                        MachineModel = item.MachineModel,
-                        MachineAvatar = (!string.IsNullOrEmpty(item.MachineAvatar) ? item.MachineAvatar : "no_image.png"), // OEE\WDI.OEE\wwwroot\images\products\no_image.png
+                        Model = item.Model,
+                        UmageUrl = (!string.IsNullOrEmpty(item.UmageUrl) ? item.UmageUrl : "NoImage.png"), // OEE\WDI.OEE\wwwroot\images\products\NoImage.png
                         MachineLocationName = item.LocationName,
                         MachineLocationID = item.MachineLocationID,
                         ListStatusPercent = listStatusPercent,

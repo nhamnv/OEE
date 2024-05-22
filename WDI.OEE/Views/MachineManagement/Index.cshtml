@@ -1,9 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<div class="col-xl-12 col-md-12">
+﻿<div class="col-xl-12 col-md-12">
     <div class="card">
         <div class="card-header">
             <h5>Quản lý máy</h5>
@@ -46,7 +41,8 @@
                     <div class="tab-content card-block">
                         <!-- [Tab: Tab chi tiết máy] start -->
                         <div class="tab-pane active" id="tab_machinedetail" role="tabpanel" aria-expanded="true">
-                            <p class="m-0">1. Tab chi tiết máy.</p>
+                            @* <p class="m-0">1. Tab chi tiết máy.</p> *@
+                            @await Html.PartialAsync("_PartialMachineDetail")
                         </div>
                         <!-- [Tab: Tab chi tiết máy] end -->
                         <!-- [Tab: Tab linh kiện] start -->

@@ -7,7 +7,7 @@
 
 
         public string MachineName { get; set; }
-        public string MachineModel { get; set; }
+        public string Model { get; set; }
         public string LocationName { get; set; }
         public string Image { get; set; }
 

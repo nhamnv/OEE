@@ -1,13 +1,16 @@
-﻿using Common.ViewModels;
+﻿using Common;
+using Common.ViewModels;
 using Service.IService;
 
 namespace Service.Service
 {
     public class MachineManagementService : IMachineManagementService
     {
-        public MachineSummaryViewModel GetMachineSummaryViewModel(int machineID, int machineLocationID)
+
+
+        public MachineStatiticsViewModel GetStatitics()
         {
-            MachineSummaryViewModel reval = new MachineSummaryViewModel();
+            MachineStatiticsViewModel reval = new MachineStatiticsViewModel();
 
             #region Fake data
 
@@ -205,6 +208,43 @@ namespace Service.Service
 
             #endregion
 
+            return reval;
+        }
+
+        public MachineDetailViewModel GetDetails(int machineID, int machineLocationID)
+        {
+            MachineDetailViewModel reval = new MachineDetailViewModel();
+
+            try
+            {
+                reval.Machine = (from m in StaticData.Data_Machine
+                                 where m.MachineID == machineID
+                                 select new Common.Data_Machine()
+                                 {
+                                     MachineID = machineID,
+                                     AccountantCode = m.AccountantCode,
+                                     AssetGroupID = m.AssetGroupID,
+                                     AssetGroupName = m.AssetGroupName,
+                                     BaseUnitID = m.BaseUnitID,
+                                     BaseUnitName = m.BaseUnitName,
+                                     FirstUseDate = m.FirstUseDate,
+                                     MachineAssetCode = m.MachineAssetCode,
+                                     MachineGroupID = m.MachineGroupID,
+                                     MachineGroupName = m.MachineGroupName,
+                                     MachineLocationID = m.MachineLocationID,
+                                     MachineLocationName = m.MachineLocationName,
+                                     MachineName = m.MachineName,
+                                     Model = m.Model,
+                                     ProviderID = m.ProviderID,
+                                     ProviderName = m.ProviderName,
+                                     SerialNo = m.SerialNo,
+                                     UmageUrl = m.UmageUrl
+                                 })?.FirstOrDefault() ?? new Data_Machine();
+            }
+            catch (Exception ex)
+            {
+
+            }
             return reval;
         }
     }

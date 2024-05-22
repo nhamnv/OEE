@@ -27,14 +27,35 @@ namespace WDI.OEE.Controllers
         }
 
         /// <summary>
-        /// Xem tổng quan máy
+        /// Thống kê số lượng máy
         /// </summary>
         /// <param name="stringData">string dạng JObject</param>
         /// <returns></returns>
+        public ActionResult Statitics(string stringData)
+        {
+            MachineStatiticsViewModel model = new MachineStatiticsViewModel();
+            ViewData["Title"] = "Thống kê số lượng máy";
+
+            try
+            {
+                //dynamic d = JObject.Parse(stringData);
+                //int machineID = d.machineID;
+                //int machineLocationID = d.machineLocationID;
+
+                model = _machineManagementService.GetStatitics();
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return View(model);
+        }
+
         public ActionResult MachineDetail(string stringData)
         {
-            MachineSummaryViewModel model = new MachineSummaryViewModel();
-            ViewData["Title"] = "Thống kê số lượng máy";
+            MachineDetailViewModel model = new MachineDetailViewModel();
+            ViewData["Title"] = "Xem chi tiết máy";
 
             try
             {
@@ -42,7 +63,7 @@ namespace WDI.OEE.Controllers
                 int machineID = d.machineID;
                 int machineLocationID = d.machineLocationID;
 
-                model = _machineManagementService.GetMachineSummaryViewModel(machineID, machineLocationID);
+                model = _machineManagementService.GetDetails(machineID, machineLocationID);
             }
             catch (Exception ex)
             {

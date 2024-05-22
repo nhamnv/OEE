@@ -26,8 +26,9 @@
 
 @foreach(var menu in Model)
 {
+    // class pcoded-trigger để xòe menu
     <ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="none" subitem-border="true">
-        <li class="pcoded-hasmenu pcoded-trigger" dropdown-icon="style1" subitem-icon="style1">
+        <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
             <a href="javascript:void(0)">
                 <span class="pcoded-micon"><i class="feather icon-list"></i></span>
                 <span class="pcoded-mtext">@menu.Name</span>
@@ -37,7 +38,7 @@
                 foreach (var menuL2 in menu.ChildMenus)
                 {
                     <ul class="pcoded-submenu">
-                        <li class="pcoded-hasmenu pcoded-trigger" dropdown-icon="style1" subitem-icon="style1">
+                        <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
                             <a href="javascript:void(0)">
                                 <span class="pcoded-mtext">@menuL2.Name</span>
                             </a>
@@ -46,7 +47,7 @@
                                 foreach (var menuL3 in menuL2.ChildMenus)
                                 {
                                     <ul class="pcoded-submenu">
-                                        <li class="pcoded-trigger">
+                                        <li class="">
                                             <a href="javascript:void(0)">
                                                 <span class="pcoded-mtext">@menuL3.Name</span>
                                             </a>
