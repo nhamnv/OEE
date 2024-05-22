@@ -35,8 +35,8 @@
 
         public int MachineID { get; set; }
         public string MachineName { get; set; } = string.Empty;
-        public string MachineModel { get; set; } = string.Empty;
-        public string MachineAvatar { get; set; } = string.Empty;
+        public string Model { get; set; } = string.Empty;
+        public string UmageUrl { get; set; } = string.Empty;
 
 
         public int MachineStatusID { get; set; }

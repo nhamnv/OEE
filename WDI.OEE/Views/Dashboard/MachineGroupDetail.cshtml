@@ -70,7 +70,7 @@
 <div class="col-sm-12">
     <div class="row">
         <div class="card">
-            <div class="card-header wcom-table-title">Danh sách máy theo trạng thái và nhóm</div>
+            <div class="card-header wcom-card-title">Danh sách máy theo trạng thái và nhóm</div>
             <div class="card-body">
                 <div class="table-hover">
                     <table id="gridListMachineByGroupAndStatus" class="table"
@@ -81,7 +81,7 @@
                             <tr>
                                 <th data-field="machineLocationName" data-align="left" data-sortable="true">Nhóm máy</th>
                                 <th data-field="machineName" data-align="left" data-sortable="true">Tên máy</th>
-                                <th data-field="machineModel" data-align="left" data-sortable="true">Model</th>
+                                <th data-field="Model" data-align="left" data-sortable="true">Model</th>
                             </tr>
                         </thead>
                     </table>
@@ -109,7 +109,7 @@
     });
 
     function load_gridListMachineByGroupAndStatus(MachineStatusID, MachineGroupID) {   
-        debugger;
+        //debugger;
         $.ajax({
             // url: "/Dashboard/MachineGroupDetail?MachineStatusID="+MachineStatusID+"&MachineGroupID="+MachineGroupID,
             url: "/Dashboard/ChangeMachineGroupDetail",
@@ -119,7 +119,7 @@
             async: true,
             beforeSend: function () { },
             success: function (result) {
-                debugger;
+                //debugger;
                 $("#gridListMachineByGroupAndStatus").bootstrapTable({
                     data: result.listMachine,
                     formatLoadingMessage: function () {

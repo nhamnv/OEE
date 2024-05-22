@@ -63,10 +63,9 @@ builder.Services.AddScoped<IErrorMachineService, ReportErrorMachineService>();
 builder.Services.AddScoped<IReportMachineRuningStatusService, ReportMachineRuningStatusService>();
 builder.Services.AddScoped<IRazorPartialToStringRenderer, RazorPartialToStringRenderer>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
-
+builder.Services.AddScoped<IMachineManagementService, MachineManagementService>();
 
 #endregion
-
 
 var app = builder.Build();
 
@@ -88,12 +87,13 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     // pattern: "{controller=Home}/{action=Index}/{id?}");
-    // pattern: "{controller=Authentication}/{action=LoginForm}/{id?}");
-    // pattern: "{controller=ReportErrorMachine}/{action=Index}/{id?}");
+    pattern: "{controller=Authentication}/{action=LoginForm}/{id?}");
+// pattern: "{controller=ReportErrorMachine}/{action=Index}/{id?}");
 
-    // pattern: "{controller=ReportMachineRuningStatus}/{action=Index}/{id?}");
-    // pattern: "{controller=ReportMachineRuningStatus}/{action=Detail}/{id?}");
-    pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+// pattern: "{controller=ReportMachineRuningStatus}/{action=Index}/{id?}");
+// pattern: "{controller=ReportMachineRuningStatus}/{action=Detail}/{id?}");
+// pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+// pattern: "{controller=MachineManagement}/{action=Index}/{id?}");
 
 
 app.UseRequestLocalization();

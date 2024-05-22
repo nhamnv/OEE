@@ -33,8 +33,8 @@ namespace Service.Service
                          MachineName = m.MachineName,
                          MachineLocationID = l.LocationID,
                          MachineLocationName = l.LocationName,
-                         MachineModel = m.MachineModel,
-                         MachineAvatar = (!string.IsNullOrEmpty(m.MachineAvatar) ? m.MachineAvatar : "no_image.png"),
+                         Model = m.Model,
+                         UmageUrl = (!string.IsNullOrEmpty(m.UmageUrl) ? m.UmageUrl : "NoImage.png"),
                          MachineStatusID = x.Where(t => t.StatusTime <= reportDate).OrderByDescending(o => o.StatusTime).FirstOrDefault()?.StatusID ?? 0
                          ,
                          MachineStatusName = (from st in StaticData.Data_MachineStatus
@@ -135,8 +135,8 @@ namespace Service.Service
                          MachineName = m.MachineName,
                          MachineLocationID = l.LocationID,
                          MachineLocationName = l.LocationName,
-                         MachineModel = m.MachineModel,
-                         MachineAvatar = (!string.IsNullOrEmpty(m.MachineAvatar) ? m.MachineAvatar : "no_image.png"),
+                         Model = m.Model,
+                         UmageUrl = (!string.IsNullOrEmpty(m.UmageUrl) ? m.UmageUrl : "NoImage.png"),
 
                          MachineStatusID = x.Where(t => t.StatusTime <= reportDate).OrderByDescending(o => o.StatusTime).FirstOrDefault()?.StatusID ?? 0
                          ,
@@ -193,7 +193,7 @@ namespace Service.Service
                 reval.ListMachine = lstMachineLastStatus?.Where(t => t.MachineStatusID == _MachineStatusID && t.MachineGroupID == _MachineGroupID)
                     .Select(t => new DashboardMachineItem()
                     {
-                        MachineAvatar = (!string.IsNullOrEmpty(t.MachineAvatar) ? t.MachineAvatar : "no_image.png")
+                        UmageUrl = (!string.IsNullOrEmpty(t.UmageUrl) ? t.UmageUrl : "NoImage.png")
                         ,
                         MachineName = t.MachineName
                         ,
@@ -203,7 +203,7 @@ namespace Service.Service
                         ,
                         MachineLocationName = t.MachineLocationName
                         ,
-                        MachineModel = t.MachineModel
+                        Model = t.Model
                     })?.ToList() ?? new List<DashboardMachineItem>();
 
 

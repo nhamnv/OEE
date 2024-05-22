@@ -1,32 +1,24 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-
-}
-
-<div style="padding-left: 0px;" id="report-error-machine">
-    <div class="col-sm-12">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label class="control-caption" >Thời gian</label>
-                            @Html.DropDownList("TimeRangeID", (List<SelectListItem>)ViewData["ListTimeRange"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange="filterData()" })
-                        </div>
+﻿
+<div class="col-lg-12 col-sm-12" id="report-error-machine">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Thời gian</label>
+                        @Html.DropDownList("TimeRangeID", (List<SelectListItem>)ViewData["ListTimeRange"], htmlAttributes: new { @class = "form-control select2", @onchange = "filterData()" })
                     </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label class="control-caption" >Nhóm máy</label>
-                            @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange = "filterData()" })
-                        </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Nhóm máy</label>
+                        @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-control select2", @onchange = "filterData()" })
                     </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label class="control-caption" >Vị trí</label>
-                            @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-select form-select-sm mt-3", @onchange = "filterData()" })
-                        </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Vị trí</label>
+                        @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-control select2", @onchange = "filterData()" })
                     </div>
                 </div>
             </div>
@@ -34,68 +26,67 @@
     </div>
 </div>
 
-<div class="row">
 
-    <div class="col-sm-6">
-        <div class="row">
-            <div class="col-sm-4">
-                <!-- [card1] start-->
-                <div class="card card-machineinfo" name="errormachine-info">
-                    <div class="card-body" style="position: relative;text-align:center">
-                        <p class="wcom-table-title">Tổng số lỗi</p>
-                        <p class="machineinfor-data" style="font-size:90px; color:#1d62c2;" id="cardErrorTotal">123</p>
+<div class="col-lg-12 col-sm-12">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <!-- [card1] start-->
+                    <div class="card card-machineinfo" name="errormachine-info">
+                        <div class="card-body" style="position: relative;text-align:center">
+                            <p class="wcom-card-title">Tổng số lỗi</p>
+                            <p class="machineinfor-data" style="font-size:90px; color:#1d62c2;" id="cardErrorTotal">123</p>
+                        </div>
                     </div>
+                    <!-- [card1] end-->
                 </div>
-                <!-- [card1] end-->
-            </div>
-            <div class="col-sm-4">
-                <!-- [card2] start-->
-                <div class="card card-machineinfo" name="errormachine-error">
-                    <div class="card-body" style="position: relative;text-align:center">
-                        <p class="wcom-table-title">Lỗi gặp nhiều nhất</p>
-                        <p class="machineinfor-data" style="color:#c07f8a;" id="cardErrorMostOccus">Lỗi gặp nhiều nhấtLỗi gặp nhiều nhấtLỗi gặp nhiều nhất</p>
+                <div class="col-lg-4 col-sm-12">
+                    <!-- [card2] start-->
+                    <div class="card card-machineinfo" name="errormachine-error">
+                        <div class="card-body" style="position: relative;text-align:center">
+                            <p class="wcom-card-title">Lỗi gặp nhiều nhất</p>
+                            <p class="machineinfor-data" style="color:#c07f8a;" id="cardErrorMostOccus">Lỗi gặp nhiều nhấtLỗi gặp nhiều nhấtLỗi gặp nhiều nhất</p>
+                        </div>
                     </div>
+                    <!-- [card2] end-->
                 </div>
-                <!-- [card2] end-->
-            </div>
-            <div class="col-sm-4">
-                <!-- [card3] start-->
-                <div class="card card-machineinfo" name="errormachine-warning">
-                    <div class="card-body" style="position: relative;text-align:center">
-                        <p class="wcom-table-title">Lỗi gặp ít nhất</p>
-                        <p class="machineinfor-data" style="color:#dabe4d;" id="cardErrorLeastOccus">Lỗi gặp ít nhất Lỗi gặp ít nhất Lỗi gặp ít nhất</p>
+                <div class="col-lg-4 col-sm-12">
+                    <!-- [card3] start-->
+                    <div class="card card-machineinfo" name="errormachine-warning">
+                        <div class="card-body" style="position: relative;text-align:center">
+                            <p class="wcom-card-title">Lỗi gặp ít nhất</p>
+                            <p class="machineinfor-data" style="color:#dabe4d;" id="cardErrorLeastOccus">Lỗi gặp ít nhất Lỗi gặp ít nhất Lỗi gặp ít nhất</p>
+                        </div>
                     </div>
+                    <!-- [card3] end-->
                 </div>
-                <!-- [card3] end-->
             </div>
-        </div>
 
-        <!-- [Chart top 10 lỗi nhiều nhất] start -->
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div id="chartTop10ErrorOccured"></div>
+            <!-- [Chart top 10 lỗi nhiều nhất] start -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="chartTop10ErrorOccured"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- [Chart top 10 lỗi nhiều nhất] end -->
         </div>
-        <!-- [Chart top 10 lỗi nhiều nhất] end -->
-    </div>
-    <div class="col-sm-6">
-        <div class="row">
+        <div class="col-sm-6">
             <div class="card">
-                <div class="card-header wcom-table-title">Danh sách lỗi</div>
-                <div class="card-body">
-                    <div class="table-hover">
-                        <table id="gridListErrorMachine" class="table"
+                <div class="card-header wcom-card-title">Danh sách lỗi</div>
+                <div class="card-block table-border-style">
+                    <div class="table-responsive">
+                        <table id="gridListErrorMachine" class="table table-styling"
                                data-pagination="true"
                                data-page-list="[5, 10, 20, 50, 100, 200]"
                                data-show-footer="false">
-                            <thead>
+                            <thead class="table-primary">
                                 <tr>
-                                    @* <th data-field="" data-checkbox="true"></th> *@
-                                    <th data-field="errorDate" data-align="center" data-sortable="true">Ngày</th>
+                                    <th data-field="errorDate" data-align="center" data-sortable="true" data-formatter="dateFormat">Ngày</th>
                                     <th data-field="machineLocation" data-align="left" data-sortable="true">Vị trí</th>
                                     <th data-field="machineName" data-align="left" data-sortable="true">Tên máy</th>
                                     <th data-field="machineGroupName" data-align="left" data-sortable="true">Nhóm máy</th>
@@ -119,6 +110,16 @@
     $(document).ready(function () {
         load_gridErrorList();
         load_GetErrorSummary();
+
+        $('#TimeRangeID').select2({
+            placeholder: 'Thời gian'
+        });
+        $('#MachineGroupID').select2({
+            placeholder: 'Nhóm máy'
+        });
+        $('#MachineLocationID').select2({
+            placeholder: 'Vị trí'
+        });
     });
 
     function filterData() {
@@ -141,9 +142,8 @@
             async: true,
             beforeSend: function () { },
             success: function (result) {
-                debugger;
-                if (result && result.success === true)
-                    {
+                //debugger;
+                if (result && result.success === true) {
                     $("#cardErrorTotal").text(result.data.errorTotal);
                     $("#cardErrorMostOccus").text(result.data.errorMostOccus);
                     $("#cardErrorLeastOccus").text(result.data.errorLeastOccus);
@@ -223,7 +223,7 @@
             legend: {
                 // https://apexcharts.com/docs/options/legend/
                 show: true,
-                position: 'right'
+                position: 'bottom'
             },
             xaxis: {
                 categories: categories,
@@ -255,7 +255,7 @@
         chartTop10Error.render();
     }
 
-     
+
     function load_gridErrorList() {
         var _TimeRange = $("#TimeRangeID").val();
         var _MachineGroup = $("#MachineGroupID").val();
@@ -286,4 +286,9 @@
         });
     }
 
+    function dateFormat(value, row, index) {
+        var _format = 'DD/MM/YYYY hh:mm:ss';
+        //let _format = "";
+        return moment(value).format(_format);
+    }
 </script>
