@@ -56,7 +56,7 @@ body {
 }
 
 .block-status {
-    width: 42px;
+    width: 40px;
     height: 32px;
     line-height: 32px;
     display: inline-block!important;
@@ -171,4 +171,34 @@ body {
 
 .table-hover .table-primary:hover {
     background-color: #22A7A9;
+}
+
+.form-control:focus {
+    border: 1px solid #01A9AC;
+}
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: none;
+    border: 0px;
+}
+
+/***** j-pro : hover màu đỏ weldcom ******/
+.j-pro input[type="text"]:hover, .j-pro input[type="password"]:hover, .j-pro input[type="email"]:hover, .j-pro input[type="search"]:hover, .j-pro input[type="url"]:hover, .j-pro textarea:hover, .j-pro select:hover, .j-pro input[type="text"]:focus, .j-pro input[type="password"]:focus, .j-pro input[type="email"]:focus, .j-pro input[type="search"]:focus, .j-pro input[type="url"]:focus, .j-pro textarea:focus, .j-pro select:focus, .j-pro .j-file-button:hover + input, .j-forms input[type="text"]:hover, .j-forms input[type="password"]:hover, .j-forms input[type="email"]:hover, .j-forms input[type="search"]:hover, .j-forms input[type="url"]:hover, .j-forms textarea:hover, .j-forms select:hover, .j-forms input[type="text"]:focus, .j-forms input[type="password"]:focus, .j-forms input[type="email"]:focus, .j-forms input[type="search"]:focus, .j-forms input[type="url"]:focus, .j-forms textarea:focus, .j-forms select:focus {
+    border: 1px solid #01A9AC;
+}
+/***** j-pro : focus => không boder ******/
+/*.j-pro input[type="text"]:focus, .j-pro input[type="password"]:focus, .j-pro input[type="email"]:focus, .j-pro input[type="search"]:focus, .j-pro input[type="url"]:focus, .j-pro textarea:focus, .j-pro select:focus, .j-pro input[type="text"]:focus, .j-pro input[type="password"]:focus, .j-pro input[type="email"]:focus, .j-pro input[type="search"]:focus, .j-pro input[type="url"]:focus, .j-pro textarea:focus, .j-pro select:focus, .j-pro .j-file-button:focus + input, .j-forms input[type="text"]:focus, .j-forms input[type="password"]:focus, .j-forms input[type="email"]:focus, .j-forms input[type="search"]:focus, .j-forms input[type="url"]:focus, .j-forms textarea:focus, .j-forms select:focus, .j-forms input[type="text"]:focus, .j-forms input[type="password"]:focus, .j-forms input[type="email"]:focus, .j-forms input[type="search"]:focus, .j-forms input[type="url"]:focus, .j-forms textarea:focus, .j-forms select:focus {
+    border: 0px solid #01A9AC;
+}*/
+/*.j-pro .form-control {
+    color: #495057;
+    height: 40px;
+}*/
+.j-pro input[type="text"], .j-pro input[type="password"], .j-pro input[type="email"], .j-pro input[type="search"], .j-pro input[type="url"], .j-pro textarea, .j-pro select, .j-forms input[type="text"], .j-forms input[type="password"], .j-forms input[type="email"], .j-forms input[type="search"], .j-forms input[type="url"], .j-forms textarea, .j-forms select {
+    font-size: 14px;
+}
+.j-pro label {
+    margin-top: 10px;
+}
+.j-pro input{
+    font-size:14px;
 }

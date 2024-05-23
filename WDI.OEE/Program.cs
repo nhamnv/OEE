@@ -45,6 +45,7 @@ builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+
 #endregion
 
 #region Define: Service Injection

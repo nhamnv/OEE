@@ -32,7 +32,14 @@
     <div id="divlistMachineRunningStatusDetail" class="row">
         @if (Model != null && Model.Count>0)
         {
-            @Html.Partial("_MachineSingle.cshtml", Model?[0]);
+            // Thiết bị lật dầm XF15 - Số 01
+            var m = Model.Where(t => t.MachineID == 22).FirstOrDefault();
+            if(m== null)
+            {
+                m = Model?[0];
+            }
+
+            @await Html.PartialAsync("_MachineSingle.cshtml", m);
         }
     </div>
 </div>

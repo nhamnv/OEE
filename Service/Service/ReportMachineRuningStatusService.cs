@@ -154,6 +154,28 @@ namespace Service.Service
                             timeline.Add(sd);
                         }
                     }
+                    // Nếu trạng thái nào không có dữ liệu history thì tạo 1 bản ghi trùng start và end
+                    // lấy bằng giờ nhỏ nhất trong khoảng thời gian search để hiển thị 1 thanh trên biểu đồ
+
+                    foreach (var ists in StaticData.Data_MachineStatus)
+                    {
+                        var tt1 = timeline.Where(t => t._StatusID == ists.StatusID).FirstOrDefault();
+                        if (tt1 == null)
+                        {
+                            timeline.Add(new TimelineSeriesData()
+                            {
+                                x = ists.StatusName,
+                                fillColor = ists.ColorCode,
+                                _StatusID = ists.StatusID,
+                                y = new List<long>()
+                                {
+                                    timeline.FirstOrDefault().y[0] // Start === end
+                                    , timeline.FirstOrDefault().y[0] // Start === end
+                                }
+                            });
+                        }
+                    }
+
                     #endregion
 
                     #region Tính % các trạng thái (đơn vị cơ sở tính = mili giây)

@@ -52,6 +52,16 @@ namespace WDI.OEE.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// Load chi tiết máy
+        /// </summary>
+        /// <param name="stringData">
+        /// Json data gồm các trường:
+        /// <para>machineID: id máy</para>
+        /// <para>machineLocationID: id vị trí lắp máy</para>
+        /// <para>formType: kiểu form: 1=load to view; 2=load to edit</para>
+        /// </param>
+        /// <returns></returns>
         public ActionResult MachineDetail(string stringData)
         {
             MachineDetailViewModel model = new MachineDetailViewModel();
@@ -62,6 +72,7 @@ namespace WDI.OEE.Controllers
                 dynamic d = JObject.Parse(stringData);
                 int machineID = d.machineID;
                 int machineLocationID = d.machineLocationID;
+                int formType = d.formType;
 
                 model = _machineManagementService.GetDetails(machineID, machineLocationID);
             }

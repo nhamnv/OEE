@@ -17,26 +17,32 @@
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- [Theme adminty] start -->
-    <!-- Favicon icon -->
-    <link rel="icon" href="~/lib/themes/adminty-dashboard-master/libraries/assets/images/favicon.ico" type="image/x-icon">
+
+
+
+    @* <link rel="icon" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/images/favicon.ico" type="image/x-icon"> *@
+    <link rel="icon" href="~/images/logoes/weldcom.png" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/bootstrap/css/bootstrap.min.css">
     <!-- themify-icons line icon -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/themify-icons/themify-icons.css">
     <!-- ico font -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/icofont/css/icofont.css">
     <!-- feather Awesome -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/feather/css/feather.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/feather/css/feather.css">
+    <!-- jpro forms css -->
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/j-pro/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/j-pro/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/j-pro/css/j-pro-modern.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/css/style.css">
     <!-- Select 2 css -->
     <link rel="stylesheet" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/select2/css/select2.min.css">
     <!-- Multi Select css -->
     <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap-multiselect/css/bootstrap-multiselect.css">
     <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/multiselect/css/multi-select.css">
-    <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/css/jquery.mCustomScrollbar.css">
 
 
     <!--Bootstrap-->
@@ -330,7 +336,7 @@
                 <div class="pcoded-wrapper">
                     <nav class="pcoded-navbar">
                         <div class="pcoded-inner-navbar main-menu">
-                            <!-- [nhamnv - menu] start-->
+                            <!-- [nhamnv1 - menu] start-->
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="pcoded-hasmenu pcoded-trigger">
                                     <a href="javascript:void(0)">
@@ -338,11 +344,6 @@
                                         <span class="pcoded-mtext">Báo cáo tổng hợp</span>
                                     </a>
                                     <ul class="pcoded-submenu">
-                                        <li class="">
-                                            <a href="@Url.Action("LoginForm","Authentication")">
-                                                <span class="pcoded-mtext">Đăng nhập</span>
-                                            </a>
-                                        </li>
                                         <li class="active">
                                             <a href="@Url.Action("Index","Dashboard")">
                                                 <span class="pcoded-mtext">Báo cáo tổng hợp</span>
@@ -363,7 +364,7 @@
                                         <li class="">
                                             <a href="@Url.Action("Detail","ReportMachineRuningStatus")">
                                                 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                                <span class="pcoded-mtext">Tình trạng hoạt động máy - chi tiết</span>
+                                                <span class="pcoded-mtext">Chi tiết hoạt động máy</span>
                                             </a>
                                         </li>
                                         <li class="">
@@ -381,9 +382,27 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <!-- [nhamnv - menu] end-->
+                            <!-- [nhamnv1 - menu] end-->
 
                             @await Component.InvokeAsync("Menu");
+
+                            <!-- [nhamnv2 - menu] start-->
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-list"></i></span>
+                                        <span class="pcoded-mtext">Hệ thống</span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class="">
+                                            <a href="@Url.Action("LoginForm","Authentication")">
+                                                <span class="pcoded-mtext">Đăng nhập</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- [nhamnv2 - menu] end-->
                         </div>
                     </nav>
                     <div class="pcoded-content">

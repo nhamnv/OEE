@@ -147,7 +147,7 @@
     }
 
     function expanLinkMachineDetail(value, row, index) {
-        var _model = '{machineID:' + row.iD + ',machineLocationID:' + row.machineLocationID + '}';
+        var _model = '{machineID:' + row.iD + ',machineLocationID:' + row.machineLocationID + ', formType:1}';
         
         var _temp = '@Url.Action("MachineDetail", "MachineManagement")?stringData=' + _model;
         var _link = '<a href="' + _temp + '">' + row.machineName + '</a>';
