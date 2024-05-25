@@ -20,11 +20,11 @@ namespace WDI.OEE.Controllers.Components.Menu
         //    return await Task.FromResult(View(model));
         //}
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public Task<IViewComponentResult> InvokeAsync()
         {
             var model = _data_MenuService.GetList();
 
-            return View(model);
+            return Task.FromResult<IViewComponentResult>(View(model));
         }
     }
 }

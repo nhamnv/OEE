@@ -19,7 +19,7 @@ namespace Repository.Entity
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -33,7 +33,7 @@ namespace Repository.Entity
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -50,7 +50,7 @@ namespace Repository.Entity
             {
                 return await _context.Set<T>().FindAsync(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -64,7 +64,7 @@ namespace Repository.Entity
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

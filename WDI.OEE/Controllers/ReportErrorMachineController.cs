@@ -93,9 +93,8 @@ namespace WDI.OEE.Controllers
         public JsonResult GetErrorSummary(string TimeRangeID, string MachineGroupID, string MachineLocationID)
         {
             bool Success = false;
-            int ErrorTotal = 0;
             string message = "";
-            dynamic data = null;
+            dynamic data = new System.Dynamic.ExpandoObject();
             try
             {
 
@@ -109,7 +108,7 @@ namespace WDI.OEE.Controllers
             }
             return new JsonResult(new
             {
-                Success = true,
+                Success = Success,
                 Data = data,
                 Message = message
             });

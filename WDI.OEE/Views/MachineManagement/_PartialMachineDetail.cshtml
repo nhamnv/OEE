@@ -1,12 +1,10 @@
 ﻿@model Common.Data_Machine
 @{
-    string _readonly_input = "";
+    //string _readonly_input = "";
 }
 
 <style>
     .bg-c-wcom-red {
-        /* background: -webkit-gradient(linear, left top, right top, from(#D82F24), to(#D82F24));
-        background: linear-gradient(to right, #D, #01dbdf); */
         background-color:#D82F24;
     }
 </style>
@@ -14,7 +12,7 @@
 <div class="col-xl-12 col-md-12">
     <div class="card user-card-full">
         <div class="row m-l-0 m-r-0">
-            <div class="col-sm-5 bg-c-wcom-red user-profile">
+            <div class="col-sm-5 @* bg-c-wcom-red *@ bg-c-lite-green user-profile">
                 <div class="card-block text-center text-white">
                     <div class="m-b-25">
                         <img class="img-radius" alt="Ảnh đại diện máy" style="width:100%;object-fit: contain;" src="~/images/machines/@Model.UmageUrl" />

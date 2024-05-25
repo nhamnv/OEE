@@ -11,14 +11,14 @@ namespace Repository.Repository
             _context = context;
         }
 
-        public ICollection<Data_Menu> GetList()
+        public List<Data_Menu> GetList()
         {
             // var a = this.GetAllAsync(); ==> Dòng này lỗi
             // fail: Microsoft.EntityFrameworkCore.Database.Connection[20004]
             // An error occurred using the connection to database 'wdi_oee' on server 'nhamnv'.
             // info: Microsoft.Hosting.Lifetime[0]
 
-            ICollection<Data_Menu> reval = new List<Data_Menu>();
+            List<Data_Menu> reval = new List<Data_Menu>();
             try
             {
                 Data_Menu l1 = new Data_Menu();
@@ -130,7 +130,7 @@ namespace Repository.Repository
 
                 #endregion
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

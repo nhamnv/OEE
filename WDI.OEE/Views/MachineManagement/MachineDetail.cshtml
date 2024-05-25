@@ -4,7 +4,7 @@
 <div class="col-xl-12 col-md-12">
     <div class="card">
         <div class="card-header">
-            <h5>Quản lý máy</h5>
+            <h5>@(Model.Machine.MachineName??"Quản lý máy")</h5>
         </div>
         <div class="card-block tab-icon">
             <div class="row">
@@ -48,8 +48,8 @@
                         <!-- [Tab: Tab chi tiết máy] end -->
                         <!-- [Tab: Tab linh kiện] start -->
                         <div class="tab-pane" id="tab_accessory" role="tabpanel" aria-expanded="false">
-                            <p class="m-0">2. Tab linh kiện.</p>
-                            @await Html.PartialAsync("_PartialMachineComponent")
+                            @* <p class="m-0">2. Tab linh kiện.</p> *@
+                            @await Html.PartialAsync("_PartialMachineComponent", Model.Machine.ListComponents)
                         </div>
                         <!-- [Tab: Tab linh kiện] end -->
                         <!-- [Tab: Tab linh kiện] end -->
@@ -60,12 +60,12 @@
                         <!-- [Tab: Tab checklist bảo dưỡng] end -->
                         <!-- [Tab: Tab thời gian vận hành] start -->
                         <div class="tab-pane" id="tab_operationtime" role="tabpanel" aria-expanded="false">
-                            <p class="m-0">4. Tab thời gian vận hành.</p>
+                            @await Html.PartialAsync("_PartialMachineRunningStatus", Model.Machine)
                         </div>
                         <!-- [Tab: Tab thời gian vận hành] end -->
                         <!-- [Tab: Tab danh sách lỗi] start -->
                         <div class="tab-pane" id="tab_errorlist" role="tabpanel" aria-expanded="false">
-                            <p class="m-0">4. Tab danh sách lỗi.</p>
+                            @await Html.PartialAsync("_PartialMachineErrorList" , Model.Machine)
                         </div>
                         <!-- [Tab: Tab danh sách lỗi] end -->
                         <!-- [Tab: Tab lịch sử sửa chữa] start -->

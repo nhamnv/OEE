@@ -27,6 +27,8 @@
         /// Bảng máy lỗi
         /// </summary>
         public static readonly List<Data_ErrorHistory> Data_ErrorHistory = new List<Data_ErrorHistory>();
+
+        public static readonly List<Data_MachineComponent> Data_MachineComponent = new List<Data_MachineComponent>();
         static StaticData()
         {
             try
@@ -44,20 +46,385 @@
 
                 #region Build table Data_Error --> https://docs.google.com/spreadsheets/d/1UMRjN9evTMvQwJMt31RtQRhMZcriXHBo0uEliIhr05M/edit#gid=1052012425&range=J38
 
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 1, ErrorName = "Bộ điều khiển", ErrorCode = "E001" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 2, ErrorName = "Cơ khí", ErrorCode = "E002" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 3, ErrorName = "Thủy lực - khí nén", ErrorCode = "E003" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 4, ErrorName = "Tủ điện điều khiển", ErrorCode = "E004" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 5, ErrorName = "Hệ thống điều khiển", ErrorCode = "E005" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 6, ErrorName = "Phần mềm", ErrorCode = "E006" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 7, ErrorName = "Vận hành máy", ErrorCode = "E007" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 8, ErrorName = "Phụ kiện", ErrorCode = "E008" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 9, ErrorName = "Điều chỉnh thông số", ErrorCode = "E009" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 10, ErrorName = "Nguồn cắt laser", ErrorCode = "E101" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 11, ErrorName = "Nguồn cắt plasma", ErrorCode = "E301" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 12, ErrorName = "Blank", ErrorCode = "E501" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 13, ErrorName = "Nguồn hàn", ErrorCode = "E701" });
-                Data_Error.Add(new Common.Data_Error() { ErrorID = 14, ErrorName = "Nguồn hàn/cắt", ErrorCode = "E901" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 1, ErrorName = "Bộ điều khiển", ErrorCode = "E001" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 2, ErrorName = "Cơ khí", ErrorCode = "E002" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 3, ErrorName = "Thủy lực - khí nén", ErrorCode = "E003" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 4, ErrorName = "Tủ điện điều khiển", ErrorCode = "E004" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 5, ErrorName = "Hệ thống điều khiển", ErrorCode = "E005" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 6, ErrorName = "Phần mềm", ErrorCode = "E006" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 7, ErrorName = "Vận hành máy", ErrorCode = "E007" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 8, ErrorName = "Phụ kiện", ErrorCode = "E008" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 9, ErrorName = "Điều chỉnh thông số", ErrorCode = "E009" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 10, ErrorName = "Nguồn cắt laser", ErrorCode = "E101" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 11, ErrorName = "Nguồn cắt plasma", ErrorCode = "E301" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 12, ErrorName = "Blank", ErrorCode = "E501" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 13, ErrorName = "Nguồn hàn", ErrorCode = "E701" });
+                //Data_Error.Add(new Common.Data_Error() { ID = 14, ErrorName = "Nguồn hàn/cắt", ErrorCode = "E901" });
+
+                Data_Error.Add(new Common.Data_Error() { ID = 1, ErrorName = "Bộ điều khiển", ErrorCode = "E01100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 2, ErrorName = "Bộ điều khiển", ErrorCode = "E01200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 3, ErrorName = "Bộ điều khiển", ErrorCode = "E01300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 4, ErrorName = "Bộ điều khiển", ErrorCode = "E01400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 5, ErrorName = "Bộ điều khiển", ErrorCode = "E01500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 6, ErrorName = "Cơ khí", ErrorCode = "E02100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 7, ErrorName = "Cơ khí", ErrorCode = "E02200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 8, ErrorName = "Cơ khí", ErrorCode = "E02300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 9, ErrorName = "Cơ khí", ErrorCode = "E02400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 10, ErrorName = "Cơ khí", ErrorCode = "E02500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 11, ErrorName = "Thủy lực, khí nén", ErrorCode = "E03100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 12, ErrorName = "Thủy lực, khí nén", ErrorCode = "E03200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 13, ErrorName = "Thủy lực, khí nén", ErrorCode = "E03300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 14, ErrorName = "Thủy lực, khí nén", ErrorCode = "E03400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 15, ErrorName = "Thủy lực, khí nén", ErrorCode = "E03500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 16, ErrorName = "Tủ điện điều khiển", ErrorCode = "E04100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 17, ErrorName = "Tủ điện điều khiển", ErrorCode = "E04200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 18, ErrorName = "Tủ điện điều khiển", ErrorCode = "E04300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 19, ErrorName = "Tủ điện điều khiển", ErrorCode = "E04400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 20, ErrorName = "Tủ điện điều khiển", ErrorCode = "E04500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 21, ErrorName = "Hệ thống điều khiển", ErrorCode = "E05100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 22, ErrorName = "Hệ thống điều khiển", ErrorCode = "E05200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 23, ErrorName = "Hệ thống điều khiển", ErrorCode = "E05300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 24, ErrorName = "Hệ thống điều khiển", ErrorCode = "E05400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 25, ErrorName = "Hệ thống điều khiển", ErrorCode = "E05500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 26, ErrorName = "Phần mềm", ErrorCode = "E06100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 27, ErrorName = "Phần mềm", ErrorCode = "E06200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 28, ErrorName = "Phần mềm", ErrorCode = "E06300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 29, ErrorName = "Phần mềm", ErrorCode = "E06400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 30, ErrorName = "Phần mềm", ErrorCode = "E06500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 31, ErrorName = "Vận hành máy", ErrorCode = "E07100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 32, ErrorName = "Vận hành máy", ErrorCode = "E07200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 33, ErrorName = "Vận hành máy", ErrorCode = "E07300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 34, ErrorName = "Vận hành máy", ErrorCode = "E07400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 35, ErrorName = "Vận hành máy", ErrorCode = "E07500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 36, ErrorName = "Phụ kiện", ErrorCode = "E08100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 37, ErrorName = "Phụ kiện", ErrorCode = "E08200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 38, ErrorName = "Phụ kiện", ErrorCode = "E08300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 39, ErrorName = "Phụ kiện", ErrorCode = "E08400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 40, ErrorName = "Phụ kiện", ErrorCode = "E08500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 41, ErrorName = "Nguồn", ErrorCode = "E09100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 42, ErrorName = "Nguồn", ErrorCode = "E09200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 43, ErrorName = "Nguồn", ErrorCode = "E09300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 44, ErrorName = "Nguồn", ErrorCode = "E09400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 45, ErrorName = "Nguồn", ErrorCode = "E09500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 46, ErrorName = "Điều chỉnh thông số", ErrorCode = "E10100", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 47, ErrorName = "Điều chỉnh thông số", ErrorCode = "E10200", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 48, ErrorName = "Điều chỉnh thông số", ErrorCode = "E10300", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 49, ErrorName = "Điều chỉnh thông số", ErrorCode = "E10400", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 50, ErrorName = "Điều chỉnh thông số", ErrorCode = "E10500", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 0 });
+                Data_Error.Add(new Common.Data_Error() { ID = 51, ErrorName = "Cảm biến hành trình", ErrorCode = "E01301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 52, ErrorName = "Máy tính điều khiển", ErrorCode = "E01302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 53, ErrorName = "Card điều khiển tín hiệu", ErrorCode = "E01303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 54, ErrorName = "Encoder", ErrorCode = "E01304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 55, ErrorName = "Động cơ Servo", ErrorCode = "E01305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 56, ErrorName = "Màn hình điều khiển", ErrorCode = "E01306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 57, ErrorName = "Nút nhấn", ErrorCode = "E01307", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 58, ErrorName = "Bộ điều khiển độ cao đầu cắt laser BCS100", ErrorCode = "E01308", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 59, ErrorName = "Remote", ErrorCode = "E01309", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 60, ErrorName = "Chiller", ErrorCode = "E01310", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 23 });
+                Data_Error.Add(new Common.Data_Error() { ID = 61, ErrorName = "Cảm biến tiệm cận", ErrorCode = "E01401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 62, ErrorName = "Bộ nâng hạ tự động THC", ErrorCode = "E01402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 63, ErrorName = "Encoder", ErrorCode = "E01403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 64, ErrorName = "Động cơ Servo", ErrorCode = "E01404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 65, ErrorName = "Bộ điều khiển CCM3", ErrorCode = "E01405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 66, ErrorName = "Bộ điều khiển F7000s", ErrorCode = "E01406", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 67, ErrorName = "Bộ điều khiển AMG", ErrorCode = "E01407", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 68, ErrorName = "Nút nhấn", ErrorCode = "E01408", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 69, ErrorName = "Bộ làm mát rời", ErrorCode = "E01409", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 24 });
+                Data_Error.Add(new Common.Data_Error() { ID = 70, ErrorName = "Cảm biến quang", ErrorCode = "E01201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 71, ErrorName = "Cảm biến từ", ErrorCode = "E01202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 72, ErrorName = "Màn hình cảm ứng keyen", ErrorCode = "E01203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 73, ErrorName = "Nút nhấn", ErrorCode = "E01204", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 74, ErrorName = "Công tắc gạt", ErrorCode = "E01205", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 75, ErrorName = "Biến trở", ErrorCode = "E01206", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 76, ErrorName = "Động cơ 3 pha", ErrorCode = "E01207", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 77, ErrorName = "Động cơ servo", ErrorCode = "E01208", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 78, ErrorName = "Công tắc hành trình", ErrorCode = "E01209", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 22 });
+                Data_Error.Add(new Common.Data_Error() { ID = 79, ErrorName = "Cảm biến hành trình", ErrorCode = "E01101", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 80, ErrorName = "Màn hình Delem", ErrorCode = "E01102", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 81, ErrorName = "Động cơ bước", ErrorCode = "E01103", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 82, ErrorName = "Driver", ErrorCode = "E01104", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 83, ErrorName = "Công tắc hành trình/biến trở", ErrorCode = "E01105", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 84, ErrorName = "Nút nhấn", ErrorCode = "E01106", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 85, ErrorName = "Màn hình điều khiển", ErrorCode = "E01107", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 86, ErrorName = "Remote", ErrorCode = "E01108", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 87, ErrorName = "Encoder", ErrorCode = "E01109", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 88, ErrorName = "Máy tính", ErrorCode = "E01110", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 21 });
+                Data_Error.Add(new Common.Data_Error() { ID = 89, ErrorName = "board I/O", ErrorCode = "E01501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 25 });
+                Data_Error.Add(new Common.Data_Error() { ID = 90, ErrorName = "motor các trục", ErrorCode = "E01502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 25 });
+                Data_Error.Add(new Common.Data_Error() { ID = 91, ErrorName = "Tay dạy robot", ErrorCode = "E01503", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 25 });
+                Data_Error.Add(new Common.Data_Error() { ID = 92, ErrorName = "Nút nhấn", ErrorCode = "E01504", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 25 });
+                Data_Error.Add(new Common.Data_Error() { ID = 93, ErrorName = "Relay", ErrorCode = "E01505", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 25 });
+                Data_Error.Add(new Common.Data_Error() { ID = 94, ErrorName = "Máy tính", ErrorCode = "E01506", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 25 });
+                Data_Error.Add(new Common.Data_Error() { ID = 95, ErrorName = "Bép cắt", ErrorCode = "E10301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 48 });
+                Data_Error.Add(new Common.Data_Error() { ID = 96, ErrorName = "Tốc độ cắt", ErrorCode = "E10302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 48 });
+                Data_Error.Add(new Common.Data_Error() { ID = 97, ErrorName = "Áp khí", ErrorCode = "E10303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 48 });
+                Data_Error.Add(new Common.Data_Error() { ID = 98, ErrorName = "Công suất nguồn", ErrorCode = "E10304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 48 });
+                Data_Error.Add(new Common.Data_Error() { ID = 99, ErrorName = "Chưa dò thông số mẫu", ErrorCode = "E10305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 48 });
+                Data_Error.Add(new Common.Data_Error() { ID = 100, ErrorName = "Lưu nhầm thông số khác", ErrorCode = "E10306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 48 });
+                Data_Error.Add(new Common.Data_Error() { ID = 101, ErrorName = "Thông số dòng cắt", ErrorCode = "E10401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 49 });
+                Data_Error.Add(new Common.Data_Error() { ID = 102, ErrorName = "Thông số tốc độ cắt", ErrorCode = "E10402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 49 });
+                Data_Error.Add(new Common.Data_Error() { ID = 103, ErrorName = "Độ cao cắt", ErrorCode = "E10403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 49 });
+                Data_Error.Add(new Common.Data_Error() { ID = 104, ErrorName = "Độ cao đục lỗ", ErrorCode = "E10404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 49 });
+                Data_Error.Add(new Common.Data_Error() { ID = 105, ErrorName = "Tốc độ hàn", ErrorCode = "E10201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 47 });
+                Data_Error.Add(new Common.Data_Error() { ID = 106, ErrorName = "Dòng hàn", ErrorCode = "E10202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 47 });
+                Data_Error.Add(new Common.Data_Error() { ID = 107, ErrorName = "Điện áp hàn", ErrorCode = "E10203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 47 });
+                Data_Error.Add(new Common.Data_Error() { ID = 108, ErrorName = "Thông số Dao chấn", ErrorCode = "E10101", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 46 });
+                Data_Error.Add(new Common.Data_Error() { ID = 109, ErrorName = "Thông số Cối chấn", ErrorCode = "E10102", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 46 });
+                Data_Error.Add(new Common.Data_Error() { ID = 110, ErrorName = "Thông số tốc độ cắt", ErrorCode = "E10103", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 46 });
+                Data_Error.Add(new Common.Data_Error() { ID = 111, ErrorName = "Thông số dòng hàn", ErrorCode = "E10501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 50 });
+                Data_Error.Add(new Common.Data_Error() { ID = 112, ErrorName = "thông số tốc độ hàn", ErrorCode = "E10502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 50 });
+                Data_Error.Add(new Common.Data_Error() { ID = 113, ErrorName = "Bánh răng", ErrorCode = "E02301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 114, ErrorName = "Thanh răng", ErrorCode = "E02302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 115, ErrorName = "Cắt méo vuông ke", ErrorCode = "E02303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 116, ErrorName = "Cụm vitme trục Z", ErrorCode = "E02304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 117, ErrorName = "Bánh xe dẫn hướng", ErrorCode = "E02305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 118, ErrorName = "Cắt không tròn, méo lỗ", ErrorCode = "E02306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 119, ErrorName = "Hộp số motor", ErrorCode = "E02307", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 120, ErrorName = "Bộ gá động cơ", ErrorCode = "E02308", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 121, ErrorName = "Khung máy", ErrorCode = "E02309", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 122, ErrorName = "Con trượt", ErrorCode = "E02310", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 123, ErrorName = "Thanh trượt", ErrorCode = "E02311", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 124, ErrorName = "Xích chuyển đổi bàn", ErrorCode = "E02312", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 125, ErrorName = "Bánh răng", ErrorCode = "E02401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 126, ErrorName = "Thanh răng", ErrorCode = "E02402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 127, ErrorName = "Dây đai", ErrorCode = "E02403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 128, ErrorName = "Cụm trục Z", ErrorCode = "E02404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 129, ErrorName = "Bánh xe dẫn hướng", ErrorCode = "E02405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 130, ErrorName = "Cụm gá mỏ súng plasma", ErrorCode = "E02406", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 131, ErrorName = "Hộp số motor", ErrorCode = "E02407", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 132, ErrorName = "Đường ray", ErrorCode = "E02408", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 133, ErrorName = "Khung máy", ErrorCode = "E02409", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 134, ErrorName = "Con trượt", ErrorCode = "E02410", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 135, ErrorName = "Thanh trượt", ErrorCode = "E02411", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 136, ErrorName = "Bàn cắt", ErrorCode = "E02412", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 137, ErrorName = "Bộ nâng hạ pha băng", ErrorCode = "E02413", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 138, ErrorName = "Bánh răng", ErrorCode = "E02101", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 139, ErrorName = "Thanh dẫn hướng", ErrorCode = "E02102", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 140, ErrorName = "Đai ốc bi", ErrorCode = "E02103", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 141, ErrorName = "Hộp số motor", ErrorCode = "E02104", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 142, ErrorName = "Khung máy", ErrorCode = "E02105", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 143, ErrorName = "Bạc đạn", ErrorCode = "E02106", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 144, ErrorName = "Khe hở dao", ErrorCode = "E02107", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 145, ErrorName = "Con lăn", ErrorCode = "E02108", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 146, ErrorName = "Vítme bi", ErrorCode = "E02109", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 6 });
+                Data_Error.Add(new Common.Data_Error() { ID = 147, ErrorName = "Tấm gang mài mòn buồng phun", ErrorCode = "E02201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 148, ErrorName = "Con trượt", ErrorCode = "E02202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 149, ErrorName = "Tấm gang mài mòn đầu phun", ErrorCode = "E02203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 150, ErrorName = "Bạc đạn", ErrorCode = "E02204", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 151, ErrorName = "Gầu múc bi", ErrorCode = "E02205", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 152, ErrorName = "Tấm chắn cao su", ErrorCode = "E02206", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 153, ErrorName = "Xích giàn lăn", ErrorCode = "E02207", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 154, ErrorName = "Ray", ErrorCode = "E02208", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 155, ErrorName = "Con lăn", ErrorCode = "E02209", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 156, ErrorName = "Cốt bạc đạn con lăn", ErrorCode = "E02210", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 157, ErrorName = "Bánh xe tải dây", ErrorCode = "E02211", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 158, ErrorName = "Thanh trượt", ErrorCode = "E02212", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 159, ErrorName = "Bánh xe dẫn hướng", ErrorCode = "E02213", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 7 });
+                Data_Error.Add(new Common.Data_Error() { ID = 160, ErrorName = "Bánh răng", ErrorCode = "E02301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 161, ErrorName = "Thanh răng", ErrorCode = "E02302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 162, ErrorName = "Cắt méo vuông ke", ErrorCode = "E02303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 163, ErrorName = "Cụm vitme trục Z", ErrorCode = "E02304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 164, ErrorName = "Bánh xe dẫn hướng", ErrorCode = "E02305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 165, ErrorName = "Cắt không tròn, méo lỗ", ErrorCode = "E02306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 166, ErrorName = "Hộp số motor", ErrorCode = "E02307", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 167, ErrorName = "Bộ gá động cơ", ErrorCode = "E02308", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 168, ErrorName = "Khung máy", ErrorCode = "E02309", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 169, ErrorName = "Con trượt", ErrorCode = "E02310", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 170, ErrorName = "Thanh trượt", ErrorCode = "E02311", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 171, ErrorName = "Xích chuyển đổi bàn", ErrorCode = "E02312", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 8 });
+                Data_Error.Add(new Common.Data_Error() { ID = 172, ErrorName = "Bánh răng", ErrorCode = "E02401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 173, ErrorName = "Thanh răng", ErrorCode = "E02402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 174, ErrorName = "Dây đai", ErrorCode = "E02403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 175, ErrorName = "Cụm trục Z", ErrorCode = "E02404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 176, ErrorName = "Bánh xe dẫn hướng", ErrorCode = "E02405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 177, ErrorName = "Cụm gá mỏ súng plasma", ErrorCode = "E02406", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 178, ErrorName = "Hộp số motor", ErrorCode = "E02407", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 179, ErrorName = "Đường ray", ErrorCode = "E02408", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 180, ErrorName = "Khung máy", ErrorCode = "E02409", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 181, ErrorName = "Con trượt", ErrorCode = "E02410", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 182, ErrorName = "Thanh trượt", ErrorCode = "E02411", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 183, ErrorName = "Bàn cắt", ErrorCode = "E02412", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 184, ErrorName = "Bộ nâng hạ pha băng", ErrorCode = "E02413", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 9 });
+                Data_Error.Add(new Common.Data_Error() { ID = 185, ErrorName = "Gá mỏ súng hàn/ cắt", ErrorCode = "E02501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 10 });
+                Data_Error.Add(new Common.Data_Error() { ID = 186, ErrorName = "Đầu cấp dây", ErrorCode = "E02502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 10 });
+                Data_Error.Add(new Common.Data_Error() { ID = 187, ErrorName = "Động cơ các Trục", ErrorCode = "E02503", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 10 });
+                Data_Error.Add(new Common.Data_Error() { ID = 188, ErrorName = "Hộp số", ErrorCode = "E02504", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 10 });
+                Data_Error.Add(new Common.Data_Error() { ID = 189, ErrorName = "Bánh răng", ErrorCode = "E02505", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 10 });
+                Data_Error.Add(new Common.Data_Error() { ID = 190, ErrorName = "Xilanh thủy lực", ErrorCode = "E03101", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 191, ErrorName = "Đầu bơm", ErrorCode = "E03102", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 192, ErrorName = "Van thủy lực", ErrorCode = "E03103", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 193, ErrorName = "Sin, phốt", ErrorCode = "E03104", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 194, ErrorName = "Van khí nén", ErrorCode = "E03105", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 195, ErrorName = "Dây khí nén", ErrorCode = "E03106", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 196, ErrorName = "Lọc khí", ErrorCode = "E03107", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 197, ErrorName = "Ống dẫn dầu", ErrorCode = "E03108", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 198, ErrorName = "Xilanh hơi", ErrorCode = "E03109", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 199, ErrorName = "kẹp thủy lực", ErrorCode = "E03110", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 11 });
+                Data_Error.Add(new Common.Data_Error() { ID = 200, ErrorName = "Xilanh hơi", ErrorCode = "E03201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 201, ErrorName = "Bơm thủy lực", ErrorCode = "E03202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 202, ErrorName = "Van phân phối", ErrorCode = "E03203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 203, ErrorName = "Van áp cổng", ErrorCode = "E03204", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 204, ErrorName = "Van khí nén", ErrorCode = "E03205", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 205, ErrorName = "Sin phốt dầu", ErrorCode = "E03206", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 206, ErrorName = "Ống dẫn dầu", ErrorCode = "E03207", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 207, ErrorName = "Lọc dầu", ErrorCode = "E03208", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 208, ErrorName = "Dây khí nén", ErrorCode = "E03209", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 209, ErrorName = "Xilanh thủy lực", ErrorCode = "E03210", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 12 });
+                Data_Error.Add(new Common.Data_Error() { ID = 210, ErrorName = "Xilanh hơi", ErrorCode = "E03301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 211, ErrorName = "Đầu bơm", ErrorCode = "E03302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 212, ErrorName = "Van tổng", ErrorCode = "E03303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 213, ErrorName = "Van phân phối", ErrorCode = "E03304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 214, ErrorName = "Lọc khí", ErrorCode = "E03305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 215, ErrorName = "Van khí", ErrorCode = "E03306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 216, ErrorName = "Cảm biến khí", ErrorCode = "E03307", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 217, ErrorName = "Xilanh thủy lực", ErrorCode = "E03308", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 218, ErrorName = "Đồng hồ khí (O2,N2)", ErrorCode = "E03309", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 219, ErrorName = "Dây ống khí", ErrorCode = "E03310", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 13 });
+                Data_Error.Add(new Common.Data_Error() { ID = 220, ErrorName = "Van khí oxygas", ErrorCode = "E03401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 221, ErrorName = "Van khí plasma", ErrorCode = "E03402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 222, ErrorName = "Lọc khí", ErrorCode = "E03403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 223, ErrorName = "Đường dây khí", ErrorCode = "E03404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 224, ErrorName = "Đồng hồ khí", ErrorCode = "E03405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 225, ErrorName = "Bộ bơm thủy lực", ErrorCode = "E03406", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 226, ErrorName = "Bộ kẹp, đẩy thủy lực", ErrorCode = "E03407", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 227, ErrorName = "Chất lượng khí", ErrorCode = "E03408", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 14 });
+                Data_Error.Add(new Common.Data_Error() { ID = 228, ErrorName = "Dầu bôi trơn các khớp", ErrorCode = "E03501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 15 });
+                Data_Error.Add(new Common.Data_Error() { ID = 229, ErrorName = "Đồng hồ khí (CO2, argon)", ErrorCode = "E03502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 15 });
+                Data_Error.Add(new Common.Data_Error() { ID = 230, ErrorName = "Dây khí nén", ErrorCode = "E03503", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 15 });
+                Data_Error.Add(new Common.Data_Error() { ID = 231, ErrorName = "Bộ gá xoay", ErrorCode = "E03504", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 15 });
+                Data_Error.Add(new Common.Data_Error() { ID = 232, ErrorName = "PLC", ErrorCode = "E04101", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 233, ErrorName = "Relay", ErrorCode = "E04102", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 234, ErrorName = "Khởi động từ", ErrorCode = "E04103", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 235, ErrorName = "CB nguồn", ErrorCode = "E04104", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 236, ErrorName = "Driver", ErrorCode = "E04105", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 237, ErrorName = "Cầu chì", ErrorCode = "E04106", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 238, ErrorName = "Biến tần", ErrorCode = "E04107", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 239, ErrorName = "Biến thế", ErrorCode = "E04108", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 240, ErrorName = "Nguồn tổ Ong", ErrorCode = "E04109", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 241, ErrorName = "Moduml truyền thông", ErrorCode = "E04110", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 16 });
+                Data_Error.Add(new Common.Data_Error() { ID = 242, ErrorName = "PLC", ErrorCode = "E04201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 243, ErrorName = "Relay", ErrorCode = "E04202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 244, ErrorName = "Khởi động từ", ErrorCode = "E04203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 245, ErrorName = "CB nguồn", ErrorCode = "E04204", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 246, ErrorName = "Driver", ErrorCode = "E04205", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 247, ErrorName = "Cầu chì", ErrorCode = "E04206", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 248, ErrorName = "Biến tần", ErrorCode = "E04207", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 249, ErrorName = "Biến thế", ErrorCode = "E04208", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 250, ErrorName = "Nguồn tổ Ong", ErrorCode = "E04209", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 251, ErrorName = "Moduml truyền thông", ErrorCode = "E04210", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 17 });
+                Data_Error.Add(new Common.Data_Error() { ID = 252, ErrorName = "Plc", ErrorCode = "E04301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 253, ErrorName = "Relay", ErrorCode = "E04302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 254, ErrorName = "Khởi đông từ", ErrorCode = "E04303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 255, ErrorName = "CB nguồn", ErrorCode = "E04304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 256, ErrorName = "Driver", ErrorCode = "E04305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 257, ErrorName = "Cầu chì", ErrorCode = "E04306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 258, ErrorName = "Biến tần", ErrorCode = "E04307", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 259, ErrorName = "Biến thế", ErrorCode = "E04308", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 260, ErrorName = "Nguồn tổ Ong", ErrorCode = "E04309", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 261, ErrorName = "Bo relay IO", ErrorCode = "E04310", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 262, ErrorName = "Module truyền thông", ErrorCode = "E04311", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 18 });
+                Data_Error.Add(new Common.Data_Error() { ID = 263, ErrorName = "Plc", ErrorCode = "E04401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 264, ErrorName = "Relay", ErrorCode = "E04402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 265, ErrorName = "khởi đông từ", ErrorCode = "E04403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 266, ErrorName = "CB nguồn", ErrorCode = "E04404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 267, ErrorName = "Driver", ErrorCode = "E04405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 268, ErrorName = "Cầu chì", ErrorCode = "E04406", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 269, ErrorName = "Biến tần", ErrorCode = "E04407", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 270, ErrorName = "Biến thế", ErrorCode = "E04408", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 271, ErrorName = "Nguồn tổ Ong", ErrorCode = "E04409", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 272, ErrorName = "Bo relay IO", ErrorCode = "E04410", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 273, ErrorName = "Module truyền thông", ErrorCode = "E04411", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 19 });
+                Data_Error.Add(new Common.Data_Error() { ID = 274, ErrorName = "Plc", ErrorCode = "E04501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 20 });
+                Data_Error.Add(new Common.Data_Error() { ID = 275, ErrorName = "Relay", ErrorCode = "E04502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 20 });
+                Data_Error.Add(new Common.Data_Error() { ID = 276, ErrorName = "khởi đông từ", ErrorCode = "E04503", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 20 });
+                Data_Error.Add(new Common.Data_Error() { ID = 277, ErrorName = "CB nguồn", ErrorCode = "E04504", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 20 });
+                Data_Error.Add(new Common.Data_Error() { ID = 278, ErrorName = "Driver control", ErrorCode = "E04505", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 20 });
+                Data_Error.Add(new Common.Data_Error() { ID = 279, ErrorName = "Board I/O", ErrorCode = "E04506", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 20 });
+                Data_Error.Add(new Common.Data_Error() { ID = 280, ErrorName = "Moduml truyền thông", ErrorCode = "E04507", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 20 });
+                Data_Error.Add(new Common.Data_Error() { ID = 281, ErrorName = "Chương trình PLC", ErrorCode = "E06101", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 26 });
+                Data_Error.Add(new Common.Data_Error() { ID = 282, ErrorName = "Phần mềm Moduml/Driver", ErrorCode = "E06102", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 26 });
+                Data_Error.Add(new Common.Data_Error() { ID = 283, ErrorName = "HMI", ErrorCode = "E06103", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 26 });
+                Data_Error.Add(new Common.Data_Error() { ID = 284, ErrorName = "Chương trình PLC", ErrorCode = "E06201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 27 });
+                Data_Error.Add(new Common.Data_Error() { ID = 285, ErrorName = "Phần mềm cảm biến", ErrorCode = "E06202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 27 });
+                Data_Error.Add(new Common.Data_Error() { ID = 286, ErrorName = "HMI", ErrorCode = "E06203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 27 });
+                Data_Error.Add(new Common.Data_Error() { ID = 287, ErrorName = "Sigmanest", ErrorCode = "E06301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 288, ErrorName = "Virus", ErrorCode = "E06302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 289, ErrorName = "Key sigmanest (Quá hạn)", ErrorCode = "E06303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 290, ErrorName = "Chương trình PLC", ErrorCode = "E06304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 291, ErrorName = "HMI", ErrorCode = "E06305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 292, ErrorName = "Windows", ErrorCode = "E06306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 293, ErrorName = "Phần mềm Tube Pro", ErrorCode = "E06307", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 294, ErrorName = "Chương trình Beckhoff", ErrorCode = "E06308", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 295, ErrorName = "Chương trình Siemen", ErrorCode = "E06309", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 296, ErrorName = "Phần mềm Cypcut", ErrorCode = "E06310", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 28 });
+                Data_Error.Add(new Common.Data_Error() { ID = 297, ErrorName = "Sigmanest", ErrorCode = "E06401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 29 });
+                Data_Error.Add(new Common.Data_Error() { ID = 298, ErrorName = "Windows", ErrorCode = "E06402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 29 });
+                Data_Error.Add(new Common.Data_Error() { ID = 299, ErrorName = "Chương trình PLC", ErrorCode = "E06403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 29 });
+                Data_Error.Add(new Common.Data_Error() { ID = 300, ErrorName = "Any Pipe", ErrorCode = "E06404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 29 });
+                Data_Error.Add(new Common.Data_Error() { ID = 301, ErrorName = "Mach3", ErrorCode = "E06405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 29 });
+                Data_Error.Add(new Common.Data_Error() { ID = 302, ErrorName = "Robot studio", ErrorCode = "E06501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 30 });
+                Data_Error.Add(new Common.Data_Error() { ID = 303, ErrorName = "RobotWare", ErrorCode = "E06502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 30 });
+                Data_Error.Add(new Common.Data_Error() { ID = 304, ErrorName = "Chíp dao", ErrorCode = "E08101", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 36 });
+                Data_Error.Add(new Common.Data_Error() { ID = 305, ErrorName = "Đầu BT", ErrorCode = "E08102", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 36 });
+                Data_Error.Add(new Common.Data_Error() { ID = 306, ErrorName = "Cán dao", ErrorCode = "E08103", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 36 });
+                Data_Error.Add(new Common.Data_Error() { ID = 307, ErrorName = "Lưỡi Cưa", ErrorCode = "E08104", MachineGroupID = 1, MachineGroupName = "GCN", ParentID = 36 });
+                Data_Error.Add(new Common.Data_Error() { ID = 308, ErrorName = "Nối bép hàn", ErrorCode = "E08201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 37 });
+                Data_Error.Add(new Common.Data_Error() { ID = 309, ErrorName = "Dây ruột gà", ErrorCode = "E08202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 37 });
+                Data_Error.Add(new Common.Data_Error() { ID = 310, ErrorName = "Tắc bép hàn", ErrorCode = "E08203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 37 });
+                Data_Error.Add(new Common.Data_Error() { ID = 311, ErrorName = "Bép cắt", ErrorCode = "E08301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 38 });
+                Data_Error.Add(new Common.Data_Error() { ID = 312, ErrorName = "Súng cắt", ErrorCode = "E08302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 38 });
+                Data_Error.Add(new Common.Data_Error() { ID = 313, ErrorName = "Dây súng", ErrorCode = "E08303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 38 });
+                Data_Error.Add(new Common.Data_Error() { ID = 314, ErrorName = "Lăng kính (laser)", ErrorCode = "E08304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 38 });
+                Data_Error.Add(new Common.Data_Error() { ID = 315, ErrorName = "Đầu cắt (laser)", ErrorCode = "E08305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 38 });
+                Data_Error.Add(new Common.Data_Error() { ID = 316, ErrorName = "Cục sứ gá bép", ErrorCode = "E08306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 38 });
+                Data_Error.Add(new Common.Data_Error() { ID = 317, ErrorName = "Nước làm mát", ErrorCode = "E08307", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 38 });
+                Data_Error.Add(new Common.Data_Error() { ID = 318, ErrorName = "Điện cực", ErrorCode = "E08401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 39 });
+                Data_Error.Add(new Common.Data_Error() { ID = 319, ErrorName = "bép cắt", ErrorCode = "E08402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 39 });
+                Data_Error.Add(new Common.Data_Error() { ID = 320, ErrorName = "vòng tạo lốc", ErrorCode = "E08403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 39 });
+                Data_Error.Add(new Common.Data_Error() { ID = 321, ErrorName = "Ty nước", ErrorCode = "E08404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 39 });
+                Data_Error.Add(new Common.Data_Error() { ID = 322, ErrorName = "Dây súng", ErrorCode = "E08405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 39 });
+                Data_Error.Add(new Common.Data_Error() { ID = 323, ErrorName = "nước làm mát", ErrorCode = "E08406", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 39 });
+                Data_Error.Add(new Common.Data_Error() { ID = 324, ErrorName = "Súng cắt plasma", ErrorCode = "E08407", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 39 });
+                Data_Error.Add(new Common.Data_Error() { ID = 325, ErrorName = "ĐIện cực", ErrorCode = "E08501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 40 });
+                Data_Error.Add(new Common.Data_Error() { ID = 326, ErrorName = "chụp khí", ErrorCode = "E08502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 40 });
+                Data_Error.Add(new Common.Data_Error() { ID = 327, ErrorName = "chia khí", ErrorCode = "E08503", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 40 });
+                Data_Error.Add(new Common.Data_Error() { ID = 328, ErrorName = "ruột gà dẫn hướng", ErrorCode = "E08504", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 40 });
+                Data_Error.Add(new Common.Data_Error() { ID = 329, ErrorName = "bánh xe tải dây", ErrorCode = "E08505", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 40 });
+                Data_Error.Add(new Common.Data_Error() { ID = 330, ErrorName = "nước làm mát", ErrorCode = "E08506", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 40 });
+                Data_Error.Add(new Common.Data_Error() { ID = 331, ErrorName = "IGBT/ Thyristor", ErrorCode = "E09201", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 332, ErrorName = "Diode", ErrorCode = "E09202", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 333, ErrorName = "Cầu 3 pha", ErrorCode = "E09203", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 334, ErrorName = "Bo điều khiển", ErrorCode = "E09204", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 335, ErrorName = "Bo công suất", ErrorCode = "E09205", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 336, ErrorName = "Bo đầu cấp", ErrorCode = "E09206", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 337, ErrorName = "Motor tải dây", ErrorCode = "E09207", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 338, ErrorName = "Cọc hàn", ErrorCode = "E09208", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 339, ErrorName = "Cáp hàn", ErrorCode = "E09209", MachineGroupID = 2, MachineGroupName = "DCTH", ParentID = 42 });
+                Data_Error.Add(new Common.Data_Error() { ID = 340, ErrorName = "Khóa code hết hạn", ErrorCode = "E09301", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 43 });
+                Data_Error.Add(new Common.Data_Error() { ID = 341, ErrorName = "Cháy sợi quang", ErrorCode = "E09302", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 43 });
+                Data_Error.Add(new Common.Data_Error() { ID = 342, ErrorName = "Dây fiber", ErrorCode = "E09303", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 43 });
+                Data_Error.Add(new Common.Data_Error() { ID = 343, ErrorName = "Hỏng bo trong nguồn", ErrorCode = "E09304", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 43 });
+                Data_Error.Add(new Common.Data_Error() { ID = 344, ErrorName = "Giảm công suất", ErrorCode = "E09305", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 43 });
+                Data_Error.Add(new Common.Data_Error() { ID = 345, ErrorName = "Lỗi phần cứng khác", ErrorCode = "E09306", MachineGroupID = 3, MachineGroupName = "LASER", ParentID = 43 });
+                Data_Error.Add(new Common.Data_Error() { ID = 346, ErrorName = "IGBT", ErrorCode = "E09401", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 347, ErrorName = "Diode", ErrorCode = "E09402", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 348, ErrorName = "Cầu 3 pha", ErrorCode = "E09403", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 349, ErrorName = "Bo điều khiển IO", ErrorCode = "E09404", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 350, ErrorName = "Bo cao áp", ErrorCode = "E09405", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 351, ErrorName = "Bo điều khiển công suất", ErrorCode = "E09406", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 352, ErrorName = "Động cơ bơm nước làm mát", ErrorCode = "E09407", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 353, ErrorName = "Van selenoid", ErrorCode = "E09408", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 354, ErrorName = "Tụ điện", ErrorCode = "E09409", MachineGroupID = 4, MachineGroupName = "PLASMA", ParentID = 44 });
+                Data_Error.Add(new Common.Data_Error() { ID = 355, ErrorName = "IGBT", ErrorCode = "E09501", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 356, ErrorName = "Diode", ErrorCode = "E09502", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 357, ErrorName = "Cầu 3 pha", ErrorCode = "E09503", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 358, ErrorName = "Bo điều khiển", ErrorCode = "E09504", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 359, ErrorName = "Bo cao áp", ErrorCode = "E09505", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 360, ErrorName = "Bo điều khiển khí", ErrorCode = "E09506", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 361, ErrorName = "Động cơ bơm nước làm mát", ErrorCode = "E09507", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 362, ErrorName = "Van selenoid", ErrorCode = "E09508", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 363, ErrorName = "Bo đầu cấp", ErrorCode = "E09509", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
+                Data_Error.Add(new Common.Data_Error() { ID = 364, ErrorName = "Motor tải dây", ErrorCode = "E09510", MachineGroupID = 5, MachineGroupName = "ROBOT", ParentID = 45 });
 
                 #endregion
 
@@ -374,9 +741,6 @@
                 Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 25, MachineName = "MÁY HÀN ĐIỆN XỈ DẠNG CỔNG XZHB-15", LocationID = 7, LocationName = "AH2-Tổ HT-LBC" });
                 Data_MachineLocationSetup.Add(new Common.Data_MachineLocationSetup() { MachineID = 26, MachineName = "MÁY HÀN HỒ QUANG CHÌM DANG CỔNG XMHB 15", LocationID = 1, LocationName = "AH2-Tổ HT-LBC" });
                 #endregion
-
-
-
 
                 #region Build table Data_ErrorHistory --> Fake
                 Data_ErrorHistory.Add(new Common.Data_ErrorHistory() { ErrorHistoryID = 1, ErrorDate = new DateTime(2024, 2, 9), ErrorID = 10, MachineID = 22 });
@@ -1383,132 +1747,317 @@
                 #endregion
 
 
+
+                #region Build table Data_MachineComponent
+
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 1, MachineID = 8, TimeReplacement = 1, ComponentName = "Tủ điện điều khiển - B20600008", MachineAssetCode = "B20600008", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 2, MachineID = 8, TimeReplacement = 2, ComponentName = "Màn hình - B20600008", MachineAssetCode = "B20600008", Price = 230000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 3, MachineID = 8, TimeReplacement = 2, ComponentName = "Modum truyền thông - B20600008", MachineAssetCode = "B20600008", Price = 70000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 4, MachineID = 8, TimeReplacement = 1, ComponentName = "Thước tuyến tính - B20600008", MachineAssetCode = "B20600008", Price = 60000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 5, MachineID = 8, TimeReplacement = 1, ComponentName = "xi mạ - B20600008", MachineAssetCode = "B20600008", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 6, MachineID = 8, TimeReplacement = 1, ComponentName = "Sin/phốt xylanh - B20600008", MachineAssetCode = "B20600008", Price = 16000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 7, MachineID = 9, TimeReplacement = 1, ComponentName = "Tủ điện điều khiển - B20800013", MachineAssetCode = "B20800013", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 8, MachineID = 9, TimeReplacement = 1, ComponentName = "Bọ trượt/dẫn hướng - B20800013", MachineAssetCode = "B20800013", Price = 4200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 9, MachineID = 9, TimeReplacement = 1, ComponentName = "Sin/phốt xylanh - B20800013", MachineAssetCode = "B20800013", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 10, MachineID = 9, TimeReplacement = 1, ComponentName = "Bạc đạn - B20800013", MachineAssetCode = "B20800013", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 11, MachineID = 10, TimeReplacement = 1, ComponentName = "Tủ điền khiển - B21100006", MachineAssetCode = "B21100006", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 12, MachineID = 10, TimeReplacement = 2, ComponentName = "Hệ thống van thủy lực - B21100006", MachineAssetCode = "B21100006", Price = 4500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 13, MachineID = 10, TimeReplacement = 1, ComponentName = "Bạc đạn trục X - B21100006", MachineAssetCode = "B21100006", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 14, MachineID = 10, TimeReplacement = 2, ComponentName = "Ray trượt/dẫn hướng - B21100006", MachineAssetCode = "B21100006", Price = 70000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 15, MachineID = 10, TimeReplacement = 2, ComponentName = "encoder - B21100006", MachineAssetCode = "B21100006", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 16, MachineID = 10, TimeReplacement = 2, ComponentName = "Dây điện điều khiển - B21100006", MachineAssetCode = "B21100006", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 17, MachineID = 10, TimeReplacement = 2, ComponentName = "Motor AC - B21100006", MachineAssetCode = "B21100006", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 18, MachineID = 11, TimeReplacement = 1, ComponentName = "Tủ điền khiển - B21100241", MachineAssetCode = "B21100241", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 19, MachineID = 11, TimeReplacement = 2, ComponentName = "Hệ thống van thủy lực - B21100241", MachineAssetCode = "B21100241", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 20, MachineID = 11, TimeReplacement = 2, ComponentName = "Ray trượt/dẫn hướng - B21100241", MachineAssetCode = "B21100241", Price = 120000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 21, MachineID = 11, TimeReplacement = 2, ComponentName = "encoder - B21100241", MachineAssetCode = "B21100241", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 22, MachineID = 11, TimeReplacement = 2, ComponentName = "Dây điện điều khiển - B21100241", MachineAssetCode = "B21100241", Price = 15000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 23, MachineID = 11, TimeReplacement = 2, ComponentName = "Động cơ tải phôi - B21100241", MachineAssetCode = "B21100241", Price = 7000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 24, MachineID = 11, TimeReplacement = 2, ComponentName = "Động cơ bước - B21100241", MachineAssetCode = "B21100241", Price = 150000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 25, MachineID = 12, TimeReplacement = 1, ComponentName = "Tủ điền khiển, bảng điều khiển - B21200008", MachineAssetCode = "B21200008", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 26, MachineID = 12, TimeReplacement = 2, ComponentName = "Ray trượt/dẫn hướng - B21200008", MachineAssetCode = "B21200008", Price = 50000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 27, MachineID = 12, TimeReplacement = 2, ComponentName = "Vít me/bạc đạn - B21200008", MachineAssetCode = "B21200008", Price = 70000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 28, MachineID = 12, TimeReplacement = 1, ComponentName = "Động cơ - B21200008", MachineAssetCode = "B21200008", Price = 15000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 29, MachineID = 13, TimeReplacement = 1, ComponentName = "Tủ điền khiển, bảng điều khiển - B21200009", MachineAssetCode = "B21200009", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 30, MachineID = 13, TimeReplacement = 1, ComponentName = "Ray trượt/dẫn hướng - B21200009", MachineAssetCode = "B21200009", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 31, MachineID = 13, TimeReplacement = 1, ComponentName = "bạc đạn - B21200009", MachineAssetCode = "B21200009", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 32, MachineID = 13, TimeReplacement = 2, ComponentName = "Động cơ - B21200009", MachineAssetCode = "B21200009", Price = 15000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 33, MachineID = 13, TimeReplacement = 2, ComponentName = "Ray trượt/dẫn hướng - B21200009", MachineAssetCode = "B21200009", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 34, MachineID = 13, TimeReplacement = 2, ComponentName = "Vít me - B21200009", MachineAssetCode = "B21200009", Price = 23000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 35, MachineID = 14, TimeReplacement = 1, ComponentName = "Tủ điền khiển, bảng điều khiển - B21200010", MachineAssetCode = "B21200010", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 36, MachineID = 14, TimeReplacement = 1, ComponentName = "Ray trượt/dẫn hướng - B21200010", MachineAssetCode = "B21200010", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 37, MachineID = 14, TimeReplacement = 1, ComponentName = "bạc đạn - B21200010", MachineAssetCode = "B21200010", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 38, MachineID = 14, TimeReplacement = 2, ComponentName = "Ray trượt/dẫn hướng - B21200010", MachineAssetCode = "B21200010", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 39, MachineID = 14, TimeReplacement = 2, ComponentName = "Vít me - B21200010", MachineAssetCode = "B21200010", Price = 23000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 40, MachineID = 14, TimeReplacement = 2, ComponentName = "Động cơ - B21200010", MachineAssetCode = "B21200010", Price = 15000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 41, MachineID = 15, TimeReplacement = 2, ComponentName = "Hệ thống van thủy lực, đầu bơm - B21400006", MachineAssetCode = "B21400006", Price = 90000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 42, MachineID = 15, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện, bảng điều khiển - B21400006", MachineAssetCode = "B21400006", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 43, MachineID = 15, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21400006", MachineAssetCode = "B21400006", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 44, MachineID = 15, TimeReplacement = 2, ComponentName = "Thước tuyến tính - B21400006", MachineAssetCode = "B21400006", Price = 15000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 45, MachineID = 15, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21400006", MachineAssetCode = "B21400006", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 46, MachineID = 16, TimeReplacement = 2, ComponentName = "Hệ thống van thủy lực - B21400005", MachineAssetCode = "B21400005", Price = 200000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 47, MachineID = 16, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21400005", MachineAssetCode = "B21400005", Price = 8000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 48, MachineID = 16, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21400005", MachineAssetCode = "B21400005", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 49, MachineID = 16, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21400005", MachineAssetCode = "B21400005", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 50, MachineID = 29, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực - B22000008", MachineAssetCode = "B22000008", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 51, MachineID = 29, TimeReplacement = 2, ComponentName = "Dẫn hướng/thanh trượt - B22000008", MachineAssetCode = "B22000008", Price = 76000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 52, MachineID = 29, TimeReplacement = 2, ComponentName = "Hộp số trục chính - B22000008", MachineAssetCode = "B22000008", Price = 50000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 53, MachineID = 29, TimeReplacement = 1, ComponentName = "Đông cơ - B22000008", MachineAssetCode = "B22000008", Price = 15000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 54, MachineID = 29, TimeReplacement = 1, ComponentName = "Sin phốt chân vịt - B22000008", MachineAssetCode = "B22000008", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 55, MachineID = 29, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện, bảng điều khiển - B22000008", MachineAssetCode = "B22000008", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 56, MachineID = 29, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22000008", MachineAssetCode = "B22000008", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 57, MachineID = 5, TimeReplacement = 1, ComponentName = "Hệ thống cấp phôi - B20500013", MachineAssetCode = "B20500013", Price = 50000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 58, MachineID = 5, TimeReplacement = 1, ComponentName = "Trạm lật phôi - B20500013", MachineAssetCode = "B20500013", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 59, MachineID = 5, TimeReplacement = 1, ComponentName = "Trạm điều khiền - B20500013", MachineAssetCode = "B20500013", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 60, MachineID = 5, TimeReplacement = 1, ComponentName = "Thiết bị điện - B20500013", MachineAssetCode = "B20500013", Price = 20000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 61, MachineID = 5, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B20500013", MachineAssetCode = "B20500013", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 62, MachineID = 5, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực - B20500013", MachineAssetCode = "B20500013", Price = 100000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 63, MachineID = 5, TimeReplacement = 2, ComponentName = "Hệ thống van thủy lực - B20500013", MachineAssetCode = "B20500013", Price = 100000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 64, MachineID = 5, TimeReplacement = 1, ComponentName = "Sin phốt thủy lực - B20500013", MachineAssetCode = "B20500013", Price = 50000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 65, MachineID = 17, TimeReplacement = 1, ComponentName = "Tủ điện điều khiển - B21600003", MachineAssetCode = "B21600003", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 66, MachineID = 17, TimeReplacement = 1, ComponentName = "Motor bàn xoay - B21600003", MachineAssetCode = "B21600003", Price = 2800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 67, MachineID = 17, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600003", MachineAssetCode = "B21600003", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 68, MachineID = 18, TimeReplacement = 1, ComponentName = "Tủ điện điều khiển - B21600004", MachineAssetCode = "B21600004", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 69, MachineID = 18, TimeReplacement = 1, ComponentName = "Motor bàn xoay - B21600004", MachineAssetCode = "B21600004", Price = 2800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 70, MachineID = 18, TimeReplacement = 2, ComponentName = "Đầu bơm thủy lực - B21600004", MachineAssetCode = "B21600004", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 71, MachineID = 18, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600004", MachineAssetCode = "B21600004", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 72, MachineID = 19, TimeReplacement = 1, ComponentName = "Bạc đạn băng tải - B21600009", MachineAssetCode = "B21600009", Price = 210000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 73, MachineID = 19, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600009", MachineAssetCode = "B21600009", Price = 4500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 74, MachineID = 19, TimeReplacement = 1, ComponentName = "Bộ định tâm trên/ bên hông - B21600009", MachineAssetCode = "B21600009", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 75, MachineID = 19, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600009", MachineAssetCode = "B21600009", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 76, MachineID = 19, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600009", MachineAssetCode = "B21600009", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 77, MachineID = 19, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600009", MachineAssetCode = "B21600009", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 78, MachineID = 19, TimeReplacement = 1, ComponentName = "Nhông xích - B21600009", MachineAssetCode = "B21600009", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 79, MachineID = 19, TimeReplacement = 1, ComponentName = "Bạc đồng trượt beng ép di chuyển trái/phải, lên/xuống - B21600009", MachineAssetCode = "B21600009", Price = 300000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 80, MachineID = 19, TimeReplacement = 2, ComponentName = "Đầu bơm thủy lực - B21600009", MachineAssetCode = "B21600009", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 81, MachineID = 19, TimeReplacement = 2, ComponentName = "Motor dàn lăn băng tải - B21600009", MachineAssetCode = "B21600009", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 82, MachineID = 20, TimeReplacement = 1, ComponentName = "Bạc đạn băng tải - B21600010", MachineAssetCode = "B21600010", Price = 210000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 83, MachineID = 20, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600010", MachineAssetCode = "B21600010", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 84, MachineID = 20, TimeReplacement = 1, ComponentName = "Bạc đạn Con lăn ép cánh, ép bụng dầm - B21600010", MachineAssetCode = "B21600010", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 85, MachineID = 20, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600010", MachineAssetCode = "B21600010", Price = 400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 86, MachineID = 20, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600010", MachineAssetCode = "B21600010", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 87, MachineID = 20, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600010", MachineAssetCode = "B21600010", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 88, MachineID = 20, TimeReplacement = 1, ComponentName = "Nhông xích - B21600010", MachineAssetCode = "B21600010", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 89, MachineID = 20, TimeReplacement = 1, ComponentName = "Nguồn hàn - B21600010", MachineAssetCode = "B21600010", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 90, MachineID = 21, TimeReplacement = 1, ComponentName = "Bạc đạn băng tải - B21600011", MachineAssetCode = "B21600011", Price = 210000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 91, MachineID = 21, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600011", MachineAssetCode = "B21600011", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 92, MachineID = 21, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600011", MachineAssetCode = "B21600011", Price = 400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 93, MachineID = 21, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600011", MachineAssetCode = "B21600011", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 94, MachineID = 21, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600011", MachineAssetCode = "B21600011", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 95, MachineID = 21, TimeReplacement = 1, ComponentName = "Nhông xích - B21600011", MachineAssetCode = "B21600011", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 96, MachineID = 21, TimeReplacement = 1, ComponentName = "Nguồn hàn - B21600011", MachineAssetCode = "B21600011", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 97, MachineID = 22, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600012", MachineAssetCode = "B21600012", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 98, MachineID = 22, TimeReplacement = 1, ComponentName = "Xích nhựa - B21600012", MachineAssetCode = "B21600012", Price = 2500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 99, MachineID = 22, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600012", MachineAssetCode = "B21600012", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 100, MachineID = 22, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600012", MachineAssetCode = "B21600012", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 101, MachineID = 22, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600012", MachineAssetCode = "B21600012", Price = 220000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 102, MachineID = 23, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600013", MachineAssetCode = "B21600013", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 103, MachineID = 23, TimeReplacement = 1, ComponentName = "Xích nhựa - B21600013", MachineAssetCode = "B21600013", Price = 2500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 104, MachineID = 23, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600013", MachineAssetCode = "B21600013", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 105, MachineID = 23, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600013", MachineAssetCode = "B21600013", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 106, MachineID = 23, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600013", MachineAssetCode = "B21600013", Price = 220000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 107, MachineID = 24, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600014", MachineAssetCode = "B21600014", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 108, MachineID = 24, TimeReplacement = 1, ComponentName = "Xích nhựa - B21600014", MachineAssetCode = "B21600014", Price = 2500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 109, MachineID = 24, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600014", MachineAssetCode = "B21600014", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 110, MachineID = 24, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600014", MachineAssetCode = "B21600014", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 111, MachineID = 24, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600014", MachineAssetCode = "B21600014", Price = 220000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 112, MachineID = 25, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600015", MachineAssetCode = "B21600015", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 113, MachineID = 25, TimeReplacement = 1, ComponentName = "Xích nhựa - B21600015", MachineAssetCode = "B21600015", Price = 2500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 114, MachineID = 25, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600015", MachineAssetCode = "B21600015", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 115, MachineID = 25, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600015", MachineAssetCode = "B21600015", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 116, MachineID = 25, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600015", MachineAssetCode = "B21600015", Price = 220000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 117, MachineID = 26, TimeReplacement = 1, ComponentName = "Bạc đạn băng tải - B21600018", MachineAssetCode = "B21600018", Price = 210000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 118, MachineID = 26, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21600018", MachineAssetCode = "B21600018", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 119, MachineID = 26, TimeReplacement = 1, ComponentName = "Con lăn ép cánh, ép bụng dầm - B21600018", MachineAssetCode = "B21600018", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 120, MachineID = 26, TimeReplacement = 1, ComponentName = "Sin phốt xy lanh thủy lực - B21600018", MachineAssetCode = "B21600018", Price = 600000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 121, MachineID = 26, TimeReplacement = 1, ComponentName = "Thiết bị tủ điện - B21600018", MachineAssetCode = "B21600018", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 122, MachineID = 26, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21600018", MachineAssetCode = "B21600018", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 123, MachineID = 26, TimeReplacement = 1, ComponentName = "Nhông xích - B21600018", MachineAssetCode = "B21600018", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 124, MachineID = 26, TimeReplacement = 1, ComponentName = "Nguồn hàn - B21600018", MachineAssetCode = "B21600018", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 125, MachineID = 27, TimeReplacement = 1, ComponentName = "Bạc đạn dàn lăn - B21700010", MachineAssetCode = "B21700010", Price = 210000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 126, MachineID = 27, TimeReplacement = 1, ComponentName = "Con lăn nắn cánh - B21700010", MachineAssetCode = "B21700010", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 127, MachineID = 27, TimeReplacement = 1, ComponentName = "Con lăn ép bụng - B21700010", MachineAssetCode = "B21700010", Price = 1500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 128, MachineID = 27, TimeReplacement = 1, ComponentName = "Thiết bị điện - B21700010", MachineAssetCode = "B21700010", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 129, MachineID = 27, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21700010", MachineAssetCode = "B21700010", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 130, MachineID = 27, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21700010", MachineAssetCode = "B21700010", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 131, MachineID = 27, TimeReplacement = 1, ComponentName = "Sin phốt thủy lực - B21700010", MachineAssetCode = "B21700010", Price = 300000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 132, MachineID = 28, TimeReplacement = 1, ComponentName = "Bạc đạn dàn lăn - B21700003", MachineAssetCode = "B21700003", Price = 210000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 133, MachineID = 28, TimeReplacement = 1, ComponentName = "Con lăn nắn cánh - B21700003", MachineAssetCode = "B21700003", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 134, MachineID = 28, TimeReplacement = 1, ComponentName = "Con lăn ép bụng - B21700003", MachineAssetCode = "B21700003", Price = 1500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 135, MachineID = 28, TimeReplacement = 1, ComponentName = "Thiết bị điện - B21700003", MachineAssetCode = "B21700003", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 136, MachineID = 28, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B21700003", MachineAssetCode = "B21700003", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 137, MachineID = 28, TimeReplacement = 1, ComponentName = "Hệ thống van thủy lực, lọc dầu - B21700003", MachineAssetCode = "B21700003", Price = 1800000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 138, MachineID = 28, TimeReplacement = 1, ComponentName = "Sin phốt thủy lực - B21700003", MachineAssetCode = "B21700003", Price = 300000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 139, MachineID = 28, TimeReplacement = 2, ComponentName = "Đầu bơm thủy lực - B21700003", MachineAssetCode = "B21700003", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 140, MachineID = 30, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400183", MachineAssetCode = "B22400183", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 141, MachineID = 30, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400183", MachineAssetCode = "B22400183", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 142, MachineID = 30, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400183", MachineAssetCode = "B22400183", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 143, MachineID = 30, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400183", MachineAssetCode = "B22400183", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 144, MachineID = 30, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400183", MachineAssetCode = "B22400183", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 145, MachineID = 30, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400183", MachineAssetCode = "B22400183", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 146, MachineID = 30, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400183", MachineAssetCode = "B22400183", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 147, MachineID = 30, TimeReplacement = 2, ComponentName = "Màn hình điều khiển Keyence - B22400183", MachineAssetCode = "B22400183", Price = 19000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 148, MachineID = 30, TimeReplacement = 2, ComponentName = "Đông cơ di chuyển mỏ (trái/phải, lên/xuống) - B22400183", MachineAssetCode = "B22400183", Price = 6000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 149, MachineID = 31, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22401593", MachineAssetCode = "B22401593", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 150, MachineID = 31, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22401593", MachineAssetCode = "B22401593", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 151, MachineID = 31, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22401593", MachineAssetCode = "B22401593", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 152, MachineID = 31, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22401593", MachineAssetCode = "B22401593", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 153, MachineID = 31, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22401593", MachineAssetCode = "B22401593", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 154, MachineID = 31, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22401593", MachineAssetCode = "B22401593", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 155, MachineID = 31, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22401593", MachineAssetCode = "B22401593", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 156, MachineID = 31, TimeReplacement = 1, ComponentName = "Laser dò đường hàn - B22401593", MachineAssetCode = "B22401593", Price = 12000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 157, MachineID = 31, TimeReplacement = 2, ComponentName = "Màn hình điều khiển Keyence - B22401593", MachineAssetCode = "B22401593", Price = 19000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 158, MachineID = 31, TimeReplacement = 2, ComponentName = "Đông cơ di chuyển mỏ (trái/phải, lên/xuống) - B22401593", MachineAssetCode = "B22401593", Price = 6000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 159, MachineID = 33, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400185", MachineAssetCode = "B22400185", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 160, MachineID = 33, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400185", MachineAssetCode = "B22400185", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 161, MachineID = 33, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400185", MachineAssetCode = "B22400185", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 162, MachineID = 33, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400185", MachineAssetCode = "B22400185", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 163, MachineID = 33, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400185", MachineAssetCode = "B22400185", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 164, MachineID = 33, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400185", MachineAssetCode = "B22400185", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 165, MachineID = 33, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400185", MachineAssetCode = "B22400185", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 166, MachineID = 33, TimeReplacement = 2, ComponentName = "Laser dò đường hàn - B22400185", MachineAssetCode = "B22400185", Price = 50000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 167, MachineID = 34, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn - B22401010", MachineAssetCode = "B22401010", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 168, MachineID = 34, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22401010", MachineAssetCode = "B22401010", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 169, MachineID = 34, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22401010", MachineAssetCode = "B22401010", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 170, MachineID = 34, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22401010", MachineAssetCode = "B22401010", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 171, MachineID = 34, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22401010", MachineAssetCode = "B22401010", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 172, MachineID = 34, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22401010", MachineAssetCode = "B22401010", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 173, MachineID = 34, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22401010", MachineAssetCode = "B22401010", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 174, MachineID = 34, TimeReplacement = 2, ComponentName = "Laser dò đường hàn - B22401010", MachineAssetCode = "B22401010", Price = 50000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 175, MachineID = 35, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400222", MachineAssetCode = "B22400222", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 176, MachineID = 35, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400222", MachineAssetCode = "B22400222", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 177, MachineID = 35, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400222", MachineAssetCode = "B22400222", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 178, MachineID = 35, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400222", MachineAssetCode = "B22400222", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 179, MachineID = 35, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400222", MachineAssetCode = "B22400222", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 180, MachineID = 35, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400222", MachineAssetCode = "B22400222", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 181, MachineID = 35, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400222", MachineAssetCode = "B22400222", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 182, MachineID = 35, TimeReplacement = 2, ComponentName = "Màn hình điều khiển Keyence - B22400222", MachineAssetCode = "B22400222", Price = 19000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 183, MachineID = 35, TimeReplacement = 2, ComponentName = "Đông cơ di chuyển mỏ (trái/phải, lên/xuống) - B22400222", MachineAssetCode = "B22400222", Price = 6000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 184, MachineID = 36, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400221", MachineAssetCode = "B22400221", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 185, MachineID = 36, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400221", MachineAssetCode = "B22400221", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 186, MachineID = 36, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400221", MachineAssetCode = "B22400221", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 187, MachineID = 36, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400221", MachineAssetCode = "B22400221", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 188, MachineID = 36, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400221", MachineAssetCode = "B22400221", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 189, MachineID = 36, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400221", MachineAssetCode = "B22400221", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 190, MachineID = 36, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400221", MachineAssetCode = "B22400221", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 191, MachineID = 36, TimeReplacement = 1, ComponentName = "Laser dò đường hàn - B22400221", MachineAssetCode = "B22400221", Price = 12000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 192, MachineID = 36, TimeReplacement = 2, ComponentName = "Màn hình điều khiển Keyence - B22400221", MachineAssetCode = "B22400221", Price = 19000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 193, MachineID = 36, TimeReplacement = 2, ComponentName = "Đông cơ di chuyển mỏ (trái/phải, lên/xuống) - B22400221", MachineAssetCode = "B22400221", Price = 12000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 194, MachineID = 38, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400186", MachineAssetCode = "B22400186", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 195, MachineID = 38, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400186", MachineAssetCode = "B22400186", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 196, MachineID = 38, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400186", MachineAssetCode = "B22400186", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 197, MachineID = 38, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400186", MachineAssetCode = "B22400186", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 198, MachineID = 38, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400186", MachineAssetCode = "B22400186", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 199, MachineID = 38, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400186", MachineAssetCode = "B22400186", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 200, MachineID = 38, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400186", MachineAssetCode = "B22400186", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 201, MachineID = 38, TimeReplacement = 2, ComponentName = "Bộ điều khiển hàn - B22400186", MachineAssetCode = "B22400186", Price = 119000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 202, MachineID = 38, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400186", MachineAssetCode = "B22400186", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 203, MachineID = 39, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400187", MachineAssetCode = "B22400187", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 204, MachineID = 39, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400187", MachineAssetCode = "B22400187", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 205, MachineID = 39, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400187", MachineAssetCode = "B22400187", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 206, MachineID = 39, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400187", MachineAssetCode = "B22400187", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 207, MachineID = 39, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400187", MachineAssetCode = "B22400187", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 208, MachineID = 39, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400187", MachineAssetCode = "B22400187", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 209, MachineID = 39, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400187", MachineAssetCode = "B22400187", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 210, MachineID = 39, TimeReplacement = 2, ComponentName = "Bộ điều khiển hàn - B22400187", MachineAssetCode = "B22400187", Price = 119000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 211, MachineID = 40, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400188", MachineAssetCode = "B22400188", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 212, MachineID = 40, TimeReplacement = 1, ComponentName = "Ruột gà dẫn dây hàn - B22400188", MachineAssetCode = "B22400188", Price = 1700000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 213, MachineID = 40, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400188", MachineAssetCode = "B22400188", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 214, MachineID = 40, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400188", MachineAssetCode = "B22400188", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 215, MachineID = 40, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400188", MachineAssetCode = "B22400188", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 216, MachineID = 41, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400189", MachineAssetCode = "B22400189", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 217, MachineID = 41, TimeReplacement = 1, ComponentName = "Ruột gà dẫn dây hàn - B22400189", MachineAssetCode = "B22400189", Price = 1700000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 218, MachineID = 41, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400189", MachineAssetCode = "B22400189", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 219, MachineID = 41, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400189", MachineAssetCode = "B22400189", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 220, MachineID = 41, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400189", MachineAssetCode = "B22400189", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 221, MachineID = 42, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400190", MachineAssetCode = "B22400190", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 222, MachineID = 42, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400190", MachineAssetCode = "B22400190", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 223, MachineID = 42, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400190", MachineAssetCode = "B22400190", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 224, MachineID = 42, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400190", MachineAssetCode = "B22400190", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 225, MachineID = 42, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400190", MachineAssetCode = "B22400190", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 226, MachineID = 42, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400190", MachineAssetCode = "B22400190", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 227, MachineID = 42, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400190", MachineAssetCode = "B22400190", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 228, MachineID = 43, TimeReplacement = 1, ComponentName = "Bộ mỏ hàn, bánh xe tải dây hàn - B22400191", MachineAssetCode = "B22400191", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 229, MachineID = 43, TimeReplacement = 1, ComponentName = "Lọc bụi thuốc hàn - B22400191", MachineAssetCode = "B22400191", Price = 250000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 230, MachineID = 43, TimeReplacement = 1, ComponentName = "Sên hút thuốc hàn - B22400191", MachineAssetCode = "B22400191", Price = 6400000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 231, MachineID = 43, TimeReplacement = 1, ComponentName = "Ống hút, xả thuốc - B22400191", MachineAssetCode = "B22400191", Price = 1200000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 232, MachineID = 43, TimeReplacement = 1, ComponentName = "Thiết bị điện - B22400191", MachineAssetCode = "B22400191", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 233, MachineID = 43, TimeReplacement = 1, ComponentName = "Dây điện điều khiển - B22400191", MachineAssetCode = "B22400191", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 234, MachineID = 43, TimeReplacement = 1, ComponentName = "Nguồn hàn - B22400191", MachineAssetCode = "B22400191", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 235, MachineID = 4, TimeReplacement = 2, ComponentName = "Bộ điều khiển AMG - B20500011", MachineAssetCode = "B20500011", Price = 23000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 236, MachineID = 4, TimeReplacement = 1, ComponentName = "Bộ gá mỏ súng - B20500011", MachineAssetCode = "B20500011", Price = 12000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 237, MachineID = 4, TimeReplacement = 2, ComponentName = "Bộ THC - B20500011", MachineAssetCode = "B20500011", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 238, MachineID = 4, TimeReplacement = 2, ComponentName = "Động cơ trục X - B20500011", MachineAssetCode = "B20500011", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 239, MachineID = 4, TimeReplacement = 2, ComponentName = "Động cơ Trục Y - B20500011", MachineAssetCode = "B20500011", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 240, MachineID = 4, TimeReplacement = 2, ComponentName = "Bộ giữ mỏ súng (bao gồm động cơ trục Z) - B20500011", MachineAssetCode = "B20500011", Price = 6000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 241, MachineID = 4, TimeReplacement = 2, ComponentName = "Thanh răng + bánh răng các trục - B20500011", MachineAssetCode = "B20500011", Price = 12000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 242, MachineID = 4, TimeReplacement = 2, ComponentName = "Ray trượt các trục - B20500011", MachineAssetCode = "B20500011", Price = 12000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 243, MachineID = 4, TimeReplacement = 1, ComponentName = "Linh kiện nguồn plasma hypetherm - B20500011", MachineAssetCode = "B20500011", Price = 3000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 244, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ điều khiển F7000s - B20500103", MachineAssetCode = "B20500103", Price = 25000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 245, MachineID = 7, TimeReplacement = 1, ComponentName = "Bộ gá mỏ súng oxygas - B20500103", MachineAssetCode = "B20500103", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 246, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ THC oxy gas CHC200F - B20500103", MachineAssetCode = "B20500103", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 247, MachineID = 7, TimeReplacement = 2, ComponentName = "Động cơ trục X - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 248, MachineID = 7, TimeReplacement = 2, ComponentName = "Động cơ Trục Y - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 249, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ gá trục Z (bao gồm động cơ trục Z) - B20500103", MachineAssetCode = "B20500103", Price = 6000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 250, MachineID = 7, TimeReplacement = 2, ComponentName = "Driver các trục X,Y MDDLN55BE - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 251, MachineID = 7, TimeReplacement = 2, ComponentName = "Driver trục Z MBDLN25BE - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 252, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ gá trục Z - B20500103", MachineAssetCode = "B20500103", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 253, MachineID = 7, TimeReplacement = 1, ComponentName = "Dây dai khổ 40mm - B20500103", MachineAssetCode = "B20500103", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 254, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ gá mỏ súng plasma - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 255, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ điều khiển F7000s - B20500103", MachineAssetCode = "B20500103", Price = 25000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 256, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ gá mỏ súng oxygas - B20500103", MachineAssetCode = "B20500103", Price = 1500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 257, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ THC oxy gas CHC200F - B20500103", MachineAssetCode = "B20500103", Price = 15000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 258, MachineID = 7, TimeReplacement = 2, ComponentName = "Động cơ trục X - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 259, MachineID = 7, TimeReplacement = 2, ComponentName = "Động cơ Trục Y - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 260, MachineID = 7, TimeReplacement = 2, ComponentName = "Bộ gá trục Z (bao gồm động cơ trục Z) - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 261, MachineID = 7, TimeReplacement = 2, ComponentName = "Driver các trục X,Y - B20500103", MachineAssetCode = "B20500103", Price = 12000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 262, MachineID = 7, TimeReplacement = 2, ComponentName = "Driver trục Z - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 263, MachineID = 7, TimeReplacement = 1, ComponentName = "bộ giữ mỏ trục Z - B20500103", MachineAssetCode = "B20500103", Price = 8500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 264, MachineID = 1, TimeReplacement = 1, ComponentName = "Linh kiện tủ điện điều khiển như relay, CB, Contactor - B20500006", MachineAssetCode = "B20500006", Price = 6000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 265, MachineID = 1, TimeReplacement = 2, ComponentName = "Linh kiện màn hình điều khiển máy - B20500006", MachineAssetCode = "B20500006", Price = 14000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 266, MachineID = 1, TimeReplacement = 2, ComponentName = "Linh kiện driver Siemen Double, NCU và bộ nguồn Siemen - B20500006", MachineAssetCode = "B20500006", Price = 42000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 267, MachineID = 1, TimeReplacement = 1, ComponentName = "Các dây tín hiệu đi từ tủ điện đến thân máy chính - B20500006", MachineAssetCode = "B20500006", Price = 4900000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 268, MachineID = 1, TimeReplacement = 2, ComponentName = "Van khí Solenoid và van tuyến tính Lanny - B20500006", MachineAssetCode = "B20500006", Price = 10000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 269, MachineID = 1, TimeReplacement = 2, ComponentName = "Linh kiện động cơ servo khi phát sinh X, Y, Z - B20500006", MachineAssetCode = "B20500006", Price = 70000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 270, MachineID = 1, TimeReplacement = 2, ComponentName = "Hộp số động cơ servo trục X,Y - B20500006", MachineAssetCode = "B20500006", Price = 72000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 271, MachineID = 1, TimeReplacement = 1, ComponentName = "Các con trượt, bạc đạn trượt trục X, Y - B20500006", MachineAssetCode = "B20500006", Price = 19040000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 272, MachineID = 1, TimeReplacement = 1, ComponentName = "Hệ thống vitme, bạc đạn, gối đỡ trục Z - B20500006", MachineAssetCode = "B20500006", Price = 11340000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 273, MachineID = 1, TimeReplacement = 1, ComponentName = "Các bộ lọc của máy sấy khí - B20500006", MachineAssetCode = "B20500006", Price = 2500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 274, MachineID = 1, TimeReplacement = 1, ComponentName = "Các bộ lọc nước của chiller làm mát - B20500006", MachineAssetCode = "B20500006", Price = 2500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 275, MachineID = 1, TimeReplacement = 1, ComponentName = "Linh kiện chiller - B20500006", MachineAssetCode = "B20500006", Price = 4750000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 276, MachineID = 1, TimeReplacement = 1, ComponentName = "Cover che ray - B20500006", MachineAssetCode = "B20500006", Price = 7000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 277, MachineID = 1, TimeReplacement = 2, ComponentName = "Bảo dưỡng bo mạch đầu cắt - B20500006", MachineAssetCode = "B20500006", Price = 1 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 278, MachineID = 1, TimeReplacement = 1, ComponentName = "Thay toàn bộ thấu kính bên trong đầu cắt laser (Kính căn chỉnh, kính tiêu cự, kính bảo vệ trên) - B20500006", MachineAssetCode = "B20500006", Price = 70000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 291, MachineID = 6, TimeReplacement = 1, ComponentName = "Đồng hồ áp suất - B20500019", MachineAssetCode = "B20500019", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 292, MachineID = 6, TimeReplacement = 1, ComponentName = "Dây khi nén các loại - B20500019", MachineAssetCode = "B20500019", Price = 2000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 293, MachineID = 6, TimeReplacement = 1, ComponentName = "Pin robot - B20500019", MachineAssetCode = "B20500019", Price = 500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 294, MachineID = 6, TimeReplacement = 2, ComponentName = "Biến Tần kéo dàn lăn - B20500019", MachineAssetCode = "B20500019", Price = 5000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 295, MachineID = 6, TimeReplacement = 2, ComponentName = "Máy tính công nghiệp - B20500019", MachineAssetCode = "B20500019", Price = 18000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 296, MachineID = 6, TimeReplacement = 2, ComponentName = "Nguồn nuôi máy tính - B20500019", MachineAssetCode = "B20500019", Price = 2500000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 297, MachineID = 6, TimeReplacement = 2, ComponentName = "Bộ nguồn 24V - B20500019", MachineAssetCode = "B20500019", Price = 1000000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 298, MachineID = 6, TimeReplacement = 1, ComponentName = "Relay + contactor các loại - B20500019", MachineAssetCode = "B20500019", Price = 300000 });
+                Data_MachineComponent.Add(new Common.Data_MachineComponent() { ID = 299, MachineID = 6, TimeReplacement = 1, ComponentName = "Sửa chữa các thành phần cơ khi - B20500019", MachineAssetCode = "B20500019", Price = 1000000 });
+
+                #endregion
+
+                // Add linh kiện vào máy
+                foreach (var m in StaticData.Data_Machine)
+                {
+                    m.ListComponents.AddRange(
+                        StaticData.Data_MachineComponent.Where(t => t.MachineID == m.MachineID).ToList()
+                    );
+                }
+
+
+
                 // Init trong file StaticDataV2
                 StaticDataV2();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
         }
 
-    }
-
-    public class TimeRange
-    {
-        public int TimeRangeID { get; set; }
-        public string TimeRangeName { get; set; } = string.Empty;
-    }
-
-
-    /// <summary>
-    /// Bảng mã lỗi
-    /// </summary>
-    public class Data_Error
-    {
-        public int ErrorID { get; set; }
-        public string ErrorName { get; set; } = string.Empty;
-        public string ErrorCode { get; set; } = string.Empty;
-    }
-    /// <summary>
-    /// Bảng danh sách loai máy 
-    /// </summary>
-    public class Data_MachineGroup
-    {
-        public int MachineGroupID { get; set; }
-        public string MachineGroupName { get; set; } = string.Empty;
-    }
-    /// <summary>
-    /// Bảng danh sách máy
-    /// </summary>
-    public class Data_Machine
-    {
-        //public int MachineID { get; set; }
-        //public string MachineName { get; set; } = string.Empty;
-        //public string MachineNameOrigin { get; set; } = string.Empty;
-        //public int MachineGroupID { get; set; }
-        //public string MachineGroupName { get; set; } = string.Empty;
-
-        //public string Model { get; set; } = string.Empty;
-        //public string UmageUrl { get; set; } = string.Empty;
-
-        /*
-
- 
-        SELECT ID = m.ID
-	        ,  MachineName=m.MachineName
-	        ,  UmageUrl = m.ImageUrl
-	        ,  AssetGroupName=a.AssetGroupName
-	        ,  AssetGroupID=m.AssetGroupID
-	        ,  MachineAssetCode=m.MachineAssetCode
-	        ,  MachineGroupName=g.MachineGroupName
-	        ,  MachineGroupID=m.MachineGroupID
-	        ,  AccountantCode=m.AccountantCode
-	        ,  MachineLocationName = l.LocationName
-	        ,  MachineLocationID = m.MachineLocationID
-	        ,  BaseUnitName = u.UnitName
-	        ,  BaseUnitID= m.BaseUnitID
-	        ,  Model= m.Model
-	        ,  SerialNo= m.SerialNo
-	        ,  ProviderName = d.ProviderName
-	        ,  ProviderID= m.ProviderID
-	        ,  FirstUseDate = m.FirstUseDate
-        FROM Data_Machine m
-        LEFT JOIN Data_AssetGroup a ON a.ID = m.AssetGroupID
-        LEFT JOIN Data_MachineGroup g ON g.ID=m.MachineGroupID
-        LEFT JOIN Data_Location l ON l.ID = m.MachineLocationID
-        LEFT JOIN Data_BaseUnit u ON u.ID = m.BaseUnitID
-        LEFT JOIN Data_Provider d ON d.ID= m.ProviderID
-         
-        Data_Machine.Add(new Common.Data_Machine() { MachineID="&A2&",	MachineName=""&B2&"",UmageUrl=""&C2&"",AssetGroupName=""&D2&"",AssetGroupID="&E2&",MachineAssetCode=""&F2&"",MachineGroupName=""&G2&"",MachineGroupID="&H2&",AccountantCode=""&I2&"",MachineLocationName=""&J2&"",MachineLocationID="&K2&",BaseUnitName=""&L2&"",BaseUnitID="&M2&",Model=""&N2&"",SerialNo=""&O2&"",ProviderName=""&P2&"",ProviderID="&Q2&",FirstUseDate=new DateTime(2018,1,1)});
-         */
-
-        public int MachineID { get; set; } = 0;
-        public string MachineName { get; set; } = string.Empty;
-        public string UmageUrl { get; set; } = string.Empty;
-        public string AssetGroupName { get; set; } = string.Empty;
-        public int AssetGroupID { get; set; } = 0;
-        public string MachineAssetCode { get; set; } = string.Empty;
-        public string MachineGroupName { get; set; } = string.Empty;
-        public int MachineGroupID { get; set; } = 0;
-        public string AccountantCode { get; set; } = string.Empty;
-        public string MachineLocationName { get; set; } = string.Empty;
-        public int MachineLocationID { get; set; } = 0;
-        public string BaseUnitName { get; set; } = string.Empty;
-        public int BaseUnitID { get; set; } = 0;
-        public string Model { get; set; } = string.Empty;
-        public string SerialNo { get; set; } = string.Empty;
-        public string ProviderName { get; set; } = string.Empty;
-        public int ProviderID { get; set; } = 0;
-        public DateTime? FirstUseDate { get; set; }
-    }
-    /// <summary>
-    /// Bảng vị trí cài đặt máy
-    /// </summary>
-    public class Data_MachineLocation
-    {
-        public int LocationID { get; set; }
-        public string LocationName { get; set; } = string.Empty;
-    }
-    /// <summary>
-    /// Bảng map máy nào đặt ở vị trí nào
-    /// </summary>
-    public class Data_MachineLocationSetup
-    {
-        public int MachineID { get; set; }
-        public string MachineName { get; set; } = string.Empty;
-        public int LocationID { get; set; }
-        public string LocationName { get; set; } = string.Empty;
-    }
-    /// <summary>
-    /// Bảng máy lỗi
-    /// </summary>
-    public class Data_ErrorHistory
-    {
-        public int ErrorHistoryID { get; set; }
-        public DateTime ErrorDate { get; set; }
-
-        public int MachineID { get; set; }
-        public int ErrorID { get; set; }
     }
 }

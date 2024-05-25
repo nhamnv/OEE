@@ -105,19 +105,7 @@
 
 <script>
     $(document).ready(function () {
-
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "On", ColorCode = "#5f9d32" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#9ccc65" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Stop", ColorCode = "#fff100" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffba57" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#afabab" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 6, StatusName = "Emg", ColorCode = "#ff5252" });
-
         var data = JSON.parse('@Html.Raw(Json.Serialize(Model.SeriesTimeLine))');
-        // console.log('1111');
-        // console.log(data);
-        // console.log('2222');
-
         var series = [{ data: data }];
 
         var options = {

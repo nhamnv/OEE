@@ -1,105 +1,43 @@
-﻿<div class="card-block">
-    <div class="j-wrapper j-wrapper-640">
-        <form action="j-pro/php/action.php" method="post" class="j-pro" id="j-pro" novalidate="">
-            <div class="j-content">
-                <!-- start name -->
-                <div class="j-unit">
-                    <label class="j-label">Your name</label>
-                    <div class="j-input">
-                        <label class="j-icon-right" for="name">
-                            <i class="icofont icofont-ui-user"></i>
-                        </label>
-                        <input type="text" id="name" name="name">
+﻿@model List<Common.Data_MachineComponent>
+
+@if (Model != null && Model.Count>0)
+{
+    foreach (var cpnt in Model)
+    {
+        <div class="col-xl-12 col-md-12">
+            <div class="card user-card-full">
+                <div class="j-content">
+                    <div class="card-block j-pro">
+                        <!-- [Dòng thông tin 1] start -->
+                        @* <h6 class="m-b-20 m-t-10 p-b-5 b-b-default f-w-600">@cpnt.ComponentName</h6> *@
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="col-form-label">Tên vật tư</label>
+                                <input type="text" class="form-control" name="MachineName_@cpnt.ID" id="MachineName_@cpnt.ID" placeholder="Tên vật tư" value="@cpnt.ComponentName">
+                            </div>
+                            <div class="col-sm-2">
+                                <label class="col-form-label">Mã máy</label>
+                                <input type="text" class="form-control" name="MachineAssetCode_@cpnt.ID" id="MachineAssetCode_@cpnt.ID" placeholder="Mã máy" value="@cpnt.MachineAssetCode">
+                            </div>
+                            <div class="col-sm-2">
+                                <label class="col-form-label">Giá tiền</label>
+                                <input type="text" class="form-control autonumber" name="MachineAssetCode_@cpnt.ID" id="MachineAssetCode_@cpnt.ID" placeholder="Giá tiền" data-a-sep="." data-a-dec="," data-a-sign="vnđ" value="@cpnt.Price">
+                            </div>
+                            <div class="col-sm-2">
+                                <label class="col-form-label">Thời gian thay thế</label>
+                                <input type="text" class="form-control autonumber" name="MachineAssetCode_@cpnt.ID" id="MachineAssetCode_@cpnt.ID" placeholder="Thời gian thay thế" value="@cpnt.TimeReplacement">
+                            </div>
+                        </div>
+                        <!-- [Dòng thông tin 1] end -->
                     </div>
                 </div>
-                <!-- end name -->
-                <!-- start email phone -->
-                <div class="j-row">
-                    <div class="j-span6 j-unit">
-                        <label class="j-label">Your email</label>
-                        <div class="j-input">
-                            <label class="j-icon-right" for="email">
-                                <i class="icofont icofont-envelope"></i>
-                            </label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </div>
-                    <div class="j-span6 j-unit">
-                        <label class="j-label">Phone/Mobile</label>
-                        <div class="j-input">
-                            <label class="j-icon-right" for="phone">
-                                <i class="icofont icofont-phone"></i>
-                            </label>
-                            <input type="text" id="phone" name="phone">
-                        </div>
-                    </div>
-                </div>
-                <!-- end email phone -->
-                <div class="j-divider j-gap-bottom-25"></div>
-                <!-- start guests -->
-                <div class="j-row">
-                    <div class="j-span6 j-unit">
-                        <label class="j-label">Adult guests</label>
-                        <div class="j-input">
-                            <label class="j-icon-right" for="adults">
-                                <i class="icofont icofont-waiter"></i>
-                            </label>
-                            <input type="text" id="adults" name="adults">
-                            <span class="j-tooltip j-tooltip-right-top">Number of adult guests</span>
-                        </div>
-                    </div>
-                    <div class="j-span6 j-unit">
-                        <label class="j-label">Children guests</label>
-                        <div class="j-input">
-                            <label class="j-icon-right" for="children">
-                                <i class="icofont icofont-woman-in-glasses"></i>
-                            </label>
-                            <input type="text" id="children" name="children">
-                            <span class="j-tooltip j-tooltip-right-top">Number of children</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- end guests -->
-                <!-- start date -->
-                <div class="j-row">
-                    <div class="j-span6 j-unit">
-                        <label class="j-label">Check-in date</label>
-                        <div class="j-input">
-                            <label class="j-icon-right" for="date_from">
-                                <i class="icofont icofont-ui-calendar"></i>
-                            </label>
-                            <input type="text" id="date_from" name="date_from" readonly="" class="hasDatepicker">
-                        </div>
-                    </div>
-                    <div class="j-span6 j-unit">
-                        <label class="j-label">Check-out date</label>
-                        <div class="j-input">
-                            <label class="j-icon-right" for="date_to">
-                                <i class="icofont icofont-ui-calendar"></i>
-                            </label>
-                            <input type="text" id="date_to" name="date_to" readonly="" class="hasDatepicker">
-                        </div>
-                    </div>
-                </div>
-                <!-- end date -->
-                <div class="j-divider j-gap-bottom-25"></div>
-                <!-- start message -->
-                <div class="j-unit">
-                    <label class="j-label">Comments/Message</label>
-                    <div class="j-input">
-                        <textarea spellcheck="false" name="message"></textarea>
-                    </div>
-                </div>
-                <!-- end message -->
-                <!-- start response from server -->
-                <div class="j-response"></div>
-                <!-- end response from server -->
             </div>
-            <!-- end /.content -->
-            <div class="j-footer">
-                <button type="submit" class="btn btn-primary">Booking</button>
-            </div>
-            <!-- end /.footer -->
-        </form>
+        </div>
+    }
+}
+else
+{
+    <div>
+        <label class="col-form-label">Máy chưa có linh kiện</label>
     </div>
-</div>
+}

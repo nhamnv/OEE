@@ -26,7 +26,7 @@ namespace Service.Service
                            join machine in StaticData.Data_Machine
                                    on his.MachineID equals machine.MachineID
                            join err in StaticData.Data_Error
-                                   on his.ErrorID equals err.ErrorID
+                                   on his.ErrorID equals err.ID
                            join msetup in StaticData.Data_MachineLocationSetup
                                    on his.MachineID equals msetup.MachineID
                            join loc in StaticData.Data_MachineLocation
@@ -53,7 +53,7 @@ namespace Service.Service
                                MachineLocationID = msetup.LocationID
                            } as dynamic;
 
-                revalFiltered = data?.ToList();
+                revalFiltered = data?.ToList() ?? new List<dynamic>();
 
 
                 #region Filter
@@ -96,7 +96,6 @@ namespace Service.Service
                                 startDate = new DateTime(d.Year, 10, 1);
                                 endDate = new DateTime(d.Year, 12, DateTime.DaysInMonth(startDate.Year, 12));
                             }
-                            break;
                             break;
                         case "3":// Last year
                             startDate = new DateTime(d.Year - 1, 1, 1);
@@ -141,16 +140,70 @@ namespace Service.Service
                 }
                 if (!string.IsNullOrEmpty(MachineGroupID) && MachineGroupID.ToLower() != "all")
                 {
-                    revalFiltered = revalFiltered.Where(t => t.MachineGroupID?.ToString() == MachineGroupID).ToList();
+                    revalFiltered = revalFiltered?.Where(t => t.MachineGroupID?.ToString() == MachineGroupID)?.ToList() ?? new List<dynamic>();
                 }
                 if (!string.IsNullOrEmpty(MachineLocationID) && MachineLocationID.ToLower() != "all")
                 {
-                    revalFiltered = revalFiltered.Where(t => t.MachineLocationID?.ToString() == MachineLocationID).ToList();
+                    revalFiltered = revalFiltered?.Where(t => t.MachineLocationID?.ToString() == MachineLocationID).ToList() ?? new List<dynamic>();
                 }
                 #endregion
 
             }
-            catch (Exception ex)
+            catch (Exception)
+            {
+
+            }
+
+            return revalFiltered;
+        }
+
+        /// <summary>
+        /// Lấy danh sách lỗi
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<dynamic> GetErrorListByMachineID(int machineID)
+        {
+            // Table structure: Ngày | Vị trí | Tên máy | Nhóm máy | Mã lỗi | Tên lỗi | Ghi chú
+
+            List<dynamic> reval = new List<dynamic>();
+            List<dynamic> revalFiltered = new List<dynamic>();
+
+            try
+            {
+                var data = from his in StaticData.Data_ErrorHistory
+                           join machine in StaticData.Data_Machine
+                                   on his.MachineID equals machine.MachineID
+                           join err in StaticData.Data_Error
+                                   on his.ErrorID equals err.ID
+                           join msetup in StaticData.Data_MachineLocationSetup
+                                   on his.MachineID equals msetup.MachineID
+                           join loc in StaticData.Data_MachineLocation
+                                   on msetup.LocationID equals loc.LocationID
+
+                           where machine.MachineID == machineID
+                           select new
+                           {
+                               ErrorDate = his.ErrorDate
+                               ,
+                               MachineLocation = loc.LocationName
+                               ,
+                               MachineName = machine.MachineName
+                               ,
+                               MachineGroupName = machine.MachineGroupName
+                               ,
+                               ErrorCode = err.ErrorCode
+                               ,
+                               ErrorName = err.ErrorName
+                               // For filter
+                               ,
+                               MachineGroupID = machine.MachineGroupID
+                               ,
+                               MachineLocationID = msetup.LocationID
+                           } as dynamic;
+
+                revalFiltered = data?.ToList() ?? new List<dynamic>();
+            }
+            catch (Exception)
             {
 
             }
@@ -173,7 +226,7 @@ namespace Service.Service
                            join machine in StaticData.Data_Machine
                                    on his.MachineID equals machine.MachineID
                            join err in StaticData.Data_Error
-                                   on his.ErrorID equals err.ErrorID
+                                   on his.ErrorID equals err.ID
                            join msetup in StaticData.Data_MachineLocationSetup
                                    on his.MachineID equals msetup.MachineID
                            join loc in StaticData.Data_MachineLocation
@@ -200,7 +253,7 @@ namespace Service.Service
                                MachineLocationID = msetup.LocationID
                            } as dynamic;
 
-                revalFiltered = data?.ToList();
+                revalFiltered = data?.ToList() ?? new List<dynamic>();
 
 
                 #region Filter
@@ -243,7 +296,6 @@ namespace Service.Service
                                 startDate = new DateTime(d.Year, 10, 1);
                                 endDate = new DateTime(d.Year, 12, DateTime.DaysInMonth(startDate.Year, 12));
                             }
-                            break;
                             break;
                         case "3":// Last year
                             startDate = new DateTime(d.Year - 1, 1, 1);
@@ -299,7 +351,7 @@ namespace Service.Service
 
 
                 // Bảng top 10
-                var TableTop10Error = (revalFiltered
+                var TableTop10Error = (revalFiltered?
                        .GroupBy(t => new { t.ErrorName, t.ErrorCode })
                        .OrderByDescending(o => o.Count())
                        .Take(10)
@@ -315,25 +367,20 @@ namespace Service.Service
                 string ErrorLeastOccus = "";
                 int ErrorTotal = 0;
 
-                //var a = revalFiltered?
-                //        .GroupBy(t => t.ErrorName)?
-                //        .OrderByDescending(o => o.Count())?
-                //        .Take(1)
-                //        .Select(s => new { ErrorName = s.Key })?.ToList()?.FirstOrDefault()?.ErrorName;
 
                 ErrorMostOccus = revalFiltered?
                         .GroupBy(t => t.ErrorName)?
                         .OrderByDescending(o => o.Count())?
                         .Take(1)?
-                        .Select(s => new { ErrorName = s.Key })?.ToList()?.FirstOrDefault()?.ErrorName;
+                        .Select(s => new { ErrorName = s.Key })?.ToList()?.FirstOrDefault()?.ErrorName ?? "";
 
-                ErrorLeastOccus = revalFiltered
+                ErrorLeastOccus = revalFiltered?
                         .GroupBy(t => t.ErrorName)
                         .OrderBy(o => o.Count())
                         .Take(1)
-                        .Select(s => new { ErrorName = s.Key }).ToList()?.FirstOrDefault()?.ErrorName;
+                        .Select(s => new { ErrorName = s.Key }).ToList()?.FirstOrDefault()?.ErrorName ?? "";
 
-                ErrorTotal = revalFiltered.Count();
+                ErrorTotal = revalFiltered?.Count ?? 0;
 
                 result = new
                 {
@@ -344,7 +391,7 @@ namespace Service.Service
                 };
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

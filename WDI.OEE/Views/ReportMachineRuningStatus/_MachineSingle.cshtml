@@ -55,7 +55,7 @@
                     <div>
                         <br />
                         <div class="machine-avatar-container">
-                            <img style="width:100%;object-fit: contain;" src="~/images/machines/@Model.UmageUrl" />
+                            <img class="clicktopreview" style="width:100%;object-fit: contain;" src="~/images/machines/@Model.UmageUrl" />
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,6 @@
                         <div id="@chartHtmlID"></div>
                     </div>
                     <!-- [rangeBar time-line] end -->
-
                     <br />
                 </div>
             </div>
@@ -106,18 +105,36 @@
     <!-- [card1] end-->
 </div>
 
+<!-- [modal view image] start-->
+<div class="modal fade" id="modalpreviewimage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" data-dismiss="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <img src="" class="popuppreviewimage" style="width: 100%;">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [modal view image] end-->
 
 <script>
     $(document).ready(function () {
 
         create_rangebar_timeline();
 
-
         var data = JSON.parse('@Html.Raw(Json.Serialize(Model.ListStatusPercent))');
         create_piechart('pie', 'piechart_timeline', data);
         //create_piechart('doughnut', 'doughnutchart_timeline', data);
-
         create_polararea('doughnut', 'doughnutchart_timeline', data);
+
+        // View ảnh lớn
+        $('.clicktopreview').on('click', function () {
+            $('.popuppreviewimage').attr('src', $(this).attr('src'));
+            $('#modalpreviewimage').show();
+        });
     });
 
     function create_rangebar_timeline() {
@@ -135,7 +152,7 @@
                 bar: {
                     horizontal: true
                 },
-                minPointLength:3,
+                minPointLength: 3,
             },
             xaxis: {
                 type: 'datetime'
@@ -218,7 +235,7 @@
                                 // Hiển thị con số ở label legend
                                 const datasets = chart.data.datasets;
                                 return datasets[0].data.map((data, i) => ({
-                                    text: `${chart.data.labels[i]}: ${data}`,
+                                    text: `${chart.data.labels[i]}: ${data}%`,
                                     fillStyle: datasets[0].backgroundColor[i],
                                 }))
                             }
@@ -252,7 +269,7 @@
         }
 
 
-        new Chart($("#" + chartid ), {
+        new Chart($("#" + chartid), {
             type: 'polarArea',
             data: {
                 labels: _chartlabels,
@@ -277,7 +294,7 @@
                                 // Hiển thị con số ở label legend
                                 const datasets = chart.data.datasets;
                                 return datasets[0].data.map((data, i) => ({
-                                    text: `${chart.data.labels[i]}: ${data}`,
+                                    text: `${chart.data.labels[i]}: ${data}%`,
                                     fillStyle: datasets[0].backgroundColor[i],
                                 }))
                             }

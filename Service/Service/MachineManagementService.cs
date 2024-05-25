@@ -238,10 +238,11 @@ namespace Service.Service
                                      ProviderID = m.ProviderID,
                                      ProviderName = m.ProviderName,
                                      SerialNo = m.SerialNo,
-                                     UmageUrl = m.UmageUrl
+                                     UmageUrl = m.UmageUrl,
+                                     ListComponents = m.ListComponents,
                                  })?.FirstOrDefault() ?? new Data_Machine();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

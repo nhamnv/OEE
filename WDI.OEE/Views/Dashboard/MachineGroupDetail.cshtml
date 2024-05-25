@@ -42,7 +42,7 @@
                     {
                         <div class="col">
                             <input type="hidden" name="hidden_MachineGroupID" value="@gr.GroupID" />
-                            <a href="#" title="Chi tiết" style="color: inherit!important;" onclick="load_gridListMachineByGroupAndStatus(@Model.MachineStatusID, @gr.GroupID)">
+                            <a href="#" title="Chi tiết" style="color: inherit!important;" onclick="load_gridListMachineByGroupAndStatus(@Model?.MachineStatusID, @gr.GroupID)">
                             @* <a href="@Url.Action("MachineGroupDetail","Dashboard", new {MachineStatusID=Model.MachineStatusID, MachineGroupID=@gr.GroupID})" title="Chi tiết" style="color: inherit!important;" onclick="load_gridListMachineByGroupAndStatus(@Model.MachineStatusID, @gr.GroupID)"> *@
                                 <h5 class="m-0 text-white">@gr.MachineCount</h5>
                                 <span>@gr.GroupName</span>
@@ -94,7 +94,7 @@
 <script>
     $(document).ready(function () { 
     
-        var result = JSON.parse('@Html.Raw(Json.Serialize(Model.ListMachine))');
+        var result = JSON.parse('@Html.Raw(Json.Serialize(Model?.ListMachine))');
 
         $("#gridListMachineByGroupAndStatus").bootstrapTable({
             data: result,

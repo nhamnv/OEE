@@ -11,9 +11,14 @@ namespace WDI.OEE.Controllers
     public class MachineManagementController : BaseController
     {
         private readonly IMachineManagementService _machineManagementService;
-        public MachineManagementController(IMachineManagementService machineManagementService)
+        private readonly IErrorMachineService _errorMachineService;
+        private readonly IReportMachineRuningStatusService _reportMachineRuningStatusService;
+
+        public MachineManagementController(IMachineManagementService machineManagementService, IErrorMachineService errorMachineService, IReportMachineRuningStatusService reportMachineRuningStatusService)
         {
             _machineManagementService = machineManagementService;
+            _errorMachineService = errorMachineService;
+            _reportMachineRuningStatusService = reportMachineRuningStatusService;
         }
 
         public ActionResult Index()
@@ -44,7 +49,7 @@ namespace WDI.OEE.Controllers
 
                 model = _machineManagementService.GetStatitics();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -76,7 +81,7 @@ namespace WDI.OEE.Controllers
 
                 model = _machineManagementService.GetDetails(machineID, machineLocationID);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -84,5 +89,38 @@ namespace WDI.OEE.Controllers
             return View(model);
         }
 
+
+        #region Get data các tab
+
+        [HttpGet]
+        public JsonResult GetMachineErrorList(int machineID)
+        {
+            var data = _errorMachineService.GetErrorListByMachineID(machineID);
+            return new JsonResult(data);
+        }
+
+        [HttpGet]
+        public JsonResult GetSeriesTimeLine(int machineID)
+        {
+            // mặc định xem dữ liệu 24h gần nhất
+            DateTime endDate = DateTime.Now;
+            DateTime startDate = endDate.AddHours(-24);
+
+            var data = _reportMachineRuningStatusService.GetListTimelineByMachineID(machineID, startDate, endDate);
+            return new JsonResult(data);
+        }
+
+        [HttpGet]
+        public JsonResult ListStatusPercent(int machineID)
+        {
+            // mặc định xem dữ liệu 24h gần nhất
+            DateTime endDate = DateTime.Now;
+            DateTime startDate = endDate.AddHours(-24);
+
+            var data = _reportMachineRuningStatusService.GetListStatusPercentByMachineID(machineID, startDate, endDate);
+            return new JsonResult(data);
+        }
+
+        #endregion
     }
 }
