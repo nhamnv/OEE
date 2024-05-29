@@ -2052,6 +2052,9 @@
 
                 // Init trong file StaticDataV2
                 StaticDataV2();
+
+                // Init trong file StaticDataV3
+                StaticDataV3();
             }
             catch (Exception)
             {

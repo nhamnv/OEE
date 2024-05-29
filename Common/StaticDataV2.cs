@@ -12,12 +12,18 @@
             {
                 #region Build table Data_MachineStatus --> https://docs.google.com/spreadsheets/d/1PXA7g5p7IdIuuBvkardAjIoThfHFF5lw0biVisA6FWc/edit#gid=487803147&range=B2
 
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "On", ColorCode = "#5f9d32" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#9ccc65" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Stop", ColorCode = "#E3DA30" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffba57" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#afabab" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 6, StatusName = "Emg", ColorCode = "#ff5252" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "On", ColorCode = "#5f9d32" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#9ccc65" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Stop", ColorCode = "#E3DA30" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffba57" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#afabab" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 6, StatusName = "Emg", ColorCode = "#ff5252" });
+
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "Ready", ColorCode = "#0070c0", StatusDetail = "Sẵn sàng cho sản xuất" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#00b050", StatusDetail = "Đang sản xuất" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Not ready", ColorCode = "#ff0000", StatusDetail = "Đang bảo dưỡng, sửa chữa" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffff00", StatusDetail = "Đang cảnh báo lỗi" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#a6a6a6", StatusDetail = "Đang không vận hành" });
 
                 #endregion
 

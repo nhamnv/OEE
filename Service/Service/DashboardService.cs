@@ -60,6 +60,7 @@ namespace Service.Service
                         ColorCode = s.ColorCode,
                         StatusName = s.StatusName,
                         StatusID = s.StatusID,
+                        StatusDetail = s.StatusDetail
                     };
 
 
@@ -162,6 +163,7 @@ namespace Service.Service
                     ColorCode = s1?.ColorCode ?? "",
                     StatusName = s1?.StatusName ?? "",
                     StatusID = s1?.StatusID ?? 0,
+                    StatusDetail = s1?.StatusDetail ?? "",
                 };
 
                 var machinesByStatus = lstMachineLastStatus.Where(t => t.MachineStatusID == s1.StatusID);

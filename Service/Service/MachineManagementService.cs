@@ -248,5 +248,33 @@ namespace Service.Service
             }
             return reval;
         }
+
+        public List<Data_RepaireHistory> GetMachineRepaireHistory(int machineID)
+        {
+            List<Data_RepaireHistory> reval = new List<Data_RepaireHistory>();
+            try
+            {
+                return StaticData.Data_RepaireHistory.Where(t => t.MachineID == machineID)?.OrderByDescending(o => o.DateFinishTask)?.ToList() ?? new List<Data_RepaireHistory>();
+            }
+            catch (Exception)
+            {
+
+            }
+            return reval;
+        }
+
+        public List<Data_MachineMaintenanceList> GetMachineMaintenanceList(int machineID)
+        {
+            List<Data_MachineMaintenanceList> reval = new List<Data_MachineMaintenanceList>();
+            try
+            {
+                reval = StaticData.Data_MachineMaintenanceList.Where(t => t.MachineID == machineID).ToList();
+            }
+            catch (Exception)
+            {
+
+            }
+            return reval;
+        }
     }
 }

@@ -12,20 +12,20 @@
                         @* <h6 class="m-b-20 m-t-10 p-b-5 b-b-default f-w-600">@cpnt.ComponentName</h6> *@
                         <div class="row">
                             <div class="col-sm-6">
-                                <label class="col-form-label">Tên vật tư</label>
-                                <input type="text" class="form-control" name="MachineName_@cpnt.ID" id="MachineName_@cpnt.ID" placeholder="Tên vật tư" value="@cpnt.ComponentName">
+                                <label class="col-form-label" for="ComponentName_@cpnt.ID">Tên vật tư</label>
+                                <input type="text" class="form-control" name="ComponentName_@cpnt.ID" id="ComponentName_@cpnt.ID" placeholder="Tên vật tư" value="@cpnt.ComponentName">
                             </div>
                             <div class="col-sm-2">
-                                <label class="col-form-label">Mã máy</label>
+                                <label class="col-form-label" for="MachineAssetCode_@cpnt.ID">Mã máy</label>
                                 <input type="text" class="form-control" name="MachineAssetCode_@cpnt.ID" id="MachineAssetCode_@cpnt.ID" placeholder="Mã máy" value="@cpnt.MachineAssetCode">
                             </div>
                             <div class="col-sm-2">
-                                <label class="col-form-label">Giá tiền</label>
-                                <input type="text" class="form-control autonumber" name="MachineAssetCode_@cpnt.ID" id="MachineAssetCode_@cpnt.ID" placeholder="Giá tiền" data-a-sep="." data-a-dec="," data-a-sign="vnđ" value="@cpnt.Price">
+                                <label class="col-form-label" for="Price_@cpnt.ID">Giá tiền</label>
+                                <input type="text" class="form-control autonumber" name="MachineAsPrice_@cpnt.ID" id="Price_@cpnt.ID" placeholder="Giá tiền" data-a-sep="." data-a-dec="," data-a-sign="vnđ" value="@cpnt.Price">
                             </div>
                             <div class="col-sm-2">
-                                <label class="col-form-label">Thời gian thay thế</label>
-                                <input type="text" class="form-control autonumber" name="MachineAssetCode_@cpnt.ID" id="MachineAssetCode_@cpnt.ID" placeholder="Thời gian thay thế" value="@cpnt.TimeReplacement">
+                                <label class="col-form-label" for="TimeReplacement_@cpnt.ID">Thời gian thay thế</label>
+                                <input type="text" class="form-control autonumber" name="TimeReplacement_@cpnt.ID" id="TimeReplacement_@cpnt.ID" placeholder="Thời gian thay thế" value="@cpnt.TimeReplacement">
                             </div>
                         </div>
                         <!-- [Dòng thông tin 1] end -->
@@ -38,6 +38,6 @@
 else
 {
     <div>
-        <label class="col-form-label">Máy chưa có linh kiện</label>
+        <span class="col-form-label">Máy chưa có linh kiện</span>
     </div>
 }

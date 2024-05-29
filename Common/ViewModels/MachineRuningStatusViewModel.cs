@@ -61,18 +61,19 @@ public class MachineRuningStatusViewModel
             reval.StatusID = obj?.StatusID ?? 0;
             reval.ColorCode = obj?.ColorCode ?? "";
             reval.StatusName = "Power Off"; // Data gốc là "off"
-
+            reval.StatusDetail = "Đang không vận hành";
 
             try
             {
                 // Khác off (bao gồm nhiều trạng thái) thì là on
                 if (_LastStatus != null && _LastStatus.StatusID != 5)
                 {
-                    var obj2 = StaticData.Data_MachineStatus.Where(t => t.StatusID == 1).FirstOrDefault();
+                    var obj2 = StaticData.Data_MachineStatus.Where(t => t.StatusID == 2).FirstOrDefault();
                     reval.StatusID = obj2?.StatusID ?? 0;
                     reval.ColorCode = obj2?.ColorCode ?? "";
 
                     reval.StatusName = "Power On";// Data gốc là "on"
+                    reval.StatusDetail = "Đang sản xuất";
                 }
             }
             catch (Exception)

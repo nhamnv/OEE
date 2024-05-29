@@ -151,6 +151,7 @@
 
         public int StatusID { get; set; }
         public string StatusName { get; set; } = string.Empty;
+        public string StatusDetail { get; set; } = string.Empty;
         public string ColorCode { get; set; } = string.Empty;
 
         public long DataPercent { get; set; } = 0;
@@ -169,5 +170,32 @@
         public int MachineLocationID { get; set; }
         public int StatusID { get; set; }
         public DateTime StatusTime { get; set; }
+    }
+
+    public class Data_RepaireHistory
+    {
+        public int ID { get; set; }
+        public int MachineID { get; set; }
+
+        public DateTime DateTaskAssigned { get; set; }
+
+        public string ErrorCode { get; set; } = string.Empty;
+
+        public string Executor { get; set; } = string.Empty;
+
+        public DateTime DateFinishTask { get; set; }
+    }
+
+    public class Data_MachineMaintenanceList
+    {
+        public int ID { get; set; }
+        public int MachineID { get; set; }
+
+        public string Content { get; set; } = string.Empty;
+
+        public int IntervalID { get; set; }
+        public string IntervalName { get; set; } = string.Empty;
+        public string Note { get; set; } = string.Empty;
+
     }
 }

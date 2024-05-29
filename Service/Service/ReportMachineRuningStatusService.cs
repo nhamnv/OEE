@@ -186,7 +186,7 @@ namespace Service.Service
                     foreach (var s in StaticData.Data_MachineStatus)
                     {
                         realTotalmiliSeconds = 0;
-                        var sPcent = new Data_MachineStatus() { ColorCode = s.ColorCode, StatusID = s.StatusID, StatusName = s.StatusName };
+                        var sPcent = new Data_MachineStatus() { ColorCode = s.ColorCode, StatusID = s.StatusID, StatusName = s.StatusName, StatusDetail = s.StatusDetail };
 
                         try
                         {
@@ -398,7 +398,7 @@ namespace Service.Service
                 foreach (var s in StaticData.Data_MachineStatus)
                 {
                     realTotalmiliSeconds = 0;
-                    var sPcent = new Data_MachineStatus() { ColorCode = s.ColorCode, StatusID = s.StatusID, StatusName = s.StatusName };
+                    var sPcent = new Data_MachineStatus() { ColorCode = s.ColorCode, StatusID = s.StatusID, StatusName = s.StatusName, StatusDetail = s.StatusDetail };
 
                     try
                     {
@@ -584,7 +584,7 @@ namespace Service.Service
                 foreach (var s in StaticData.Data_MachineStatus)
                 {
                     realTotalmiliSeconds = 0;
-                    var sPcent = new Data_MachineStatus() { ColorCode = s.ColorCode, StatusID = s.StatusID, StatusName = s.StatusName };
+                    var sPcent = new Data_MachineStatus() { ColorCode = s.ColorCode, StatusID = s.StatusID, StatusName = s.StatusName, StatusDetail = s.StatusDetail };
 
                     try
                     {

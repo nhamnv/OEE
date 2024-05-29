@@ -29,12 +29,10 @@
 <script>
     $(document).ready(function () {
         var machineID = @Html.Raw(Json.Serialize(Model.MachineID));
-        console.log('ok MachineID::' + machineID);
         getMachineErrorList(machineID);
     });
 
     function getMachineErrorList(machineID) {
-        debugger;
         $.ajax({
             url: '@Url.Action("GetMachineErrorList", "MachineManagement")' + '?machineID=' + machineID,
             method: "GET",

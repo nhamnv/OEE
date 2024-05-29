@@ -111,7 +111,7 @@ namespace WDI.OEE.Controllers
         }
 
         [HttpGet]
-        public JsonResult ListStatusPercent(int machineID)
+        public JsonResult GetListStatusPercent(int machineID)
         {
             // mặc định xem dữ liệu 24h gần nhất
             DateTime endDate = DateTime.Now;
@@ -121,6 +121,20 @@ namespace WDI.OEE.Controllers
             return new JsonResult(data);
         }
 
+
+        [HttpGet]
+        public JsonResult GetListRepaireHistory(int machineID)
+        {
+            var data = _machineManagementService.GetMachineRepaireHistory(machineID);
+            return new JsonResult(data);
+        }
+
+        [HttpGet]
+        public JsonResult GetListMaintenanceChecklist(int machineID)
+        {
+            var data = _machineManagementService.GetMachineMaintenanceList(machineID);
+            return new JsonResult(data);
+        }
         #endregion
     }
 }
