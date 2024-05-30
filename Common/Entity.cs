@@ -138,6 +138,12 @@
 
         public double Price { get; set; }
         public int TimeReplacement { get; set; }
+        public string TimeReplacementName { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Đơn vị tính
+        /// </summary>
+        public string BaseUnitName { get; set; } = string.Empty;
 
     }
 
@@ -196,6 +202,10 @@
         public int IntervalID { get; set; }
         public string IntervalName { get; set; } = string.Empty;
         public string Note { get; set; } = string.Empty;
+        /// <summary>
+        /// Thời gian thực hiện (số phút)
+        /// </summary>
+        public int TimeFinish { get; set; }
 
     }
 }

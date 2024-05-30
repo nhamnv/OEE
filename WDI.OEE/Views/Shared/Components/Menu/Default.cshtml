@@ -37,18 +37,28 @@
             {
                 foreach (var menuL2 in menu.ChildMenus)
                 {
+                    string hrefL2 = "javascript:void(0)";
+                    if(!string.IsNullOrEmpty(menuL2.Url))
+                    {
+                        hrefL2 = menuL2.Url;
+                    }
                     <ul class="pcoded-submenu">
                         <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
-                            <a href="javascript:void(0)">
+                            <a href="@hrefL2">
                                 <span class="pcoded-mtext">@menuL2.Name</span>
                             </a>
                             @if (menuL2.ChildMenus.Count > 0)
                             {
                                 foreach (var menuL3 in menuL2.ChildMenus)
                                 {
+                                    string hrefL3 = "javascript:void(0)";
+                                    if (!string.IsNullOrEmpty(menuL3.Url))
+                                    {
+                                        hrefL3 = menuL3.Url;
+                                    }
                                     <ul class="pcoded-submenu">
                                         <li class="">
-                                            <a href="javascript:void(0)">
+                                            <a href="@hrefL3">
                                                 <span class="pcoded-mtext">@menuL3.Name</span>
                                             </a>
                                         </li>
