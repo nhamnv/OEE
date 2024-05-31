@@ -38,6 +38,7 @@ else
     });
 
     function getMachineRepaireHistory(machineID) {
+        //debugger;
         $.ajax({
             url: '@Url.Action("GetListRepaireHistory", "MachineManagement")' + '?machineID=' + machineID,
             method: "GET",

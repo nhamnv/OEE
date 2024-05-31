@@ -12,31 +12,31 @@
                     <!-- [Tabs menu] start -->
                     <ul class="nav nav-tabs md-tabs tab6" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tab_machinedetail" role="tab" aria-expanded="true"><i class="tabname-icon icofont icofont-company"></i>Chi tiết máy</a>
+                            <a class="nav-link active" data-toggle="tab" href="#tab_machinedetail" role="tab"><i class="tabname-icon icofont icofont-company"></i>Chi tiết máy</a>
                             <div class="slide"></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab_accessory" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-wheel"></i>Linh kiện</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab_accessory" role="tab"><i class="tabname-icon icofont icofont-wheel"></i>Linh kiện</a>
                             <div class="slide"></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab_maintenance" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-tasks-alt"></i>Checklist bảo dưỡng</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab_maintenance" role="tab"><i class="tabname-icon icofont icofont-tasks-alt"></i>Checklist bảo dưỡng</a>
                             <div class="slide"></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab_operationtime" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-ui-settings"></i>Thời gian vận hành</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab_operationtime" role="tab"><i class="tabname-icon icofont icofont-ui-settings"></i>Thời gian vận hành</a>
                             <div class="slide"></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab_errorlist" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-exclamation-tringle"></i>Danh sách lỗi</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab_errorlist" role="tab"><i class="tabname-icon icofont icofont-exclamation-tringle"></i>Danh sách lỗi</a>
                             <div class="slide"></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab_repairehistory" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-history"></i>Lich sử sửa chữa</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab_repairehistory" role="tab"><i class="tabname-icon icofont icofont-history"></i>Lich sử sửa chữa</a>
                             <div class="slide"></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab_technicaldocument" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-history"></i>Tài liệu kỹ thuật</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab_technicaldocument" role="tab"><i class="tabname-icon icofont icofont-history"></i>Tài liệu kỹ thuật</a>
                             <div class="slide"></div>
                         </li>
                     </ul>
@@ -44,37 +44,37 @@
                     <!-- [tabs content] start -->
                     <div class="tab-content card-block">
                         <!-- [Tab: Tab chi tiết máy] start -->
-                        <div class="tab-pane active" id="tab_machinedetail" role="tabpanel" aria-expanded="true">
+                        <div class="tab-pane active" id="tab_machinedetail" role="tabpanel">
                             @await Html.PartialAsync("_PartialMachineDetail", Model.Machine)
                         </div>
                         <!-- [Tab: Tab chi tiết máy] end -->
                         <!-- [Tab: Tab linh kiện] start -->
-                        <div class="tab-pane" id="tab_accessory" role="tabpanel" aria-expanded="false">
+                        <div class="tab-pane" id="tab_accessory" role="tabpanel">
                             @await Html.PartialAsync("_PartialMachineComponent", Model.Machine.ListComponents)
                         </div>
                         <!-- [Tab: Tab linh kiện] end -->
                         <!-- [Tab: Tab checklist bảo dưỡng] start -->
-                        <div class="tab-pane" id="tab_maintenance" role="tabpanel" aria-expanded="false">
+                        <div class="tab-pane" id="tab_maintenance" role="tabpanel">
                             @await Html.PartialAsync("_PartialMachineMaintenanceCheklist", Model.Machine)
                         </div>
                         <!-- [Tab: Tab checklist bảo dưỡng] end -->
                         <!-- [Tab: Tab thời gian vận hành] start -->
-                        <div class="tab-pane" id="tab_operationtime" role="tabpanel" aria-expanded="false">
+                        <div class="tab-pane" id="tab_operationtime" role="tabpanel">
                             @await Html.PartialAsync("_PartialMachineRunningStatus", Model.Machine)
                         </div>
                         <!-- [Tab: Tab thời gian vận hành] end -->
                         <!-- [Tab: Tab danh sách lỗi] start -->
-                        <div class="tab-pane" id="tab_errorlist" role="tabpanel" aria-expanded="false">
+                        <div class="tab-pane" id="tab_errorlist" role="tabpanel">
                             @await Html.PartialAsync("_PartialMachineErrorList", Model.Machine)
                         </div>
                         <!-- [Tab: Tab danh sách lỗi] end -->
                         <!-- [Tab: Tab lịch sử sửa chữa] start -->
-                        <div class="tab-pane" id="tab_repairehistory" role="tabpanel" aria-expanded="false">
+                        <div class="tab-pane" id="tab_repairehistory" role="tabpanel">
                             @await Html.PartialAsync("_PartialMachineRepaireHistory", Model.Machine)
                         </div>
                         <!-- [Tab: Tab lịch sử sửa chữa] end -->
                         <!-- [Tab: Tab tài liệu kỹ thuật] start -->
-                        <div class="tab-pane" id="tab_technicaldocument" role="tabpanel" aria-expanded="false">
+                        <div class="tab-pane" id="tab_technicaldocument" role="tabpanel">
                             <span>Chưa có tài liệu kỹ thuật</span>
                         </div>
                         <!-- [Tab: Tab tài liệu kỹ thuật] end -->
@@ -88,3 +88,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+
+        // Xử lý tab click bị hiển thị duplicate
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = $(e.target).attr("href") // activated tab
+            console.log(target);
+
+            // Clear active
+            // Tìm cha của targe có class tab-content sau đó tìm all con của cha có class .tab-pane để bỏ class active
+            $(target).closest('.tab-content').find('.tab-pane').removeClass('active');
+            // $('.tab-pane').removeClass('active');
+
+            // Active cho 1 tab thôi
+            $(target).addClass('active');
+        });
+    });
+</script>

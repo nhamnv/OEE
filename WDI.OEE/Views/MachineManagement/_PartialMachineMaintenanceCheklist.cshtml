@@ -40,7 +40,6 @@
 
 <script>
     $(document).ready(function () {
-        debugger;
         var machineID = @Html.Raw(Json.Serialize(Model.MachineID));
         getListMaintenanceChecklist(machineID);
     });
@@ -53,7 +52,6 @@
             async: true,
             beforeSend: function () { },
             success: function (result) {
-                debugger;
                 if (result) {
                     var _html = '';
 
