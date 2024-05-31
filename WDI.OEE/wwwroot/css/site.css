@@ -97,11 +97,11 @@ body {
 
 
 .tab6 .nav-item {
-    width: calc(100% / 6) !important;
+    width: calc(100% / 7) !important;
 }
 
 .tab6 .slide {
-    width: calc(100% / 6) !important;
+    width: calc(100% / 7) !important;
 }
 
 

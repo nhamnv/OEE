@@ -35,6 +35,10 @@
                             <a class="nav-link" data-toggle="tab" href="#tab_repairehistory" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-history"></i>Lich sử sửa chữa</a>
                             <div class="slide"></div>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab_technicaldocument" role="tab" aria-expanded="false"><i class="tabname-icon icofont icofont-history"></i>Tài liệu kỹ thuật</a>
+                            <div class="slide"></div>
+                        </li>
                     </ul>
                     <!-- [Tabs menu] end -->
                     <!-- [tabs content] start -->
@@ -69,6 +73,11 @@
                             @await Html.PartialAsync("_PartialMachineRepaireHistory", Model.Machine)
                         </div>
                         <!-- [Tab: Tab lịch sử sửa chữa] end -->
+                        <!-- [Tab: Tab tài liệu kỹ thuật] start -->
+                        <div class="tab-pane" id="tab_technicaldocument" role="tabpanel" aria-expanded="false">
+                            <span>Chưa có tài liệu kỹ thuật</span>
+                        </div>
+                        <!-- [Tab: Tab tài liệu kỹ thuật] end -->
                     </div>
                     <!-- [tabs content] end -->
                 </div>

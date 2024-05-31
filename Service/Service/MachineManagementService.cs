@@ -65,7 +65,7 @@ namespace Service.Service
             // Pie Chart - Tỷ lệ máy theo nhóm máy
             reval.PieChartRateOfTotalMachineByGroup = new ChartData()
             {
-                Title = "Tỷ lệ máy theo từng xưởng",
+                Title = "Tỷ lệ máy theo nhóm máy",
                 Data = new List<ChartItemViewModel>()
                 {
                     new ChartItemViewModel() {Name="GCN", Value=23.26, ColorCode="#E17084"},
