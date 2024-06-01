@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository.Entity
 {
@@ -12,10 +7,12 @@ namespace Repository.Entity
     public class Data_Menu
     {
         [Key]
-        public int MenuID {  get; set; }
+        public int MenuID { get; set; }
 
         [Required]
+        [MaxLength(200)]
         public string? Name { get; set; }
+        [Range(0, int.MinValue)]
         public int? ParentID { get; set; }
         public int? OrderNo { get; set; }
         public bool? IsShowMenu { get; set; }

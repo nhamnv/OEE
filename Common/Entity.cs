@@ -21,6 +21,14 @@
 
         public int MachineGroupID { get; set; }
         public string MachineGroupName { get; set; } = string.Empty;
+
+        #region Thuộc tính thêm để show cha con
+        public string ErrorNameNested { get; set; } = string.Empty;
+        public int L { get; set; }
+        public string ChildPath { get; set; } = string.Empty;
+        public string SearchPattern { get; set; } = string.Empty;
+
+        #endregion
     }
     /// <summary>
     /// Bảng danh sách loai máy 

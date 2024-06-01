@@ -18,13 +18,13 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label">Máy, thiết bị</label>
+                        <label class="control-label text-muted">Máy, thiết bị</label>
                         @Html.DropDownList("ListMachine", (List<SelectListItem>)ViewData["ListMachine"], htmlAttributes: new { @class = "form-control", @onchange = "loadData()" })
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="control-label">Kỳ bảo dưỡng</label>
+                        <label class="control-label text-muted">Kỳ bảo dưỡng</label>
                         @Html.DropDownList("ListMaintenanceInterval", (List<SelectListItem>)ViewData["ListMaintenanceInterval"], htmlAttributes: new { @class = "form-control", @onchange = "loadData()" })
                     </div>
                 </div>

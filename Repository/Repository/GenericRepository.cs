@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Repository.Entity;
 
-namespace Repository.Entity
+namespace Repository.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
@@ -70,14 +71,46 @@ namespace Repository.Entity
             }
         }
 
-        public Task<bool> RemoveRangeAsync(IEnumerable<T> enumerableEntity)
+        public async Task<bool> RemoveRangeAsync(IEnumerable<T> enumerableEntity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Set<T>().RemoveRange(enumerableEntity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public Task<bool> UpdateAsync(T entity)
+        public async Task<bool> UpdateAsync(T entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Set<T>().Update(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateRangeAsync(IEnumerable<T> enumerableEntity)
+        {
+            try
+            {
+                _context.Set<T>().UpdateRange(enumerableEntity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

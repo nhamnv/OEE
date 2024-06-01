@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="machineAssetGroup" class="control-label">Nhóm tài sản</label>
+                        <label for="machineAssetGroup" class="control-label text-muted">Nhóm tài sản</label>
                         <select class="form-control" id="machineAssetGroup">
                             <option value="0" selected>-- Tất cả --</option>
                             <option value="1">Máy cắt</option>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="machineGroup" class="control-label">Nhóm máy</label>
+                        <label for="machineGroup" class="control-label text-muted">Nhóm máy</label>
                         <select class="form-control" id="machineGroup">
                             <option value="0" selected>-- Tất cả --</option>
                             <option value="1">GCN</option>
@@ -38,7 +38,7 @@
 
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="machineLocation" class="control-label">Vị trí</label>
+                        <label for="machineLocation" class="control-label text-muted">Vị trí</label>
                         <select class="form-control-container input-lg step2-select" id="machineLocation">
                             <option value="0" selected>-- Tất cả --</option>
                             <option value="1">AH1</option>
@@ -68,7 +68,7 @@
 
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="txtKeyword" class="control-label">Từ khóa</label>
+                        <label for="txtKeyword" class="control-label text-muted">Từ khóa</label>
                         <div class="input-group input-group-button input-group-primary">
                             <input id="txtKeyword" type="text" class="form-control" placeholder="Từ khóa...">
                             <button id="btnSearch" class="btn btn-primary input-group-addon" onclick="load_lishmachine()">Tìm kiếm</button>
@@ -149,7 +149,7 @@
             for (var i = result.length - 1; i >= 0; i--) {
                 var strVal = '';
                 Object.entries(result[i]).forEach(([key, value]) => {
-                    strVal = strVal + (';' + value.toString().toLocaleLowerCase());
+                    strVal = strVal + (';' + value?.toString().toLocaleLowerCase());
                 });
 
                 if (strVal.indexOf(_keyword) < 0) {
