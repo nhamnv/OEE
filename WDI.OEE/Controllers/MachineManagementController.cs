@@ -26,8 +26,22 @@ namespace WDI.OEE.Controllers
             return View();
         }
 
-        public ActionResult List()
+        /// <summary>
+        /// Danh mục máy, có 2 param để open form từ các trang khác truyền vào
+        /// </summary>
+        /// <param name="machineGroupID"></param>
+        /// <param name="workshopID"></param>
+        /// <returns></returns>
+        public ActionResult List(int machineGroupID = 0
+            , int workshopID = 0
+            , int machineAssetGroupID = 0
+            , int machineLocationID = 0)
         {
+            ViewData["machineGroupID"] = machineGroupID;
+            ViewData["workshopID"] = workshopID;
+            ViewData["machineAssetGroupID"] = machineAssetGroupID;
+            ViewData["machineLocationID"] = machineLocationID;
+
             return View();
         }
 

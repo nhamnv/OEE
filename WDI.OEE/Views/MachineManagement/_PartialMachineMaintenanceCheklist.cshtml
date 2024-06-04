@@ -1,37 +1,25 @@
 ﻿@model Common.Data_Machine
 
 
-<style>
-    .latest-update-card .card-block .latest-update-box .update-meta .update-icon {
-        margin-left:0px!important;
-    }
-</style>
-<div class="card latest-update-card">
-    <div class="card-header">
-        <div class="card-header-right">
-        </div>
-    </div>
-    <div class="card-block">
-        <div class="latest-update-box">
-            <!-- [Checklist] start item -->
-            <div class="row p-b-30">
-                <div class="col-auto text-right update-meta">
-                    <!--p class="text-muted m-b-0 d-inline">#</p-->
-                    @* <i class="bg-simple-c-yellow  update-icon"></i> *@
-                </div>
-                <div class="col">
-                    <h6 class="font-weight-bold">Hạng mục</h6>
-                </div>
-                <div class="col">
-                    <h6 class="font-weight-bold">Thời gian thực hiện</h6>
-                </div>
-                <div class="col">
-                    <h6 class="font-weight-bold">Tần suất thực hiện</h6>
-                </div>
+<div class="col-xl-12 col-sm-12">
+    <div class="card">
+        <div class="card-block table-border-style">
+            <div class="table-responsive">
+                <table id="gridMachineMaintenanceCheklist" class="table table-styling"
+                       data-pagination="true"
+                       data-page-list="[5, 10, 20, 50, 100, 200]"
+                       data-show-footer="false">
+                    <thead class="table-primary">
+                        <tr>
+                            <th data-field="content" data-align="left" data-sortable="true">Nội dung</th>
+                            <th data-field="timeFinish" data-align="center" data-sortable="true" data-formatter="formatTimeMaintenanceInterval">Thời gian thực hiện</th>
+                            <th data-field="intervalName" data-align="center" data-sortable="true">Tần suất thực hiện</th>
+                            <th data-field="userGuide" data-align="left" data-sortable="true">Hướng dẫn thực hiện</th>
+                            <th data-field="userGuideVideo" data-align="left" data-sortable="true">Video</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
-            <!-- [Checklist item] end -->
-            <div id="checklistcontent"></div>
-             
         </div>
     </div>
 </div>
@@ -53,38 +41,23 @@
             beforeSend: function () { },
             success: function (result) {
                 if (result) {
-                    var _html = '';
-
-                    result.forEach((cklistItem) => {
-                    _html = _html +
-                                '\
-                                <!-- [Checklist] start item -->\
-                                <div class="row p-b-30">\
-                                    <div class="col-auto text-right update-meta">\
-                                        <!--p class="text-muted m-b-0 d-inline">Mục kiểm tra</p-->\
-                                        <i class="feather icon-check bg-info update-icon"></i>\
-                                    </div>\
-                                    <div class="col">\
-                                        <h6>'+cklistItem.content+'</h6>\
-                                        <p class="text-muted m-b-0">'+cklistItem.note+'</p>\
-                                    </div>\
-                                    <div class="col">\
-                                        <h6>'+ cklistItem.timeFinish + ' (phút) </h6>\
-                                    </div>\
-                                    <div class="col">\
-                                        <h6>'+cklistItem.intervalName+'</h6>\
-                                    </div>\
-                                </div>\
-                                <!-- [Checklist item] end -->\
-                                ';
+                    $("#gridMachineMaintenanceCheklist").bootstrapTable({
+                        data: result,
+                        formatLoadingMessage: function () {
+                            return '<b>Loading ...</b>';
+                        }
                     });
 
-                    $('#checklistcontent').html(_html);
+                    $('#gridMachineMaintenanceCheklist').bootstrapTable('load', result);
                 }
             },
             error: function (err) {
                 console.log(err);
             }
         });
+    }
+
+    function formatTimeMaintenanceInterval(value, row, index) {
+        return (value + ' (phút)');
     }
 </script>

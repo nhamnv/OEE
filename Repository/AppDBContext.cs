@@ -10,7 +10,7 @@ namespace Repository
 
         }
 
-        // public DbSet<Dashboard> Dashboards { get; set; }
         public DbSet<Data_Menu> Data_Menus { get; set; }
+        public DbSet<Data_Error> Data_Errors { get; set; }
     }
 }

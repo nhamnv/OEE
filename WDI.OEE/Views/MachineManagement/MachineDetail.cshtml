@@ -75,7 +75,7 @@
                         <!-- [Tab: Tab lịch sử sửa chữa] end -->
                         <!-- [Tab: Tab tài liệu kỹ thuật] start -->
                         <div class="tab-pane" id="tab_technicaldocument" role="tabpanel">
-                            <span>Chưa có tài liệu kỹ thuật</span>
+                            @await Html.PartialAsync("_PartialMachineTechnicalDocument", Model.Machine)
                         </div>
                         <!-- [Tab: Tab tài liệu kỹ thuật] end -->
                     </div>

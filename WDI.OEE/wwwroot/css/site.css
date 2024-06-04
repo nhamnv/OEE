@@ -212,3 +212,12 @@ body {
 .bnt-100{
     width:100px;
 }
+/** 1 block trắng trong bảng phân cấp **/
+.space-span {
+    margin: 0px 10px 0px 10px;
+}
+
+.fixed-table-pagination{
+    margin:10px 20px 0px 20px;
+}
+

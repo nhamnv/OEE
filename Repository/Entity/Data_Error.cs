@@ -27,6 +27,8 @@ namespace Repository.Entity
 
 
         #region Thuộc tính thêm để show cha con
+        public string MachineGroupName { get; set; } = string.Empty;
+
         public string ErrorNameNested { get; set; } = string.Empty;
         public int L { get; set; }
         public string ChildPath { get; set; } = string.Empty;

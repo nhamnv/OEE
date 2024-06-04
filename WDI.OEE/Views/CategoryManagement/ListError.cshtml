@@ -28,12 +28,16 @@
                         <thead class="table-primary">
                             <tr>
                                 <th data-field="iD" data-align="left" data-sortable="true" data-visible="false">ID Lỗi</th>
-                                <th data-field="errorNameNested" data-align="left" data-sortable="true" data-formatter="formatTreeColumnByParentID">Tên lỗi</th>
+                                <th data-field="searchPattern" data-align="left" data-sortable="true" data-formatter="formatColumnByTreeLevel">SearchPattern</th>
+                                <th data-field="errorName" data-align="left" data-sortable="true" data-formatter="formatColumnByTreeLevel">Tên lỗi</th>
                                 <th data-field="errorCode" data-align="left" data-sortable="true">Mã lỗi</th>
                                 <th data-field="machineGroupID" data-align="left" data-sortable="true" data-visible="false">Nhóm máy</th>
                                 <th data-field="machineGroupName" data-align="left" data-sortable="true">Nhóm máy</th>
                                 <th data-field="parentID" data-align="left" data-sortable="true" data-visible="false">ParentID</th>
                                 <th data-field="note" data-align="left" data-sortable="true">Ghi chú</th>
+                                <th data-field="errorNameOrginal" data-align="left" data-sortable="true" data-formatter="formatColumnByTreeLevel">Tên lỗi (theo nhà sản xuất)</th>
+                                <th data-field="errorCodeOrginal" data-align="left" data-sortable="true">Mã lỗi (theo nhà sản xuất)</th>
+                                <th data-field="userGuide" data-align="left" data-sortable="true">Hướng dẫn xử lý</th>
                             </tr>
                         </thead>
                     </table>
@@ -64,20 +68,21 @@
             async: true,
             beforeSend: function () { },
             success: function (result) {
+                debugger;
                 // Search by keyword ---------------------------------
                 if (result && result.length > 0) {
+                    // cần làm thêm: search con ra cha + các anh chị em + con cháu
                     var _keyword = $('#txtKeyword').val().toLocaleLowerCase().trim();
                     if (_keyword) {
-                        for (var i = result.length - 1; i >= 0; i--) {
-                            var strVal = '';
-                            Object.entries(result[i]).forEach(([key, value]) => {
-                                strVal = strVal + (';' + value?.toString().toLocaleLowerCase());
-                            });
+                        var resultTemp = [];
 
-                            if (strVal.indexOf(_keyword) < 0) {
-                                result.splice(i, 1);
+                        for (var i = 0; i <= result.length - 1; i++) {
+                            if (result[i].searchPattern.toString().toLocaleLowerCase().indexOf(_keyword) >= 0) {
+                                resultTemp.push(result[i]);
                             }
                         }
+
+                        result = resultTemp;
                     }
                 }
                 // -------------------------------------------------
@@ -87,7 +92,8 @@
                     data: result,
                     formatLoadingMessage: function () {
                         return '<b>Loading ...</b>';
-                    }
+                    },
+                    locale:'vi-VN'
                 });
 
                 $('#gridListError').bootstrapTable('load', result);
@@ -98,14 +104,20 @@
         });
     }
 
-    function formatTreeColumnByParentID(value, row, index) {
-        debugger;
+    function formatColumnByTreeLevel(value, row, index) {
+        var _val = value;
+        if (row.l != undefined && row.l > 1) {
+            for (let i = 0; i < row.l; i++) {
+                // _val = ('&emsp;&emsp;') + _val;
+                _val = ('<span class="space-span"></span>') + _val;
+            }
+        }
 
         // Format hiển thị theo level
-        return value;
+        return _val;
     }
 
-    function onSearch(){
+    function onSearch() {
         loadGridListError();
     }
 </script>
