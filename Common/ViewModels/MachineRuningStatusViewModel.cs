@@ -13,7 +13,7 @@ public class MachineRuningStatusViewModel
     public string MachineLocationName { get; set; } = string.Empty;
     public string UmageUrl { get; set; } = "NoImage.png";
     public List<Common.Data_MachineStatus> ListStatus = StaticData.Data_MachineStatus;
-    public List<Common.Data_MachineStatusHistory> StatusHistories { get; set; }
+    public List<Common.Data_MachineStatusHistory> StatusHistories { get; set; } = new List<Common.Data_MachineStatusHistory>();
 
     /// <summary>
     /// Tự động trích xuất trạng thái hoạt động cuối cùng
@@ -28,10 +28,10 @@ public class MachineRuningStatusViewModel
                 if (StatusHistories.Any() && ListStatus.Any())
                 {
 
-                    int statusID = StatusHistories
-                        .OrderByDescending(o => o.StatusTime)
-                        .Take(1)
-                        .FirstOrDefault().StatusID;
+                    int statusID = StatusHistories?
+                        .OrderByDescending(o => o.StatusTime)?
+                        .Take(1)?
+                        .FirstOrDefault()?.StatusID ?? 0;
 
                     var reval = ListStatus
                         .Where(s => s.StatusID == statusID)?
@@ -40,7 +40,7 @@ public class MachineRuningStatusViewModel
                     result = reval ?? new Data_MachineStatus();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
 
@@ -61,21 +61,22 @@ public class MachineRuningStatusViewModel
             reval.StatusID = obj?.StatusID ?? 0;
             reval.ColorCode = obj?.ColorCode ?? "";
             reval.StatusName = "Power Off"; // Data gốc là "off"
-
+            reval.StatusDetail = "Đang không vận hành";
 
             try
             {
                 // Khác off (bao gồm nhiều trạng thái) thì là on
                 if (_LastStatus != null && _LastStatus.StatusID != 5)
                 {
-                    var obj2 = StaticData.Data_MachineStatus.Where(t => t.StatusID == 1).FirstOrDefault();
+                    var obj2 = StaticData.Data_MachineStatus.Where(t => t.StatusID == 2).FirstOrDefault();
                     reval.StatusID = obj2?.StatusID ?? 0;
                     reval.ColorCode = obj2?.ColorCode ?? "";
 
                     reval.StatusName = "Power On";// Data gốc là "on"
+                    reval.StatusDetail = "Đang sản xuất";
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -185,14 +186,14 @@ public class MachineRuningStatusViewModel
         //            series = datas,
         //        };
         //    }
-        //    catch (Exception ex)
+        //    catch (Exception)
         //    {
 
         //    }
 
         //    return reval;
         //}
-    }
+    } = new List<TimelineSeriesData>();
 
     // Data cho line % các trạng thái
     public List<Common.Data_MachineStatus> ListStatusPercent = new List<Data_MachineStatus>();
@@ -207,7 +208,7 @@ public class TimelineSeriesData
     /// <summary>
     /// Tên hiển thị
     /// </summary>
-    public string x { get; set; }
+    public string x { get; set; } = string.Empty;
 
     /// <summary>
     /// Thời gian total miliseconds tính từ 01/01/1970 đến nay
@@ -218,7 +219,7 @@ public class TimelineSeriesData
     /// <summary>
     /// Màu hiển thị barChart
     /// </summary>
-    public string fillColor { get; set; }
+    public string fillColor { get; set; } = string.Empty;
 
     /// <summary>
     /// Trường để tính toán

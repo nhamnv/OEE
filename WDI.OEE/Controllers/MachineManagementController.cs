@@ -11,9 +11,14 @@ namespace WDI.OEE.Controllers
     public class MachineManagementController : BaseController
     {
         private readonly IMachineManagementService _machineManagementService;
-        public MachineManagementController(IMachineManagementService machineManagementService)
+        private readonly IErrorMachineService _errorMachineService;
+        private readonly IReportMachineRuningStatusService _reportMachineRuningStatusService;
+
+        public MachineManagementController(IMachineManagementService machineManagementService, IErrorMachineService errorMachineService, IReportMachineRuningStatusService reportMachineRuningStatusService)
         {
             _machineManagementService = machineManagementService;
+            _errorMachineService = errorMachineService;
+            _reportMachineRuningStatusService = reportMachineRuningStatusService;
         }
 
         public ActionResult Index()
@@ -21,8 +26,22 @@ namespace WDI.OEE.Controllers
             return View();
         }
 
-        public ActionResult List()
+        /// <summary>
+        /// Danh mục máy, có 2 param để open form từ các trang khác truyền vào
+        /// </summary>
+        /// <param name="machineGroupID"></param>
+        /// <param name="workshopID"></param>
+        /// <returns></returns>
+        public ActionResult List(int machineGroupID = 0
+            , int workshopID = 0
+            , int machineAssetGroupID = 0
+            , int machineLocationID = 0)
         {
+            ViewData["machineGroupID"] = machineGroupID;
+            ViewData["workshopID"] = workshopID;
+            ViewData["machineAssetGroupID"] = machineAssetGroupID;
+            ViewData["machineLocationID"] = machineLocationID;
+
             return View();
         }
 
@@ -44,7 +63,7 @@ namespace WDI.OEE.Controllers
 
                 model = _machineManagementService.GetStatitics();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -52,6 +71,16 @@ namespace WDI.OEE.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// Load chi tiết máy
+        /// </summary>
+        /// <param name="stringData">
+        /// Json data gồm các trường:
+        /// <para>machineID: id máy</para>
+        /// <para>machineLocationID: id vị trí lắp máy</para>
+        /// <para>formType: kiểu form: 1=load to view; 2=load to edit</para>
+        /// </param>
+        /// <returns></returns>
         public ActionResult MachineDetail(string stringData)
         {
             MachineDetailViewModel model = new MachineDetailViewModel();
@@ -62,10 +91,11 @@ namespace WDI.OEE.Controllers
                 dynamic d = JObject.Parse(stringData);
                 int machineID = d.machineID;
                 int machineLocationID = d.machineLocationID;
+                int formType = d.formType;
 
                 model = _machineManagementService.GetDetails(machineID, machineLocationID);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -73,5 +103,52 @@ namespace WDI.OEE.Controllers
             return View(model);
         }
 
+
+        #region Get data các tab
+
+        [HttpGet]
+        public JsonResult GetMachineErrorList(int machineID)
+        {
+            var data = _errorMachineService.GetErrorListByMachineID(machineID);
+            return new JsonResult(data);
+        }
+
+        [HttpGet]
+        public JsonResult GetSeriesTimeLine(int machineID)
+        {
+            // mặc định xem dữ liệu 24h gần nhất
+            DateTime endDate = DateTime.Now;
+            DateTime startDate = endDate.AddHours(-24);
+
+            var data = _reportMachineRuningStatusService.GetListTimelineByMachineID(machineID, startDate, endDate);
+            return new JsonResult(data);
+        }
+
+        [HttpGet]
+        public JsonResult GetListStatusPercent(int machineID)
+        {
+            // mặc định xem dữ liệu 24h gần nhất
+            DateTime endDate = DateTime.Now;
+            DateTime startDate = endDate.AddHours(-24);
+
+            var data = _reportMachineRuningStatusService.GetListStatusPercentByMachineID(machineID, startDate, endDate);
+            return new JsonResult(data);
+        }
+
+
+        [HttpGet]
+        public JsonResult GetListRepaireHistory(int machineID)
+        {
+            var data = _machineManagementService.GetMachineRepaireHistory(machineID);
+            return new JsonResult(data);
+        }
+
+        [HttpGet]
+        public JsonResult GetListMaintenanceChecklist(int machineID)
+        {
+            var data = _machineManagementService.GetMachineMaintenanceList(machineID);
+            return new JsonResult(data);
+        }
+        #endregion
     }
 }

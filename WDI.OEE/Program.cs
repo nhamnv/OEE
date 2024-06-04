@@ -45,6 +45,7 @@ builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+
 #endregion
 
 #region Define: Service Injection
@@ -64,6 +65,8 @@ builder.Services.AddScoped<IReportMachineRuningStatusService, ReportMachineRunin
 builder.Services.AddScoped<IRazorPartialToStringRenderer, RazorPartialToStringRenderer>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IMachineManagementService, MachineManagementService>();
+builder.Services.AddScoped<IData_ErrorRepository, Data_ErrorRepository>();
+builder.Services.AddScoped<IData_ErrorService, Data_ErrorService>();
 
 #endregion
 
@@ -83,6 +86,14 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
 
 app.MapControllerRoute(
     name: "default",

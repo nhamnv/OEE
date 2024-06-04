@@ -28,7 +28,7 @@ namespace WDI.OEE.Controllers
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

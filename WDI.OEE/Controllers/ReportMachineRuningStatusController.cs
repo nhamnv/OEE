@@ -100,7 +100,7 @@ namespace WDI.OEE.Controllers
 
                 return new JsonResult(new { success = true, html = machineHTML });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -189,7 +189,7 @@ namespace WDI.OEE.Controllers
 
                 return new JsonResult(new { success = true, html = machineHTML });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

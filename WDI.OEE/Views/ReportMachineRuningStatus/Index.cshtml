@@ -1,20 +1,19 @@
 ﻿@model List<Common.ViewModels.MachineRuningStatusViewModel>
 
-
 <div class="col-lg-12 col-sm-12">
     <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="control-label">Nhóm máy</label>
-                        @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-control select2", @onchange = "filterData()" })
+                        <label class="control-label text-muted">Nhóm máy</label>
+                        @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-control", @onchange = "filterData()" })
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="control-label" for="MachineLocationID">Vị trí</label>
-                        @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-control select2", @onchange = "filterData()" })
+                        <label class="control-label text-muted" for="MachineLocationID">Vị trí</label>
+                        @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-control", @onchange = "filterData()" })
                     </div>
                 </div>
             </div>
@@ -26,7 +25,7 @@
     <div id="divlistMachineRunningStatus" class="row">
     @foreach (var machine in Model)
     {
-        @Html.Partial("_Machine.cshtml", machine);
+        @await Html.PartialAsync("_Machine.cshtml", machine);
     }
     </div>
 </div>

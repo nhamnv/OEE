@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\machinemanagement\\_partialmachinedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\machinemanagement\\_partialmachinedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\machinemanagement\\_partialmachinetechnicaldocument.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\machinemanagement\\_partialmachinetechnicaldocument.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\service\\machinemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\service\\machinemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\machinemanagement\\_partialmachinemaintenancecheklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\machinemanagement\\_partialmachinemaintenancecheklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\controllers\\machinemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\controllers\\machinemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\staticdatav2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\staticdatav2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\machinemanagement\\machinedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -27,20 +23,156 @@
       "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\machinemanagement\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\machinemanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\machinemanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\controllers\\machinemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\controllers\\machinemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\service\\machinemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\service\\machinemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\static.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\static.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\controllers\\categorymanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\controllers\\categorymanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\authentication\\loginform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\authentication\\loginform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\machinemanagement\\statitics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\machinemanagement\\statitics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\viewmodels\\machinestatiticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\viewmodels\\machinestatiticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\viewmodels\\chartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\viewmodels\\chartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\repository\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|solutionrelative:repository\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\repository\\irepository\\idata_menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|solutionrelative:repository\\irepository\\idata_menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\repository\\irepository\\idata_errorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|solutionrelative:repository\\irepository\\idata_errorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\repository\\entity\\data_error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|solutionrelative:repository\\entity\\data_error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\categorymanagement\\listerror.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\categorymanagement\\listerror.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\shared\\components\\menu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\shared\\components\\menu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\repository\\repository\\data_menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|solutionrelative:repository\\repository\\data_menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\technicalservice\\executechecklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\technicalservice\\executechecklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\reporterrormachine\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\reporterrormachine\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\service\\data_errorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\service\\data_errorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\iservice\\idata_errorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\iservice\\idata_errorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\repository\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|solutionrelative:repository\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\repository\\entity\\data_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2AA9AC7-C908-4877-B4F3-0FDF333493B3}|Repository\\Repository.csproj|solutionrelative:repository\\entity\\data_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\wdi.oee.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\wdi.oee.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\machinemanagement\\_partialmachinerepairehistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\machinemanagement\\_partialmachinerepairehistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\service\\data_menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\service\\data_menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\controllers\\technicalservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\controllers\\technicalservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\staticdatav3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\staticdatav3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\staticdatav2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\staticdatav2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\service\\reportmachineruningstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\service\\reportmachineruningstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\service\\service\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878DD53E-DF1A-4BF8-8C77-2F49A2562A73}|Service\\Service.csproj|solutionrelative:service\\service\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\common\\viewmodels\\machineruningstatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCDC1EC-847B-45DD-8B76-A256981A5CEE}|Common\\Common.csproj|solutionrelative:common\\viewmodels\\machineruningstatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\reportmachineruningstatus\\_machinesingle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\reportmachineruningstatus\\_machinesingle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|e:\\nhamnv\\sourcecode\\weldcomoee\\oee\\wdi.oee\\views\\reportmachineruningstatus\\_machine.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F718D5F-994B-468B-A8FE-7F52166715A9}|WDI.OEE\\WDI.OEE.csproj|solutionrelative:wdi.oee\\views\\reportmachineruningstatus\\_machine.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,137 +182,532 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MachineManagementService.cs",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\MachineManagementService.cs",
-              "RelativeDocumentMoniker": "Service\\Service\\MachineManagementService.cs",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\MachineManagementService.cs",
-              "RelativeToolTip": "Service\\Service\\MachineManagementService.cs",
-              "ViewState": "AQIAANYAAAAAAAAAAAAkwOEAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T02:19:34.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StaticDataV2.cs",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\StaticDataV2.cs",
-              "RelativeDocumentMoniker": "Common\\StaticDataV2.cs",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\StaticDataV2.cs",
-              "RelativeToolTip": "Common\\StaticDataV2.cs",
-              "ViewState": "AQIAAC8nAAAAAAAAAAAUwDcnAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T01:49:35.268Z",
+              "DocumentIndex": 0,
+              "Title": "_PartialMachineTechnicalDocument.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineTechnicalDocument.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineTechnicalDocument.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineTechnicalDocument.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineTechnicalDocument.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACMAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-04T07:33:07.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MachineManagementController.cs",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\MachineManagementController.cs",
-              "RelativeDocumentMoniker": "WDI.OEE\\Controllers\\MachineManagementController.cs",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\MachineManagementController.cs",
-              "RelativeToolTip": "WDI.OEE\\Controllers\\MachineManagementController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAUwCwAAAAwAAAA",
+              "Title": "FileController.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "WDI.OEE\\Controllers\\FileController.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\FileController.cs",
+              "RelativeToolTip": "WDI.OEE\\Controllers\\FileController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T01:49:35.409Z",
+              "WhenOpened": "2024-06-04T07:32:19.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "List.cshtml",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\List.cshtml",
-              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\List.cshtml",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\List.cshtml",
-              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\List.cshtml",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAiwJYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-22T02:07:37.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\Index.cshtml",
-              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\Index.cshtml",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\Index.cshtml",
-              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\Index.cshtml",
-              "ViewState": "AQIAADoAAAAAAAAAAAAiwFIAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T08:38:08.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_PartialMachineDetail.cshtml",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineDetail.cshtml",
-              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineDetail.cshtml",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineDetail.cshtml",
-              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineDetail.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T08:39:03.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MachineDetail.cshtml",
               "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\MachineDetail.cshtml",
               "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\MachineDetail.cshtml",
               "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\MachineDetail.cshtml",
               "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\MachineDetail.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAE0AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-22T02:11:50.263Z",
+              "WhenOpened": "2024-06-04T04:01:12.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_PartialMachineMaintenanceCheklist.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineMaintenanceCheklist.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineMaintenanceCheklist.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineMaintenanceCheklist.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineMaintenanceCheklist.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T01:15:50.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\List.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\List.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\List.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\List.cshtml",
+              "ViewState": "AQIAAOQAAAAAAAAAAAAAAO0AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-03T09:24:36.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MachineManagementService.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\MachineManagementService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\MachineManagementService.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\MachineManagementService.cs",
+              "RelativeToolTip": "Service\\Service\\MachineManagementService.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAAwHkAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T02:30:14.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Statitics.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\Statitics.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\Statitics.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\Statitics.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\Statitics.cshtml",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAAwOMBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-03T07:36:24.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MachineManagementController.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\MachineManagementController.cs",
+              "RelativeDocumentMoniker": "WDI.OEE\\Controllers\\MachineManagementController.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\MachineManagementController.cs",
+              "RelativeToolTip": "WDI.OEE\\Controllers\\MachineManagementController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T04:58:45.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WDI.OEE\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WDI.OEE\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAGUBAAAAAAAAAAAAAHkBAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-22T02:15:59.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Static.cs",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\Static.cs",
-              "RelativeDocumentMoniker": "Common\\Static.cs",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\Static.cs",
-              "RelativeToolTip": "Common\\Static.cs",
-              "ViewState": "AQIAALUFAAAAAAAAAAAMwL4FAAA2AAAA",
+              "Title": "CategoryManagementController.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\CategoryManagementController.cs",
+              "RelativeDocumentMoniker": "WDI.OEE\\Controllers\\CategoryManagementController.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\CategoryManagementController.cs",
+              "RelativeToolTip": "WDI.OEE\\Controllers\\CategoryManagementController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T08:49:16.137Z",
+              "WhenOpened": "2024-06-01T01:40:08.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "LoginForm.cshtml",
-              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\Authentication\\LoginForm.cshtml",
-              "RelativeDocumentMoniker": "WDI.OEE\\Views\\Authentication\\LoginForm.cshtml",
-              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\Authentication\\LoginForm.cshtml",
-              "RelativeToolTip": "WDI.OEE\\Views\\Authentication\\LoginForm.cshtml",
-              "ViewState": "AQIAAJEAAAAAAAAAAAAiwJ8AAABFAAAA",
+              "Title": "MachineStatiticsViewModel.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\MachineStatiticsViewModel.cs",
+              "RelativeDocumentMoniker": "Common\\ViewModels\\MachineStatiticsViewModel.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\MachineStatiticsViewModel.cs",
+              "RelativeToolTip": "Common\\ViewModels\\MachineStatiticsViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T09:13:52.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChartItemViewModel.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\ChartItemViewModel.cs",
+              "RelativeDocumentMoniker": "Common\\ViewModels\\ChartItemViewModel.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\ChartItemViewModel.cs",
+              "RelativeToolTip": "Common\\ViewModels\\ChartItemViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T09:11:41.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "Repository\\AppDBContext.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\AppDBContext.cs",
+              "RelativeToolTip": "Repository\\AppDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T06:09:04.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IData_ErrorRepository.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\IRepository\\IData_ErrorRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IData_ErrorRepository.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\IRepository\\IData_ErrorRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IData_ErrorRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T04:59:41.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Data_Error.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Entity\\Data_Error.cs",
+              "RelativeDocumentMoniker": "Repository\\Entity\\Data_Error.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Entity\\Data_Error.cs",
+              "RelativeToolTip": "Repository\\Entity\\Data_Error.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T04:56:47.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Program.cs",
+              "RelativeDocumentMoniker": "WDI.OEE\\Program.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Program.cs",
+              "RelativeToolTip": "WDI.OEE\\Program.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T07:52:41.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ListError.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\CategoryManagement\\ListError.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\CategoryManagement\\ListError.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\CategoryManagement\\ListError.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\CategoryManagement\\ListError.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAwFAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T09:58:36.489Z",
+              "WhenOpened": "2024-06-01T01:43:07.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\Shared\\Components\\Menu\\Default.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\Shared\\Components\\Menu\\Default.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\Shared\\Components\\Menu\\Default.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\Shared\\Components\\Menu\\Default.cshtml",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAAADsAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-30T09:08:38.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IData_MenuRepository.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\IRepository\\IData_MenuRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IData_MenuRepository.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\IRepository\\IData_MenuRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IData_MenuRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T03:38:44.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Data_MenuRepository.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Repository\\Data_MenuRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repository\\Data_MenuRepository.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Repository\\Data_MenuRepository.cs",
+              "RelativeToolTip": "Repository\\Repository\\Data_MenuRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwB0AAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T02:41:53.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\ReportErrorMachine\\Index.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\ReportErrorMachine\\Index.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\ReportErrorMachine\\Index.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\ReportErrorMachine\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACABAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-01T03:18:01.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IData_ErrorService.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\IService\\IData_ErrorService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\IData_ErrorService.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\IService\\IData_ErrorService.cs",
+              "RelativeToolTip": "Service\\IService\\IData_ErrorService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T03:21:23.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ExecuteChecklist.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\TechnicalService\\ExecuteChecklist.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\TechnicalService\\ExecuteChecklist.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\TechnicalService\\ExecuteChecklist.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\TechnicalService\\ExecuteChecklist.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAC4AAACNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-30T03:34:58.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Data_ErrorService.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\Data_ErrorService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Data_ErrorService.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\Data_ErrorService.cs",
+              "RelativeToolTip": "Service\\Service\\Data_ErrorService.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAlwBAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T02:18:07.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\Entity.cs",
+              "RelativeDocumentMoniker": "Common\\Entity.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\Entity.cs",
+              "RelativeToolTip": "Common\\Entity.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAYwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:50:56.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repository\\GenericRepository.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "Repository\\Repository\\GenericRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T02:46:19.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Service.csproj",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service.csproj",
+              "RelativeDocumentMoniker": "Service\\Service.csproj",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service.csproj",
+              "RelativeToolTip": "Service\\Service.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-31T08:14:06.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T07:55:07.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WDI.OEE\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WDI.OEE\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T07:54:52.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Data_Menu.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Entity\\Data_Menu.cs",
+              "RelativeDocumentMoniker": "Repository\\Entity\\Data_Menu.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Repository\\Entity\\Data_Menu.cs",
+              "RelativeToolTip": "Repository\\Entity\\Data_Menu.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T07:12:39.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "WDI.OEE\\ScaffoldingReadMe.txt",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "WDI.OEE\\ScaffoldingReadMe.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-31T07:52:16.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "WDI.OEE",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\WDI.OEE.csproj",
+              "RelativeDocumentMoniker": "WDI.OEE\\WDI.OEE.csproj",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\WDI.OEE.csproj",
+              "RelativeToolTip": "WDI.OEE\\WDI.OEE.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-31T06:09:13.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_PartialMachineRepaireHistory.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineRepaireHistory.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineRepaireHistory.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\MachineManagement\\_PartialMachineRepaireHistory.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\MachineManagement\\_PartialMachineRepaireHistory.cshtml",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAwCkAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T01:16:39.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "WDI.OEE\\Controllers\\MenuController.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "WDI.OEE\\Controllers\\MenuController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAxwDMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:38:07.598Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "TechnicalServiceController.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\TechnicalServiceController.cs",
+              "RelativeDocumentMoniker": "WDI.OEE\\Controllers\\TechnicalServiceController.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Controllers\\TechnicalServiceController.cs",
+              "RelativeToolTip": "WDI.OEE\\Controllers\\TechnicalServiceController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAQwDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T02:27:36.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Data_MenuService.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\Data_MenuService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Data_MenuService.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\Data_MenuService.cs",
+              "RelativeToolTip": "Service\\Service\\Data_MenuService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwBYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:22:35.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "StaticDataV3.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\StaticDataV3.cs",
+              "RelativeDocumentMoniker": "Common\\StaticDataV3.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\StaticDataV3.cs",
+              "RelativeToolTip": "Common\\StaticDataV3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:44:16.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "StaticDataV2.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\StaticDataV2.cs",
+              "RelativeDocumentMoniker": "Common\\StaticDataV2.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\StaticDataV2.cs",
+              "RelativeToolTip": "Common\\StaticDataV2.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwEQnAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:44:27.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\DashboardService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\DashboardService.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\DashboardService.cs",
+              "RelativeToolTip": "Service\\Service\\DashboardService.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAnwKUAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:38:07.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ReportMachineRuningStatusService.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\ReportMachineRuningStatusService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\ReportMachineRuningStatusService.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Service\\Service\\ReportMachineRuningStatusService.cs",
+              "RelativeToolTip": "Service\\Service\\ReportMachineRuningStatusService.cs",
+              "ViewState": "AQIAADwCAAAAAAAAAAAnwEgCAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:38:07.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "MachineRuningStatusViewModel.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\MachineRuningStatusViewModel.cs",
+              "RelativeDocumentMoniker": "Common\\ViewModels\\MachineRuningStatusViewModel.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\MachineRuningStatusViewModel.cs",
+              "RelativeToolTip": "Common\\ViewModels\\MachineRuningStatusViewModel.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAnwEgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:38:07.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Common\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\Common\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "Common\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T04:37:10.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_MachineSingle.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\ReportMachineRuningStatus\\_MachineSingle.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\ReportMachineRuningStatus\\_MachineSingle.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\ReportMachineRuningStatus\\_MachineSingle.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\ReportMachineRuningStatus\\_MachineSingle.cshtml",
+              "ViewState": "AQIAABwAAAAAAAAAAAAYwCYAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-29T02:34:01.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "_Machine.cshtml",
+              "DocumentMoniker": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\ReportMachineRuningStatus\\_Machine.cshtml",
+              "RelativeDocumentMoniker": "WDI.OEE\\Views\\ReportMachineRuningStatus\\_Machine.cshtml",
+              "ToolTip": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\Views\\ReportMachineRuningStatus\\_Machine.cshtml",
+              "RelativeToolTip": "WDI.OEE\\Views\\ReportMachineRuningStatus\\_Machine.cshtml",
+              "ViewState": "AQIAABcAAAAAAAAAAIBJwCgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-29T02:25:55.114Z"
             }
           ]
         }

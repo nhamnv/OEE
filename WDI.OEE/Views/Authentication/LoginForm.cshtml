@@ -15,7 +15,8 @@
     <meta name="author" content="#">
     <!-- Favicon icon -->
 
-    <link rel="icon" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/images/favicon.ico" type="image/x-icon">
+    @* <link rel="icon" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/images/favicon.ico" type="image/x-icon"> *@
+    <link rel="icon" href="~/images/logoes/weldcom.png" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
@@ -35,6 +36,9 @@
     <!-- Google reCaptcha -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/css/jquery.mCustomScrollbar.css">
+    <!--Site CSS-->
+    <link rel="stylesheet" href="~/WDI.OEE.styles.css" asp-append-version="true" />
+
 
     <style>
         .login-logo{
@@ -157,19 +161,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <!-- end password -->
-                                                                    @*<div class="j-unit">
-                                                                        <label class="j-input j-select j-success-view">
-                                                                            <select name="department">
-                                                                                <option value="" selected="">Choose your department</option>
-                                                                                <option value="general">General</option>
-                                                                                <option value="sales and marketing">Sales and Marketing</option>
-                                                                                <option value="deposit">Deposit</option>
-                                                                                <option value="IT and development">IT and Development</option>
-                                                                                <option value="design and branding">Design and Branding</option>
-                                                                            </select>
-                                                                            <i></i>
-                                                                        </label>
-                                                                    </div> *@
+                                                                   
                                                                     <!-- start factory -->
                                                                     <div class="j-unit">
                                                                         <div class="form-group row">
@@ -180,7 +172,7 @@
                                                                                 </label>
                                                                                 <select id="factory" class="js-example-basic-single col-sm-12 select2-hidden-accessible" tabindex="-1" aria-hidden="true" placeholder="Nhà máy">
                                                                                     <option value="0">Tập đoàn Đại Dũng</option>
-                                                                                    <option value="1">An Hạ - Bình Chánh</option>
+                                                                                    <option value="1" selected>An Hạ - Bình Chánh</option>
                                                                                     <option value="2">Long An</option>
                                                                                     <option value="3">Miền Trung</option>
                                                                                 </select>
@@ -188,7 +180,24 @@
                                                                         </div>
                                                                     </div>
                                                                     <!-- end factory -->
-                                                                     
+                                                                    <!-- start xưởng -->
+                                                                    <div class="j-unit">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-sm-3 col-form-label">Xưởng sản xuất</label>
+                                                                            <div class="col-sm-8">
+                                                                                <label class="j-icon-right label-icon" for="factory">
+                                                                                    <i class="icofont icofont-caret-down"></i>
+                                                                                </label>
+                                                                                <select id="factory" class="js-example-basic-single col-sm-12 select2-hidden-accessible" tabindex="-1" aria-hidden="true" placeholder="Nhà máy">
+                                                                                    <option value="1">An Hạ 1</option>
+                                                                                    <option value="2">An Hạ 2</option>
+                                                                                    <option value="3">An Hạ 3</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end xưởng -->
+
                                                                     <!-- start response from server -->
                                                                     <div class="j-response"></div>
                                                                     <!-- end response from server -->
@@ -201,7 +210,8 @@
                                                                         </div>
                                                                         <div class="ml-auto mr-1">
                                                                             <button type="submit" class="btn btn-primary" style="display:none;">Đăng nhập</button>
-                                                                            <a class="btn btn-primary" href="@Url.Action("Index","Dashboard")">Đăng nhập</a>
+                                                                            <!--a class="btn btn-primary" href="@Url.Action("Index","Dashboard")">Đăng nhập</a-->
+                                                                            <a class="btn btn-primary" href="@Url.Action("Statitics","MachineManagement")">Đăng nhập</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -278,6 +288,7 @@
     <![endif]-->
     <!-- Warning Section Ends -->
     <!-- Required Jquery -->
+
     <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/jquery/js/jquery.min.js"></script>
     <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/popper.js/js/popper.min.js"></script>

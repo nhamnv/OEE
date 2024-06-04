@@ -13,11 +13,24 @@
             <input type="hidden" name="hidden_MachineLocationID" value="@Model.MachineLocationID" />
             <input type="hidden" name="hidden_LastStatusID" value="@Model._LastStatus.StatusID" />
             <div class="row">
-                <div class="col-lg-6 col-sm-12" data-original-title="Tên máy" style="font-weight:bold;">
+                <div class="col-lg-12 col-sm-12" data-original-title="Tên máy" style="font-weight:bold;">
                     @Model.MachineName
                 </div>
-
-                <div class="col-lg-6 col-sm-12 text-right">
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="text-muted m-b-0" data-original-title="Model máy">
+                        @Model.Model
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="line-height:45px;">
+                <div class="col-lg-5 col-sm-12">
+                    <div data-original-title="Vị trí">
+                        @Model.MachineLocationName
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-12 text-right">
                     @foreach (var status in Model.ListStatus)
                     {
                         string strBgColor = "";
@@ -25,25 +38,10 @@
                         {
                             strBgColor = "background-color:" + status.ColorCode + "!important;";
                         }
-                        <span class="block-status" style="@strBgColor">
+                        <div class="block-status" style="@strBgColor">
                             @status.StatusName
-                        </span>
+                        </div>
                     }
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="text-muted m-b-0" data-original-title="Model máy">
-                        @Model.Model
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div data-original-title="Vị trí">
-                        @Model.MachineLocationName
-                    </div>
                 </div>
             </div>
         </div>
@@ -105,77 +103,11 @@
 
 <script>
     $(document).ready(function () {
-
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "On", ColorCode = "#5f9d32" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#9ccc65" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Stop", ColorCode = "#fff100" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffba57" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#afabab" });
-        // Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 6, StatusName = "Emg", ColorCode = "#ff5252" });
-
         var data = JSON.parse('@Html.Raw(Json.Serialize(Model.SeriesTimeLine))');
-        // console.log('1111');
-        // console.log(data);
-        // console.log('2222');
-
         var series = [{ data: data }];
 
         var options = {
             series: series,
-            // series: [
-            //     {
-            //         data: [
-            //             {
-            //                 x: 'On',
-            //                 y: [
-            //                     new Date('2024-05-10 01:03:21').getTime(),
-            //                     new Date('2024-05-10 03:21:21').getTime(),
-            //                 ],
-            //                 fillColor: '#5f9d32'
-            //             },
-            //             {
-            //                 x: 'Run',
-            //                 y: [
-            //                     new Date('2024-05-10 23:16:21').getTime(),
-            //                     new Date('2024-05-10 23:55:21').getTime(),
-            //                 ],
-            //                 fillColor: '#9ccc65'
-            //             },
-            //             {
-            //                 x: 'Stop',
-            //                 y: [
-            //                     new Date('2024-05-10 05:09:21').getTime(),
-            //                     new Date('2024-05-10 08:31:21').getTime(),
-            //                 ],
-            //                 fillColor: '#fff100'
-            //             },
-            //             {
-            //                 x: 'Alarm',
-            //                 y: [
-            //                     new Date('2024-05-10 11:08:21').getTime(),
-            //                     new Date('2024-05-10 13:27:21').getTime(),
-            //                 ],
-            //                 fillColor: '#ffba57'
-            //             },
-            //             {
-            //                 x: 'Off',
-            //                 y: [
-            //                     new Date('2024-05-10 14:56:21').getTime(),
-            //                     new Date('2024-05-10 18:19:21').getTime(),
-            //                 ],
-            //                 fillColor: '#afabab'
-            //             },
-            //             {
-            //                 x: 'Emg',
-            //                 y: [
-            //                     new Date('2024-05-10 12:08:21').getTime(),
-            //                     new Date('2024-05-10 15:27:21').getTime(),
-            //                 ],
-            //                 fillColor: '#ff5252'
-            //             }
-            //         ]
-            //     }
-            // ],
             chart: {
                 height: 150,
                 type: 'rangeBar'
@@ -190,9 +122,6 @@
             },
             tooltip: {
                 custom: function (opts) {
-                    // const fromYear = new Date(opts.y1).getFullYear()
-                    // const toYear = new Date(opts.y2).getFullYear()
-
                     const fromYear = getDateTime_LocalDateTimeString(new Date(opts.y1));
                     const toYear = getDateTime_LocalDateTimeString(new Date(opts.y2));
 
@@ -211,7 +140,6 @@
                         (seriesName ? seriesName : '') +
                         '</span></div>' +
                         '<div> <span class="category">' +
-                        // ylabel +
                         ' </span> <span class="value start-value">' +
                         fromYear +
                         '</span> <span class="separator">-</span> <span class="value end-value">' +

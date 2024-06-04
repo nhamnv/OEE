@@ -12,12 +12,18 @@
             {
                 #region Build table Data_MachineStatus --> https://docs.google.com/spreadsheets/d/1PXA7g5p7IdIuuBvkardAjIoThfHFF5lw0biVisA6FWc/edit#gid=487803147&range=B2
 
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "On", ColorCode = "#5f9d32" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#9ccc65" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Stop", ColorCode = "#E3DA30" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffba57" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#afabab" });
-                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 6, StatusName = "Emg", ColorCode = "#ff5252" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "On", ColorCode = "#5f9d32" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#9ccc65" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Stop", ColorCode = "#E3DA30" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffba57" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#afabab" });
+                //Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 6, StatusName = "Emg", ColorCode = "#ff5252" });
+
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 1, StatusName = "Ready", ColorCode = "#0070c0", StatusDetail = "Sẵn sàng cho sản xuất" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 2, StatusName = "Run", ColorCode = "#00b050", StatusDetail = "Đang sản xuất" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 3, StatusName = "Not ready", ColorCode = "#ff0000", StatusDetail = "Đang bảo dưỡng, sửa chữa" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 4, StatusName = "Alarm", ColorCode = "#ffff00", StatusDetail = "Đang cảnh báo lỗi" });
+                Data_MachineStatus.Add(new Common.Data_MachineStatus() { StatusID = 5, StatusName = "Off", ColorCode = "#a6a6a6", StatusDetail = "Đang không vận hành" });
 
                 #endregion
 
@@ -10025,55 +10031,30 @@
                 Data_MachineStatusHistory.Add(new Common.Data_MachineStatusHistory() { MachineStatusHistoryID = 5001, MachineID = 2, StatusID = 5, MachineLocationID = 10, StatusTime = new DateTime(2024, 5, 15, 1, 24, 1) });
                 Data_MachineStatusHistory.Add(new Common.Data_MachineStatusHistory() { MachineStatusHistoryID = 5001, MachineID = 20, StatusID = 4, MachineLocationID = 18, StatusTime = new DateTime(2024, 5, 13, 13, 0, 12) });
 
-                var aaa = StaticData.Data_MachineStatusHistory.MaxBy(d => d.StatusTime).StatusTime;
+                // var aaa = StaticData.Data_MachineStatusHistory.MaxBy(d => d.StatusTime).StatusTime;
 
                 var d = (DateTime.Now.Subtract(new DateTime(2024, 5, 12))).TotalDays - 2;
                 // Từ dữ liệu fake 3 ngày cố định, biến thành 3 ngày hiện tại
                 foreach (var item in StaticData.Data_MachineStatusHistory)
                 {
-                    // Data generate tu ngay 12/5/2024
-                    item.StatusTime = item.StatusTime.AddDays(d);
+                    if (item != null)
+                    {
+                        // Data generate tu ngay 12/5/2024
+                        item.StatusTime = item.StatusTime.AddDays(d);
+                    }
                 }
 
                 #endregion
 
-                var bbb = StaticData.Data_MachineStatusHistory.MaxBy(d => d.StatusTime).StatusTime;
+                // var bbb = StaticData.Data_MachineStatusHistory.MaxBy(d => d.StatusTime).StatusTime;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
         }
     }
 
-    /// <summary>
-    /// Các trạng thái hoạt động của máy
-    /// </summary>
-    public class Data_MachineStatus
-    {
-        public Data_MachineStatus() { }
 
-
-        public int StatusID { get; set; }
-        public string StatusName { get; set; }
-        public string ColorCode { get; set; }
-
-        public long DataPercent { get; set; } = 0;
-    }
-
-    /// <summary>
-    /// Lịch sử trạng thái của máy
-    /// </summary>
-    public class Data_MachineStatusHistory
-    {
-        public Data_MachineStatusHistory() { }
-
-
-        public int MachineStatusHistoryID { get; set; }
-        public int MachineID { get; set; }
-        public int MachineLocationID { get; set; }
-        public int StatusID { get; set; }
-        public DateTime StatusTime { get; set; }
-    }
 }
 

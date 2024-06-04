@@ -9,7 +9,7 @@
         //        var serialized = JsonConvert.SerializeObject(source);
         //        return JsonConvert.DeserializeObject<List<T>>(serialized);
         //    }
-        //    catch (Exception ex)
+        //    catch (Exception)
         //    {
         //        return new List<T>();
         //    }

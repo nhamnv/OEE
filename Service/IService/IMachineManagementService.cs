@@ -1,4 +1,5 @@
-﻿using Common.ViewModels;
+﻿using Common;
+using Common.ViewModels;
 
 namespace Service.IService
 {
@@ -17,5 +18,19 @@ namespace Service.IService
         /// <param name="machineLocationID"></param>
         /// <returns></returns>
         MachineDetailViewModel GetDetails(int machineID, int machineLocationID);
+
+        /// <summary>
+        /// Lịch sử sửa chữa máy
+        /// </summary>
+        /// <param name="machineID"></param>
+        /// <returns></returns>
+        List<Data_RepaireHistory> GetMachineRepaireHistory(int machineID);
+
+        /// <summary>
+        /// Checklist bảo dưỡng máy
+        /// </summary>
+        /// <param name="machineID"></param>
+        /// <returns></returns>
+        List<Data_MachineMaintenanceList> GetMachineMaintenanceList(int machineID);
     }
 }

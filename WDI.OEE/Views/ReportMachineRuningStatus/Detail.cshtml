@@ -7,20 +7,20 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="control-label" >Nhóm máy</label>
-                        @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-control select2" })
+                        <label class="control-label text-muted" >Nhóm máy</label>
+                        @Html.DropDownList("MachineGroupID", (List<SelectListItem>)ViewData["ListMachineGroup"], htmlAttributes: new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="control-label">Vị trí</label>
-                        @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-control select2" })
+                        <label class="control-label text-muted">Vị trí</label>
+                        @Html.DropDownList("MachineLocationID", (List<SelectListItem>)ViewData["ListMachineLocation"], htmlAttributes: new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="control-label">Máy</label>
-                        @Html.DropDownList("MachineID", (List<SelectListItem>)ViewData["ListMachine"], htmlAttributes: new { @class = "form-control select2", @onchange = "filterDataDetail()" })
+                        <label class="control-label text-muted">Máy</label>
+                        @Html.DropDownList("MachineID", (List<SelectListItem>)ViewData["ListMachine"], htmlAttributes: new { @class = "form-control", @onchange = "filterDataDetail()" })
                     </div>
                 </div>
             </div>
@@ -32,7 +32,14 @@
     <div id="divlistMachineRunningStatusDetail" class="row">
         @if (Model != null && Model.Count>0)
         {
-            @Html.Partial("_MachineSingle.cshtml", Model?[0]);
+            // Thiết bị lật dầm XF15 - Số 01
+            var m = Model.Where(t => t.MachineID == 22).FirstOrDefault();
+            if(m== null)
+            {
+                m = Model?[0];
+            }
+
+            @await Html.PartialAsync("_MachineSingle.cshtml", m);
         }
     </div>
 </div>

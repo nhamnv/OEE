@@ -60,6 +60,7 @@ namespace Service.Service
                         ColorCode = s.ColorCode,
                         StatusName = s.StatusName,
                         StatusID = s.StatusID,
+                        StatusDetail = s.StatusDetail
                     };
 
 
@@ -97,7 +98,7 @@ namespace Service.Service
 
                 #endregion
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -159,9 +160,10 @@ namespace Service.Service
                 var s1 = StaticData.Data_MachineStatus.Where(t => t.StatusID == _MachineStatusID).FirstOrDefault();
                 var sts = new DashboardStatusSummary()
                 {
-                    ColorCode = s1.ColorCode,
-                    StatusName = s1.StatusName,
-                    StatusID = s1.StatusID,
+                    ColorCode = s1?.ColorCode ?? "",
+                    StatusName = s1?.StatusName ?? "",
+                    StatusID = s1?.StatusID ?? 0,
+                    StatusDetail = s1?.StatusDetail ?? "",
                 };
 
                 var machinesByStatus = lstMachineLastStatus.Where(t => t.MachineStatusID == s1.StatusID);
@@ -209,7 +211,7 @@ namespace Service.Service
 
                 #endregion
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

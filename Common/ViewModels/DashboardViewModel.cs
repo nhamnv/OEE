@@ -10,6 +10,7 @@
     public class DashboardStatusSummary
     {
         public string StatusName { get; set; } = string.Empty;
+        public string StatusDetail { get; set; } = string.Empty;
         public int StatusID { get; set; } = 0;
         public string ColorCode { get; set; } = string.Empty;
 

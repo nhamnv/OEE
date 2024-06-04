@@ -12,31 +12,44 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <!-- CSS media query size
+        https://viblo.asia/p/bai-28-hieu-chinh-xac-ve-responsive-web-design-va-cach-chia-khoang-man-hinh-ORNZqb0Ml0n
+        max-width: 320px (điện thoại di động, hiển thị chiều dọc)
+        max-width: 480px (điện thoại di động, hiển thị chiều ngang)
+        max-width: 600px (máy tính bảng, hiển thị chiều dọc)
+        max-width: 800px (máy tính bảng, hiển thị chiều ngang)
+        max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
+        max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
+        min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
+    -->
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="" />
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- [Theme adminty] start -->
-    <!-- Favicon icon -->
-    <link rel="icon" href="~/lib/themes/adminty-dashboard-master/libraries/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/images/logoes/weldcom.png" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/bower_components/bootstrap/css/bootstrap.min.css">
     <!-- themify-icons line icon -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/themify-icons/themify-icons.css">
     <!-- ico font -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/icofont/css/icofont.css">
     <!-- feather Awesome -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/icon/feather/css/feather.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/icon/feather/css/feather.css">
+    <!-- jpro forms css -->
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/j-pro/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/j-pro/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/pages/j-pro/css/j-pro-modern.css">
     <!-- Select 2 css -->
     <link rel="stylesheet" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/select2/css/select2.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="~/lib/Themes/adminty-dashboard-master/libraries/assets/css/style.css">
     <!-- Multi Select css -->
     <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/bootstrap-multiselect/css/bootstrap-multiselect.css">
     <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/bower_components/multiselect/css/multi-select.css">
-    <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="~/lib/themes/adminty-dashboard-master/libraries/assets/css/jquery.mCustomScrollbar.css">
 
 
     <!--Bootstrap-->
@@ -113,7 +126,7 @@
                                 <div class="main-search morphsearch-search">
                                     <div class="input-group">
                                         <span class="input-group-addon search-close"><i class="feather icon-x"></i></span>
-                                        <input type="text" class="form-control">
+                                        <input id="searchkeyword" type="text" class="form-control" />
                                         <span class="input-group-addon search-btn"><i class="feather icon-search"></i></span>
                                     </div>
                                 </div>
@@ -134,7 +147,7 @@
                                     <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li>
                                             <h6>Notifications</h6>
-                                            <label class="label label-danger">New</label>
+                                            <span class="label label-danger">New</span>
                                         </li>
                                         <li>
                                             <div class="media">
@@ -318,7 +331,7 @@
                 </div>
                 <div class="chat-reply-box p-b-20">
                     <div class="right-icon-control">
-                        <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+                        <input type="text" id="shareyourthoughts" class="form-control search-text" placeholder="Share Your Thoughts">
                         <div class="form-icon">
                             <i class="feather icon-navigation"></i>
                         </div>
@@ -330,59 +343,6 @@
                 <div class="pcoded-wrapper">
                     <nav class="pcoded-navbar">
                         <div class="pcoded-inner-navbar main-menu">
-                            <!-- [nhamnv - menu] start-->
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu pcoded-trigger">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-list"></i></span>
-                                        <span class="pcoded-mtext">Báo cáo tổng hợp</span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class="">
-                                            <a href="@Url.Action("LoginForm","Authentication")">
-                                                <span class="pcoded-mtext">Đăng nhập</span>
-                                            </a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="@Url.Action("Index","Dashboard")">
-                                                <span class="pcoded-mtext">Báo cáo tổng hợp</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="@Url.Action("Index","ReportErrorMachine")">
-                                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                                <span class="pcoded-mtext">Dừng lỗi máy</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="@Url.Action("Index","ReportMachineRuningStatus")">
-                                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                                <span class="pcoded-mtext">Tình trạng hoạt động máy</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="@Url.Action("Detail","ReportMachineRuningStatus")">
-                                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                                <span class="pcoded-mtext">Tình trạng hoạt động máy - chi tiết</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="@Url.Action("List","MachineManagement")">
-                                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                                <span class="pcoded-mtext">Danh sách máy</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="@Url.Action("Statitics","MachineManagement")">
-                                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                                <span class="pcoded-mtext">Thống kê số lượng máy</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <!-- [nhamnv - menu] end-->
-
                             @await Component.InvokeAsync("Menu");
                         </div>
                     </nav>
