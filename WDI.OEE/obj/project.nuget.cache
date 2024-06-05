@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2f17+B6PQSDK9h1yC1/fMGw2yn3H6GzRKS11I+zPRZvkQ9wuGOe29eomM9C29QZHJHPXmSeSqShZQBRA+osTpw==",
+  "dgSpecHash": "6aao2LgH8zXJL+jg+AO8wUlH+w3x2LOVZ0XC9WGVGjEUkneengZCZdPdZa346fOqovIald1u/zkChpB4lh5Qgg==",
   "success": true,
   "projectFilePath": "E:\\nhamnv\\SourceCode\\WELDCOMOEE\\OEE\\WDI.OEE\\WDI.OEE.csproj",
   "expectedPackageFiles": [
@@ -115,6 +115,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.4\\microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.4\\microsoft.entityframeworkcore.design.8.0.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.4\\microsoft.entityframeworkcore.relational.8.0.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.4\\microsoft.entityframeworkcore.sqlserver.8.0.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",

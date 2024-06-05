@@ -8,9 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewComponents\**" />
     <Compile Remove="wwwroot\lib\themes\ablepro-master\**" />
+    <Content Remove="ViewComponents\**" />
     <Content Remove="wwwroot\lib\themes\ablepro-master\**" />
+    <EmbeddedResource Remove="ViewComponents\**" />
     <EmbeddedResource Remove="wwwroot\lib\themes\ablepro-master\**" />
+    <None Remove="ViewComponents\**" />
     <None Remove="wwwroot\lib\themes\ablepro-master\**" />
   </ItemGroup>
 
@@ -189,6 +193,10 @@
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
     <!--<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />-->
   </ItemGroup>
@@ -207,7 +215,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="ViewComponents\" />
   </ItemGroup>
 
 </Project>
